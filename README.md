@@ -6,7 +6,7 @@
 |-----|-----|--------|-----|
 |2020-09-01| 강사/과목 소개 | [슬라이드](https://docs.google.com/presentation/d/1JY3LBjrSNqaQqJTe1FkR0Q7s_4viji7z11CepfLWFNw/edit?usp=sharing) | GitHub 가입. 과목 GitHub 팀 등록. 자기소개. Dacon 가입 |
 |2020-09-03| 개발 환경 설정          | [슬라이드](https://docs.google.com/presentation/d/1GyEc1zvn-4NsSliYf-pidnFT-9MBwePl4Gq1qn2saT4/edit?usp=sharing)  | GitHub 리포 생성. 파이썬 가상환경 설정. 파이썬 라이브러리 설치. 대회 데이터 다운로드 |
-|2020-09-08| Pandas               |  |  |
+|2020-09-08| Pandas               | [슬라이드](https://docs.google.com/presentation/d/1MhnsZAV8SfLK9ob9gSMXN2Jil7ZjH-8mngH-Qec7bk8/edit?usp=sharing) | Pandas를 활용한 단국대 대회 데이터 EDA |
 |2020-09-10| Numpy, 선형회귀        |  |  |
 |2020-09-15| 수치데이터 가공          |  |  |
 |2020-09-17| 라이브 질의응답          |  |  |
