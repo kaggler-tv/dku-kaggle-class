@@ -8,10 +8,10 @@
 |2020-09-03| 개발 환경 설정          | [슬라이드](https://docs.google.com/presentation/d/1GyEc1zvn-4NsSliYf-pidnFT-9MBwePl4Gq1qn2saT4/edit?usp=sharing)  | GitHub 리포 생성. 가상환경 설정. 라이브러리 설치. 대회 데이터 다운로드 |
 |2020-09-08| Pandas               | [슬라이드](https://docs.google.com/presentation/d/1MhnsZAV8SfLK9ob9gSMXN2Jil7ZjH-8mngH-Qec7bk8/edit?usp=sharing) | Pandas를 활용한 단국대 대회 데이터 EDA |
 |2020-09-10| Numpy, 선형회귀        | [슬라이드](https://docs.google.com/presentation/d/1emLd1bVorVh9gfjJBd7ZNCbTxs3SZZOnaXx6aPwZNPQ/edit?usp=sharing) | scikit-learn의 LinearRegression/LogisticRegression 모델링  |
-|2020-09-15| 수치데이터 가공          |  |  |
+|2020-09-15| 수치형변수 가공          | [슬라이드](https://docs.google.com/presentation/d/1-1xdhujxVu-2Q_sVEa6AZKqxij3PiBL3ZPm4H_MTaMs/edit?usp=sharing) | 수치형변수 가공 |
 |2020-09-17| 라이브 질의응답          |  |  |
 |2020-09-22| Scikit-Learn, 결정트리 |  |  |
-|2020-09-24| 범주데이터 가공 1        |  |  |
+|2020-09-24| 범주형변수 가공 1        |  |  |
 |2020-09-29| Random Forests, GBDT |  |  |
 |2020-10-01| 추석연휴 - 휴강          |  |  |
 |2020-10-06| Keras, MLP           |  |  |
@@ -20,7 +20,7 @@
 |2020-10-15| 라이브 질의응답           |  |  |
 |2020-10-20| 중간고사 주 - 팀 발표      |  | 코드 제출 |
 |2020-10-22| 중간고사 주 - 팀 발표      |  |  |
-|2020-10-27| 범주데이터 가공 2 |  |  |
+|2020-10-27| 범주형변수 가공 2 |  |  |
 |2020-10-29| 대회에서 팀 운영 |  |  |
 |2020-11-03| 모델 튜닝 |  |  |
 |2020-11-05| 앙상블 |  |  |
