@@ -10,7 +10,7 @@
 |2020-09-10| Numpy, 선형회귀        | [슬라이드](https://docs.google.com/presentation/d/1emLd1bVorVh9gfjJBd7ZNCbTxs3SZZOnaXx6aPwZNPQ/edit?usp=sharing) | scikit-learn의 LinearRegression/LogisticRegression 모델링  |
 |2020-09-15| 수치형변수 가공          | [슬라이드](https://docs.google.com/presentation/d/1-1xdhujxVu-2Q_sVEa6AZKqxij3PiBL3ZPm4H_MTaMs/edit?usp=sharing) | 수치형변수 가공 |
 |2020-09-17| 라이브 질의응답          |  |  |
-|2020-09-22| Scikit-Learn, 결정트리 |  |  |
+|2020-09-22| Scikit-Learn, 결정트리 | [슬라이드](https://docs.google.com/presentation/d/1c4mg_b1zYxvZw4UrodwmgJXNZw9nv0u9Mjy_oZ6Lmds/edit?usp=sharing) | 결정트리 모델 예측 값 대회에 제출 |
 |2020-09-24| Random Forests, GBDT        |  |  |
 |2020-09-29| XGBoost, LightGBM |  |  |
 |2020-10-01| 추석연휴 - 휴강          |  |  |
