@@ -11,8 +11,8 @@
 |2020-09-15| 수치형변수 가공          | [슬라이드](https://docs.google.com/presentation/d/1-1xdhujxVu-2Q_sVEa6AZKqxij3PiBL3ZPm4H_MTaMs/edit?usp=sharing) | 수치형변수 가공 |
 |2020-09-17| 라이브 질의응답          |  |  |
 |2020-09-22| Scikit-Learn, 결정트리 | [슬라이드](https://docs.google.com/presentation/d/1c4mg_b1zYxvZw4UrodwmgJXNZw9nv0u9Mjy_oZ6Lmds/edit?usp=sharing) | 결정트리 모델 예측 값 대회에 제출 |
-|2020-09-24| Random Forests, LightGBM | [슬라이드](https://docs.google.com/presentation/d/1IInmro1RSGs0nsfMxDCct_DBGRmrvzUPW4r4qRLp24U/edit?usp=sharing) | RF/LightGBM 모델 예측값 대회에  |
-|2020-09-29| XGBoost, LightGBM |  |  |
+|2020-09-24| Random Forests, LightGBM | [슬라이드](https://docs.google.com/presentation/d/1IInmro1RSGs0nsfMxDCct_DBGRmrvzUPW4r4qRLp24U/edit?usp=sharing) | RF/LightGBM 모델 예측값 대회에 제출 |
+|2020-09-29| 교차검증 (CV), Stacking | [슬라이드](https://docs.google.com/presentation/d/160j7GQEoMPFkKn0mjculI0TpkDRJIsNkggUuwlG_ouY/edit?usp=sharing) | CV/Stacking 사용한 모델 예측값 대회에 제출 |
 |2020-10-01| 추석연휴 - 휴강          |  |  |
 |2020-10-06| Keras, MLP           |  |  |
 |2020-10-08| 범주형변수 가공 1    |  |  |
