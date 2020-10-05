@@ -14,7 +14,7 @@
 |2020-09-24| Random Forests, LightGBM | [슬라이드](https://docs.google.com/presentation/d/1IInmro1RSGs0nsfMxDCct_DBGRmrvzUPW4r4qRLp24U/edit?usp=sharing) | RF/LightGBM 모델 예측값 대회에 제출 |
 |2020-09-29| 교차검증 (CV), Stacking | [슬라이드](https://docs.google.com/presentation/d/160j7GQEoMPFkKn0mjculI0TpkDRJIsNkggUuwlG_ouY/edit?usp=sharing) | CV/Stacking 사용한 모델 예측값 대회에 제출 |
 |2020-10-01| 추석연휴 - 휴강          |  |  |
-|2020-10-06| Keras, MLP           |  |  |
+|2020-10-06| 모델튜닝, Hyperopt, Optuna | [슬라이드](https://docs.google.com/presentation/d/1Yy3s4nbwJPiZwSa73WRpWGQkhgnnEwfffhwJUYs2Ozk/edit?usp=sharing) | 대회 참여 |
 |2020-10-08| 범주형변수 가공 1    |  |  |
 |2020-10-13| 오버피팅                |  |  |
 |2020-10-15| 라이브 질의응답           |  |  |
