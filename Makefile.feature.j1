@@ -1,0 +1,17 @@
+#--------------------------------------------------------------------------
+# j1: features for xgboost, lightgbm, rf, et
+#--------------------------------------------------------------------------
+include Makefile
+
+FEATURE_NAME := j1
+
+FEATURE_TRN := $(DIR_FEATURE)/$(FEATURE_NAME).trn.h5
+FEATURE_TST := $(DIR_FEATURE)/$(FEATURE_NAME).tst.h5
+FEATURE_MAP := $(DIR_FEATURE)/$(FEATURE_NAME).fmap
+
+$(FEATURE_TRN) $(FEATURE_TST) $(FEATURE_MAP): $(DATA_TRN) $(DATA_TST) | $(DIR_FEATURE)
+	python ./src/generate_$(FEATURE_NAME).py --train-file $< \
+                                             --test-file $(lastword $^) \
+                                             --train-feature-file $(FEATURE_TRN) \
+                                             --test-feature-file $(FEATURE_TST) \
+                                             --feature-map-file $(FEATURE_MAP)

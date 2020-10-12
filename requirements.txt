@@ -1,0 +1,13 @@
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+lightgbm
+hyperopt
+optuna
+Cython>=0.29
+h5py
+kaggler
+tqdm
+
