@@ -20,8 +20,8 @@
 |2020-10-15| 범주형변수 가공 1 | [슬라이드](https://docs.google.com/presentation/d/1uLmoJfuMCQk0hEBqwXTEyV0QKsmWe6sYOu6qiaCDheo/edit?usp=sharing) | 코드공유 및 발표준비 |
 |2020-10-20| 중간고사 주 - 팀 발표      |  | 코드 제출 |
 |2020-10-22| 중간고사 주 - 팀 발표      |  |  |
-|2020-10-27| 범주형변수 가공 2 |  |  |
-|2020-10-29| 대회에서 팀 운영 |  |  |
+|2020-10-27| 라이브 질의응답 |  |  |
+|2020-10-29| 신경망, Keras | [슬라이드](https://docs.google.com/presentation/d/1D7_8FNJjpzStB-T63vv2aY17YyJJr4k5iqStfZJ2m3k/edit?usp=sharing) | 신경망 모델 학습 |
 |2020-11-03| 개교기념일 - 휴강 |  |  |
 |2020-11-05| 앙상블 |  |  |
 |2020-11-10| 모델 튜닝, 후처리 |  |  |
