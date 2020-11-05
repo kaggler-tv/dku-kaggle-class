@@ -23,7 +23,7 @@
 |2020-10-27| 라이브 질의응답 |  |  |
 |2020-10-29| 신경망, Keras | [슬라이드](https://docs.google.com/presentation/d/1D7_8FNJjpzStB-T63vv2aY17YyJJr4k5iqStfZJ2m3k/edit?usp=sharing) | 신경망 모델 학습 |
 |2020-11-03| 개교기념일 - 휴강 |  |  |
-|2020-11-05| 문자열변수 가공 |  |  |
+|2020-11-05| 문자열변수 가공 | [슬라이드](https://docs.google.com/presentation/d/11TsWSRQxvTdrKdHKQN1CKkLPEO_ijsIWcqcp1Dva08M/edit?usp=sharing) | Tfidf 피처를 이용한 모델  |
 |2020-11-10| Keras, RNN |  |  |
 |2020-11-12| 선학습 모델, 전이학습 |  |  |
 |2020-11-17| 라이브 질의응답 |  |  |
