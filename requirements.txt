@@ -1,3 +1,4 @@
+pip
 numpy
 pandas
 scikit-learn
@@ -10,4 +11,5 @@ Cython>=0.29
 h5py
 kaggler
 tqdm
-
+tensorflow
+pydot
