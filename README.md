@@ -26,8 +26,8 @@
 |2020-11-05| 문자열변수 가공 | [슬라이드](https://docs.google.com/presentation/d/11TsWSRQxvTdrKdHKQN1CKkLPEO_ijsIWcqcp1Dva08M/edit?usp=sharing) | Tfidf 피처를 이용한 모델 학습  |
 |2020-11-10| Embeddings, RNN | [슬라이드](https://docs.google.com/presentation/d/1ultSXr-_wihsh4Cu-6y5TQIoFIorV5-LyxCP6fBbR6w/edit?usp=sharing) | Embedding + RNN 모델 학습 |
 |2020-11-12| 선학습 임베딩, 전이학습 | [슬라이드](https://docs.google.com/presentation/d/10iXh7a15zEU2Zuvs-od3rdc688CKSQfjP11-9on7RM4/edit?usp=sharing) | 선학습 임베딩  |
-|2020-11-17| 라이브 질의응답 |  |  |
-|2020-11-19| 텍스트 분류 학습 |  |  |
+|2020-11-17| Data Augmentation | [슬라이드](https://docs.google.com/presentation/d/1QnuQjWiF_1q7XFLMzie3RPE0Hq9DCwtoQ8kc1ohZw_4/edit?usp=sharing) | Text Augmentation 적용 |
+|2020-11-19| 라이브 질의응답 |  |  |
 |2020-11-24| Keras, CNN |  |  |
 |2020-11-26| 이미지 분류 학습  |  |  |
 |2020-12-01| 모델 튜닝, 후처리 |  |  |
