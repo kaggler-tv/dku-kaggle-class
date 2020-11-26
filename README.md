@@ -29,7 +29,7 @@
 |2020-11-17| Data Augmentation | [슬라이드](https://docs.google.com/presentation/d/1QnuQjWiF_1q7XFLMzie3RPE0Hq9DCwtoQ8kc1ohZw_4/edit?usp=sharing) | Text Augmentation 적용 |
 |2020-11-19| 라이브 질의응답 |  |  |
 |2020-11-24| CNN | [슬라이드](https://docs.google.com/presentation/d/1bCAmWlS0SMoqybtzZJHBOtpYIjIEN3J3UKwgxHfoaio/edit?usp=sharing) | 대회 참여 |
-|2020-11-26| Keras, 이미지 분류 학습  |  | 대회 참여  |
+|2020-11-26| Keras, 이미지 분류 학습  | [](https://docs.google.com/presentation/d/1dmCmkv0mWeuf-rHkrOYBXPKaPIwW4B6gSsVPzerOGLc/edit?usp=sharing)  | 대회 참여  |
 |2020-12-01| 모델 튜닝, 후처리 |  | 대회 참여 |
 |2020-12-03| 라이브 질의응답 |  | 코드공유 및 발표준비 |
 |2020-12-08| 기말고사 주 - 팀 발표 | 코드 제출  |  |
