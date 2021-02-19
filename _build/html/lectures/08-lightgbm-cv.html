@@ -1,0 +1,1850 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>데모 &#8212; 단국대 2020 캐글 뽀개기</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="데모" href="08-lr-cv.html" />
+    <link rel="prev" title="데모" href="07-rf.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">단국대 2020 캐글 뽀개기</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   단국대 2020년 가을학기 캐글 뽀개기 강좌
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-pandas-eda.html">
+   03-pandas-eda
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-numpy-lr.html">
+   04-numpy-lr
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-numerical-features.html">
+   05-numerical-features
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-decision-trees.html">
+   06-decision-trees
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-lightgbm.html">
+   07-lightgbm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-rf.html">
+   07-rf
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   08-lightgbm-cv
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-lr-cv.html">
+   08-lr-cv
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-rf-cv.html">
+   08-rf-cv
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-stacking-lgb.html">
+   08-stacking-lgb
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-stacking-lr.html">
+   08-stacking-lr
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09-lightgbm-hyperopt.html">
+   09-lightgbm-hyperopt
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09-lightgbm-optuna.html">
+   09-lightgbm-optuna
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11-categorical-features.html">
+   11-categorical-features
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12-nn-cv.html">
+   12-nn-cv
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13-lr-tfidf.html">
+   13-lr-tfidf
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14-cnn-emb.html">
+   14-cnn-emb
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14-lstm-emb.html">
+   14-lstm-emb
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15-bert.html">
+   15-bert
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15-lstm-glove.html">
+   15-lstm-glove
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-attention.html">
+   16-attention
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lectures/08-lightgbm-cv.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/SDSTony/dku-kaggle-class"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/SDSTony/dku-kaggle-class/issues/new?title=Issue%20on%20page%20%2Flectures/08-lightgbm-cv.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/SDSTony/dku-kaggle-class/master?urlpath=tree/lectures/08-lightgbm-cv.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import">
+   라이브러리 import 및 설정
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   학습데이터 로드
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stratified-k-fold-cross-validation">
+   Stratified K-Fold Cross Validation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lightgbm">
+   LightGBM 모델 학습
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   피처 중요도 시각화
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   제출 파일 생성
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="id1">
+<h1>데모<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="import">
+<h2>라이브러리 import 및 설정<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reload_ext</span> autoreload
+<span class="o">%</span><span class="k">autoreload</span> 2
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lightgbm</span> <span class="k">as</span> <span class="nn">lgb</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">StratifiedKFold</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;max_columns&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.precision&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>학습데이터 로드<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/kaggler-tv/dku-kaggle-class/blob/master/notebook/03-pandas-eda.ipynb">03-pandas-eda.ipynb</a>에서 생성한 <code class="docutils literal notranslate"><span class="pre">feature.csv</span></code> 피처파일 사용</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../data/dacon-dku&#39;</span><span class="p">)</span>
+<span class="n">feature_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../build/feature&#39;</span><span class="p">)</span>
+<span class="n">val_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../build/val&#39;</span><span class="p">)</span>
+<span class="n">tst_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../build/tst&#39;</span><span class="p">)</span>
+<span class="n">sub_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../build/sub&#39;</span><span class="p">)</span>
+
+<span class="n">trn_file</span> <span class="o">=</span> <span class="n">data_dir</span> <span class="o">/</span> <span class="s1">&#39;train.csv&#39;</span>
+<span class="n">tst_file</span> <span class="o">=</span> <span class="n">data_dir</span> <span class="o">/</span> <span class="s1">&#39;test.csv&#39;</span>
+<span class="n">sample_file</span> <span class="o">=</span> <span class="n">data_dir</span> <span class="o">/</span> <span class="s1">&#39;sample_submission.csv&#39;</span>
+
+<span class="n">target_col</span> <span class="o">=</span> <span class="s1">&#39;class&#39;</span>
+<span class="n">n_fold</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">n_class</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">seed</span> <span class="o">=</span> <span class="mi">42</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">algo_name</span> <span class="o">=</span> <span class="s1">&#39;lgbcv&#39;</span>
+<span class="n">feature_name</span> <span class="o">=</span> <span class="s1">&#39;feature&#39;</span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">algo_name</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">feature_name</span><span class="si">}</span><span class="s1">&#39;</span>
+
+<span class="n">feature_file</span> <span class="o">=</span> <span class="n">feature_dir</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">feature_name</span><span class="si">}</span><span class="s1">.csv&#39;</span>
+<span class="n">p_val_file</span> <span class="o">=</span> <span class="n">val_dir</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s1">.val.csv&#39;</span>
+<span class="n">p_tst_file</span> <span class="o">=</span> <span class="n">tst_dir</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s1">.tst.csv&#39;</span>
+<span class="n">sub_file</span> <span class="o">=</span> <span class="n">sub_dir</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s1">.csv&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">feature_file</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(400000, 20)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>z</th>
+      <th>redshift</th>
+      <th>dered_u</th>
+      <th>dered_g</th>
+      <th>dered_r</th>
+      <th>dered_i</th>
+      <th>dered_z</th>
+      <th>nObserve</th>
+      <th>airmass_u</th>
+      <th>class</th>
+      <th>d_dered_u</th>
+      <th>d_dered_g</th>
+      <th>d_dered_r</th>
+      <th>d_dered_i</th>
+      <th>d_dered_z</th>
+      <th>d_dered_ig</th>
+      <th>d_dered_zg</th>
+      <th>d_dered_rz</th>
+      <th>d_dered_iz</th>
+      <th>d_obs_det</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>16.9396</td>
+      <td>-8.1086e-05</td>
+      <td>23.1243</td>
+      <td>20.2578</td>
+      <td>18.9551</td>
+      <td>17.6321</td>
+      <td>16.9089</td>
+      <td>2.9444</td>
+      <td>1.1898</td>
+      <td>0.0</td>
+      <td>-0.1397</td>
+      <td>-0.0790</td>
+      <td>-0.0544</td>
+      <td>-0.0403</td>
+      <td>-0.0307</td>
+      <td>-2.6257</td>
+      <td>-3.3488</td>
+      <td>2.0462</td>
+      <td>0.7232</td>
+      <td>-15.0556</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>13.1689</td>
+      <td>4.5061e-03</td>
+      <td>14.9664</td>
+      <td>14.0045</td>
+      <td>13.4114</td>
+      <td>13.2363</td>
+      <td>13.1347</td>
+      <td>0.6931</td>
+      <td>1.2533</td>
+      <td>1.0</td>
+      <td>-0.0857</td>
+      <td>-0.0574</td>
+      <td>-0.0410</td>
+      <td>-0.0322</td>
+      <td>-0.0343</td>
+      <td>-0.7683</td>
+      <td>-0.8698</td>
+      <td>0.2767</td>
+      <td>0.1016</td>
+      <td>-0.3069</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>15.3500</td>
+      <td>4.7198e-04</td>
+      <td>16.6076</td>
+      <td>15.6866</td>
+      <td>15.4400</td>
+      <td>15.3217</td>
+      <td>15.2961</td>
+      <td>1.0986</td>
+      <td>1.0225</td>
+      <td>0.0</td>
+      <td>-0.1787</td>
+      <td>-0.1388</td>
+      <td>-0.0963</td>
+      <td>-0.0718</td>
+      <td>-0.0540</td>
+      <td>-0.3649</td>
+      <td>-0.3905</td>
+      <td>0.1440</td>
+      <td>0.0257</td>
+      <td>-0.9014</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>19.6346</td>
+      <td>5.8143e-06</td>
+      <td>25.3536</td>
+      <td>20.9947</td>
+      <td>20.0873</td>
+      <td>19.7947</td>
+      <td>19.5552</td>
+      <td>1.6094</td>
+      <td>1.2054</td>
+      <td>0.0</td>
+      <td>-0.3070</td>
+      <td>-0.1941</td>
+      <td>-0.1339</td>
+      <td>-0.1003</td>
+      <td>-0.0795</td>
+      <td>-1.2000</td>
+      <td>-1.4395</td>
+      <td>0.5321</td>
+      <td>0.2395</td>
+      <td>-1.3906</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>17.9826</td>
+      <td>-3.3247e-05</td>
+      <td>23.7714</td>
+      <td>20.4338</td>
+      <td>18.8630</td>
+      <td>18.1903</td>
+      <td>17.8759</td>
+      <td>2.6391</td>
+      <td>1.1939</td>
+      <td>0.0</td>
+      <td>-0.6820</td>
+      <td>-0.2653</td>
+      <td>-0.1794</td>
+      <td>-0.1339</td>
+      <td>-0.1067</td>
+      <td>-2.2436</td>
+      <td>-2.5579</td>
+      <td>0.9871</td>
+      <td>0.3144</td>
+      <td>-9.3609</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">target_col</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[:</span><span class="mi">320000</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">target_col</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">trn</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">320000</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">tst</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">320000</span><span class="p">:]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">feature_name</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">trn</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">tst</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(320000,) (320000, 19) (80000, 19)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="stratified-k-fold-cross-validation">
+<h2>Stratified K-Fold Cross Validation<a class="headerlink" href="#stratified-k-fold-cross-validation" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cv</span> <span class="o">=</span> <span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="n">n_fold</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="lightgbm">
+<h2>LightGBM 모델 학습<a class="headerlink" href="#lightgbm" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">trn</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">n_class</span><span class="p">))</span>
+<span class="n">p_tst</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">tst</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">n_class</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">i_trn</span><span class="p">,</span> <span class="n">i_val</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cv</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">trn</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;training model for CV #</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">clf</span> <span class="o">=</span> <span class="n">lgb</span><span class="o">.</span><span class="n">LGBMClassifier</span><span class="p">(</span><span class="n">objective</span><span class="o">=</span><span class="s1">&#39;multiclass&#39;</span><span class="p">,</span>
+                             <span class="n">n_estimators</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+                             <span class="n">num_leaves</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span>
+                             <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+                             <span class="n">min_child_samples</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                             <span class="n">subsample</span><span class="o">=.</span><span class="mi">5</span><span class="p">,</span>
+                             <span class="n">subsample_freq</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                             <span class="n">colsample_bytree</span><span class="o">=.</span><span class="mi">8</span><span class="p">,</span>
+                             <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">,</span>
+                             <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">trn</span><span class="p">[</span><span class="n">i_trn</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">i_trn</span><span class="p">],</span>
+            <span class="n">eval_set</span><span class="o">=</span><span class="p">[(</span><span class="n">trn</span><span class="p">[</span><span class="n">i_val</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">i_val</span><span class="p">])],</span>
+            <span class="n">eval_metric</span><span class="o">=</span><span class="s1">&#39;multiclass&#39;</span><span class="p">,</span>
+            <span class="n">early_stopping_rounds</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    
+    <span class="n">p_val</span><span class="p">[</span><span class="n">i_val</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">trn</span><span class="p">[</span><span class="n">i_val</span><span class="p">])</span>
+    <span class="n">p_tst</span> <span class="o">+=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">tst</span><span class="p">)</span> <span class="o">/</span> <span class="n">n_fold</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>training model for CV #1
+[1]	valid_0&#39;s multi_logloss: 0.888783
+Training until validation scores don&#39;t improve for 10 rounds
+[2]	valid_0&#39;s multi_logloss: 0.808303
+[3]	valid_0&#39;s multi_logloss: 0.735768
+[4]	valid_0&#39;s multi_logloss: 0.674393
+[5]	valid_0&#39;s multi_logloss: 0.621266
+[6]	valid_0&#39;s multi_logloss: 0.579717
+[7]	valid_0&#39;s multi_logloss: 0.540529
+[8]	valid_0&#39;s multi_logloss: 0.508314
+[9]	valid_0&#39;s multi_logloss: 0.481377
+[10]	valid_0&#39;s multi_logloss: 0.451845
+[11]	valid_0&#39;s multi_logloss: 0.426169
+[12]	valid_0&#39;s multi_logloss: 0.402967
+[13]	valid_0&#39;s multi_logloss: 0.382223
+[14]	valid_0&#39;s multi_logloss: 0.363352
+[15]	valid_0&#39;s multi_logloss: 0.346798
+[16]	valid_0&#39;s multi_logloss: 0.332813
+[17]	valid_0&#39;s multi_logloss: 0.319653
+[18]	valid_0&#39;s multi_logloss: 0.307032
+[19]	valid_0&#39;s multi_logloss: 0.295718
+[20]	valid_0&#39;s multi_logloss: 0.285881
+[21]	valid_0&#39;s multi_logloss: 0.276321
+[22]	valid_0&#39;s multi_logloss: 0.267506
+[23]	valid_0&#39;s multi_logloss: 0.259526
+[24]	valid_0&#39;s multi_logloss: 0.252791
+[25]	valid_0&#39;s multi_logloss: 0.246756
+[26]	valid_0&#39;s multi_logloss: 0.242056
+[27]	valid_0&#39;s multi_logloss: 0.236363
+[28]	valid_0&#39;s multi_logloss: 0.230898
+[29]	valid_0&#39;s multi_logloss: 0.226091
+[30]	valid_0&#39;s multi_logloss: 0.221748
+[31]	valid_0&#39;s multi_logloss: 0.218616
+[32]	valid_0&#39;s multi_logloss: 0.215371
+[33]	valid_0&#39;s multi_logloss: 0.211716
+[34]	valid_0&#39;s multi_logloss: 0.208485
+[35]	valid_0&#39;s multi_logloss: 0.205515
+[36]	valid_0&#39;s multi_logloss: 0.20296
+[37]	valid_0&#39;s multi_logloss: 0.200538
+[38]	valid_0&#39;s multi_logloss: 0.198057
+[39]	valid_0&#39;s multi_logloss: 0.195934
+[40]	valid_0&#39;s multi_logloss: 0.193947
+[41]	valid_0&#39;s multi_logloss: 0.192
+[42]	valid_0&#39;s multi_logloss: 0.190347
+[43]	valid_0&#39;s multi_logloss: 0.188778
+[44]	valid_0&#39;s multi_logloss: 0.187407
+[45]	valid_0&#39;s multi_logloss: 0.186234
+[46]	valid_0&#39;s multi_logloss: 0.184883
+[47]	valid_0&#39;s multi_logloss: 0.183621
+[48]	valid_0&#39;s multi_logloss: 0.182644
+[49]	valid_0&#39;s multi_logloss: 0.181481
+[50]	valid_0&#39;s multi_logloss: 0.180526
+[51]	valid_0&#39;s multi_logloss: 0.179553
+[52]	valid_0&#39;s multi_logloss: 0.178721
+[53]	valid_0&#39;s multi_logloss: 0.177925
+[54]	valid_0&#39;s multi_logloss: 0.177253
+[55]	valid_0&#39;s multi_logloss: 0.176668
+[56]	valid_0&#39;s multi_logloss: 0.17604
+[57]	valid_0&#39;s multi_logloss: 0.175452
+[58]	valid_0&#39;s multi_logloss: 0.174856
+[59]	valid_0&#39;s multi_logloss: 0.174347
+[60]	valid_0&#39;s multi_logloss: 0.173863
+[61]	valid_0&#39;s multi_logloss: 0.173395
+[62]	valid_0&#39;s multi_logloss: 0.173009
+[63]	valid_0&#39;s multi_logloss: 0.172583
+[64]	valid_0&#39;s multi_logloss: 0.172102
+[65]	valid_0&#39;s multi_logloss: 0.171626
+[66]	valid_0&#39;s multi_logloss: 0.171315
+[67]	valid_0&#39;s multi_logloss: 0.170991
+[68]	valid_0&#39;s multi_logloss: 0.170588
+[69]	valid_0&#39;s multi_logloss: 0.170238
+[70]	valid_0&#39;s multi_logloss: 0.169865
+[71]	valid_0&#39;s multi_logloss: 0.169607
+[72]	valid_0&#39;s multi_logloss: 0.169319
+[73]	valid_0&#39;s multi_logloss: 0.169108
+[74]	valid_0&#39;s multi_logloss: 0.168895
+[75]	valid_0&#39;s multi_logloss: 0.168608
+[76]	valid_0&#39;s multi_logloss: 0.168286
+[77]	valid_0&#39;s multi_logloss: 0.168004
+[78]	valid_0&#39;s multi_logloss: 0.167797
+[79]	valid_0&#39;s multi_logloss: 0.167615
+[80]	valid_0&#39;s multi_logloss: 0.168315
+[81]	valid_0&#39;s multi_logloss: 0.16751
+[82]	valid_0&#39;s multi_logloss: 0.167307
+[83]	valid_0&#39;s multi_logloss: 0.167124
+[84]	valid_0&#39;s multi_logloss: 0.16698
+[85]	valid_0&#39;s multi_logloss: 0.16677
+[86]	valid_0&#39;s multi_logloss: 0.166628
+[87]	valid_0&#39;s multi_logloss: 0.166428
+[88]	valid_0&#39;s multi_logloss: 0.167046
+[89]	valid_0&#39;s multi_logloss: 0.166202
+[90]	valid_0&#39;s multi_logloss: 0.166032
+[91]	valid_0&#39;s multi_logloss: 0.166864
+[92]	valid_0&#39;s multi_logloss: 0.167182
+[93]	valid_0&#39;s multi_logloss: 0.16707
+[94]	valid_0&#39;s multi_logloss: 0.166343
+[95]	valid_0&#39;s multi_logloss: 0.166279
+[96]	valid_0&#39;s multi_logloss: 0.166104
+[97]	valid_0&#39;s multi_logloss: 0.167086
+[98]	valid_0&#39;s multi_logloss: 0.165807
+[99]	valid_0&#39;s multi_logloss: 0.166655
+[100]	valid_0&#39;s multi_logloss: 0.166165
+[101]	valid_0&#39;s multi_logloss: 0.169185
+[102]	valid_0&#39;s multi_logloss: 0.170863
+[103]	valid_0&#39;s multi_logloss: 0.168526
+[104]	valid_0&#39;s multi_logloss: 0.167332
+[105]	valid_0&#39;s multi_logloss: 0.170462
+[106]	valid_0&#39;s multi_logloss: 0.169335
+[107]	valid_0&#39;s multi_logloss: 0.170213
+[108]	valid_0&#39;s multi_logloss: 0.172375
+Early stopping, best iteration is:
+[98]	valid_0&#39;s multi_logloss: 0.165807
+training model for CV #2
+[1]	valid_0&#39;s multi_logloss: 0.889196
+Training until validation scores don&#39;t improve for 10 rounds
+[2]	valid_0&#39;s multi_logloss: 0.808799
+[3]	valid_0&#39;s multi_logloss: 0.736544
+[4]	valid_0&#39;s multi_logloss: 0.674999
+[5]	valid_0&#39;s multi_logloss: 0.622015
+[6]	valid_0&#39;s multi_logloss: 0.580525
+[7]	valid_0&#39;s multi_logloss: 0.541204
+[8]	valid_0&#39;s multi_logloss: 0.509103
+[9]	valid_0&#39;s multi_logloss: 0.481765
+[10]	valid_0&#39;s multi_logloss: 0.452333
+[11]	valid_0&#39;s multi_logloss: 0.426822
+[12]	valid_0&#39;s multi_logloss: 0.403522
+[13]	valid_0&#39;s multi_logloss: 0.383115
+[14]	valid_0&#39;s multi_logloss: 0.364452
+[15]	valid_0&#39;s multi_logloss: 0.347696
+[16]	valid_0&#39;s multi_logloss: 0.333724
+[17]	valid_0&#39;s multi_logloss: 0.320589
+[18]	valid_0&#39;s multi_logloss: 0.308423
+[19]	valid_0&#39;s multi_logloss: 0.297079
+[20]	valid_0&#39;s multi_logloss: 0.287164
+[21]	valid_0&#39;s multi_logloss: 0.277648
+[22]	valid_0&#39;s multi_logloss: 0.269049
+[23]	valid_0&#39;s multi_logloss: 0.261231
+[24]	valid_0&#39;s multi_logloss: 0.254586
+[25]	valid_0&#39;s multi_logloss: 0.248492
+[26]	valid_0&#39;s multi_logloss: 0.24376
+[27]	valid_0&#39;s multi_logloss: 0.238
+[28]	valid_0&#39;s multi_logloss: 0.232758
+[29]	valid_0&#39;s multi_logloss: 0.228041
+[30]	valid_0&#39;s multi_logloss: 0.223499
+[31]	valid_0&#39;s multi_logloss: 0.220296
+[32]	valid_0&#39;s multi_logloss: 0.217039
+[33]	valid_0&#39;s multi_logloss: 0.213456
+[34]	valid_0&#39;s multi_logloss: 0.21002
+[35]	valid_0&#39;s multi_logloss: 0.207116
+[36]	valid_0&#39;s multi_logloss: 0.204514
+[37]	valid_0&#39;s multi_logloss: 0.201951
+[38]	valid_0&#39;s multi_logloss: 0.199577
+[39]	valid_0&#39;s multi_logloss: 0.197492
+[40]	valid_0&#39;s multi_logloss: 0.195487
+[41]	valid_0&#39;s multi_logloss: 0.193514
+[42]	valid_0&#39;s multi_logloss: 0.191853
+[43]	valid_0&#39;s multi_logloss: 0.190222
+[44]	valid_0&#39;s multi_logloss: 0.188677
+[45]	valid_0&#39;s multi_logloss: 0.187531
+[46]	valid_0&#39;s multi_logloss: 0.186253
+[47]	valid_0&#39;s multi_logloss: 0.185096
+[48]	valid_0&#39;s multi_logloss: 0.184136
+[49]	valid_0&#39;s multi_logloss: 0.183068
+[50]	valid_0&#39;s multi_logloss: 0.181948
+[51]	valid_0&#39;s multi_logloss: 0.181008
+[52]	valid_0&#39;s multi_logloss: 0.180142
+[53]	valid_0&#39;s multi_logloss: 0.179345
+[54]	valid_0&#39;s multi_logloss: 0.178623
+[55]	valid_0&#39;s multi_logloss: 0.177935
+[56]	valid_0&#39;s multi_logloss: 0.177315
+[57]	valid_0&#39;s multi_logloss: 0.176741
+[58]	valid_0&#39;s multi_logloss: 0.176108
+[59]	valid_0&#39;s multi_logloss: 0.175577
+[60]	valid_0&#39;s multi_logloss: 0.17505
+[61]	valid_0&#39;s multi_logloss: 0.174551
+[62]	valid_0&#39;s multi_logloss: 0.173974
+[63]	valid_0&#39;s multi_logloss: 0.173549
+[64]	valid_0&#39;s multi_logloss: 0.173064
+[65]	valid_0&#39;s multi_logloss: 0.172609
+[66]	valid_0&#39;s multi_logloss: 0.172186
+[67]	valid_0&#39;s multi_logloss: 0.171723
+[68]	valid_0&#39;s multi_logloss: 0.171192
+[69]	valid_0&#39;s multi_logloss: 0.170821
+[70]	valid_0&#39;s multi_logloss: 0.170537
+[71]	valid_0&#39;s multi_logloss: 0.17032
+[72]	valid_0&#39;s multi_logloss: 0.170013
+[73]	valid_0&#39;s multi_logloss: 0.169805
+[74]	valid_0&#39;s multi_logloss: 0.169566
+[75]	valid_0&#39;s multi_logloss: 0.169248
+[76]	valid_0&#39;s multi_logloss: 0.168999
+[77]	valid_0&#39;s multi_logloss: 0.168772
+[78]	valid_0&#39;s multi_logloss: 0.168648
+[79]	valid_0&#39;s multi_logloss: 0.16842
+[80]	valid_0&#39;s multi_logloss: 0.168233
+[81]	valid_0&#39;s multi_logloss: 0.168195
+[82]	valid_0&#39;s multi_logloss: 0.167973
+[83]	valid_0&#39;s multi_logloss: 0.167777
+[84]	valid_0&#39;s multi_logloss: 0.1679
+[85]	valid_0&#39;s multi_logloss: 0.16766
+[86]	valid_0&#39;s multi_logloss: 0.167503
+[87]	valid_0&#39;s multi_logloss: 0.167306
+[88]	valid_0&#39;s multi_logloss: 0.167131
+[89]	valid_0&#39;s multi_logloss: 0.166976
+[90]	valid_0&#39;s multi_logloss: 0.166824
+[91]	valid_0&#39;s multi_logloss: 0.166619
+[92]	valid_0&#39;s multi_logloss: 0.166511
+[93]	valid_0&#39;s multi_logloss: 0.166377
+[94]	valid_0&#39;s multi_logloss: 0.166228
+[95]	valid_0&#39;s multi_logloss: 0.166155
+[96]	valid_0&#39;s multi_logloss: 0.166021
+[97]	valid_0&#39;s multi_logloss: 0.165876
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[98]	valid_0&#39;s multi_logloss: 0.165769
+[99]	valid_0&#39;s multi_logloss: 0.165733
+[100]	valid_0&#39;s multi_logloss: 0.165622
+[101]	valid_0&#39;s multi_logloss: 0.165559
+[102]	valid_0&#39;s multi_logloss: 0.165496
+[103]	valid_0&#39;s multi_logloss: 0.165434
+[104]	valid_0&#39;s multi_logloss: 0.165403
+[105]	valid_0&#39;s multi_logloss: 0.165334
+[106]	valid_0&#39;s multi_logloss: 0.165257
+[107]	valid_0&#39;s multi_logloss: 0.165189
+[108]	valid_0&#39;s multi_logloss: 0.16508
+[109]	valid_0&#39;s multi_logloss: 0.164988
+[110]	valid_0&#39;s multi_logloss: 0.164952
+[111]	valid_0&#39;s multi_logloss: 0.164895
+[112]	valid_0&#39;s multi_logloss: 0.164917
+[113]	valid_0&#39;s multi_logloss: 0.16486
+[114]	valid_0&#39;s multi_logloss: 0.164812
+[115]	valid_0&#39;s multi_logloss: 0.164754
+[116]	valid_0&#39;s multi_logloss: 0.164707
+[117]	valid_0&#39;s multi_logloss: 0.164655
+[118]	valid_0&#39;s multi_logloss: 0.164612
+[119]	valid_0&#39;s multi_logloss: 0.164579
+[120]	valid_0&#39;s multi_logloss: 0.1645
+[121]	valid_0&#39;s multi_logloss: 0.164443
+[122]	valid_0&#39;s multi_logloss: 0.164383
+[123]	valid_0&#39;s multi_logloss: 0.164306
+[124]	valid_0&#39;s multi_logloss: 0.164247
+[125]	valid_0&#39;s multi_logloss: 0.164163
+[126]	valid_0&#39;s multi_logloss: 0.164096
+[127]	valid_0&#39;s multi_logloss: 0.164114
+[128]	valid_0&#39;s multi_logloss: 0.164024
+[129]	valid_0&#39;s multi_logloss: 0.163967
+[130]	valid_0&#39;s multi_logloss: 0.163937
+[131]	valid_0&#39;s multi_logloss: 0.163912
+[132]	valid_0&#39;s multi_logloss: 0.163861
+[133]	valid_0&#39;s multi_logloss: 0.163826
+[134]	valid_0&#39;s multi_logloss: 0.16374
+[135]	valid_0&#39;s multi_logloss: 0.163647
+[136]	valid_0&#39;s multi_logloss: 0.163582
+[137]	valid_0&#39;s multi_logloss: 0.163554
+[138]	valid_0&#39;s multi_logloss: 0.16351
+[139]	valid_0&#39;s multi_logloss: 0.163475
+[140]	valid_0&#39;s multi_logloss: 0.163484
+[141]	valid_0&#39;s multi_logloss: 0.163467
+[142]	valid_0&#39;s multi_logloss: 0.163407
+[143]	valid_0&#39;s multi_logloss: 0.163359
+[144]	valid_0&#39;s multi_logloss: 0.163332
+[145]	valid_0&#39;s multi_logloss: 0.163309
+[146]	valid_0&#39;s multi_logloss: 0.163314
+[147]	valid_0&#39;s multi_logloss: 0.163334
+[148]	valid_0&#39;s multi_logloss: 0.163351
+[149]	valid_0&#39;s multi_logloss: 0.163353
+[150]	valid_0&#39;s multi_logloss: 0.163355
+[151]	valid_0&#39;s multi_logloss: 0.163362
+[152]	valid_0&#39;s multi_logloss: 0.163349
+[153]	valid_0&#39;s multi_logloss: 0.163287
+[154]	valid_0&#39;s multi_logloss: 0.163232
+[155]	valid_0&#39;s multi_logloss: 0.163155
+[156]	valid_0&#39;s multi_logloss: 0.163137
+[157]	valid_0&#39;s multi_logloss: 0.163132
+[158]	valid_0&#39;s multi_logloss: 0.16313
+[159]	valid_0&#39;s multi_logloss: 0.16309
+[160]	valid_0&#39;s multi_logloss: 0.163092
+[161]	valid_0&#39;s multi_logloss: 0.163018
+[162]	valid_0&#39;s multi_logloss: 0.162994
+[163]	valid_0&#39;s multi_logloss: 0.162964
+[164]	valid_0&#39;s multi_logloss: 0.162962
+[165]	valid_0&#39;s multi_logloss: 0.162929
+[166]	valid_0&#39;s multi_logloss: 0.16294
+[167]	valid_0&#39;s multi_logloss: 0.162894
+[168]	valid_0&#39;s multi_logloss: 0.16286
+[169]	valid_0&#39;s multi_logloss: 0.162843
+[170]	valid_0&#39;s multi_logloss: 0.162827
+[171]	valid_0&#39;s multi_logloss: 0.162802
+[172]	valid_0&#39;s multi_logloss: 0.162782
+[173]	valid_0&#39;s multi_logloss: 0.162789
+[174]	valid_0&#39;s multi_logloss: 0.162755
+[175]	valid_0&#39;s multi_logloss: 0.162724
+[176]	valid_0&#39;s multi_logloss: 0.162724
+[177]	valid_0&#39;s multi_logloss: 0.162715
+[178]	valid_0&#39;s multi_logloss: 0.162672
+[179]	valid_0&#39;s multi_logloss: 0.162673
+[180]	valid_0&#39;s multi_logloss: 0.162613
+[181]	valid_0&#39;s multi_logloss: 0.162627
+[182]	valid_0&#39;s multi_logloss: 0.162585
+[183]	valid_0&#39;s multi_logloss: 0.162541
+[184]	valid_0&#39;s multi_logloss: 0.1625
+[185]	valid_0&#39;s multi_logloss: 0.162509
+[186]	valid_0&#39;s multi_logloss: 0.162474
+[187]	valid_0&#39;s multi_logloss: 0.162466
+[188]	valid_0&#39;s multi_logloss: 0.162457
+[189]	valid_0&#39;s multi_logloss: 0.162467
+[190]	valid_0&#39;s multi_logloss: 0.162478
+[191]	valid_0&#39;s multi_logloss: 0.162466
+[192]	valid_0&#39;s multi_logloss: 0.162458
+[193]	valid_0&#39;s multi_logloss: 0.162448
+[194]	valid_0&#39;s multi_logloss: 0.162471
+[195]	valid_0&#39;s multi_logloss: 0.162481
+[196]	valid_0&#39;s multi_logloss: 0.162467
+[197]	valid_0&#39;s multi_logloss: 0.162441
+[198]	valid_0&#39;s multi_logloss: 0.162424
+[199]	valid_0&#39;s multi_logloss: 0.162397
+[200]	valid_0&#39;s multi_logloss: 0.162407
+[201]	valid_0&#39;s multi_logloss: 0.162397
+[202]	valid_0&#39;s multi_logloss: 0.162426
+[203]	valid_0&#39;s multi_logloss: 0.162468
+[204]	valid_0&#39;s multi_logloss: 0.162469
+[205]	valid_0&#39;s multi_logloss: 0.162431
+[206]	valid_0&#39;s multi_logloss: 0.162439
+[207]	valid_0&#39;s multi_logloss: 0.162464
+[208]	valid_0&#39;s multi_logloss: 0.162486
+[209]	valid_0&#39;s multi_logloss: 0.162448
+[210]	valid_0&#39;s multi_logloss: 0.162418
+[211]	valid_0&#39;s multi_logloss: 0.162391
+[212]	valid_0&#39;s multi_logloss: 0.162373
+[213]	valid_0&#39;s multi_logloss: 0.162414
+[214]	valid_0&#39;s multi_logloss: 0.162408
+[215]	valid_0&#39;s multi_logloss: 0.162366
+[216]	valid_0&#39;s multi_logloss: 0.162336
+[217]	valid_0&#39;s multi_logloss: 0.162315
+[218]	valid_0&#39;s multi_logloss: 0.162364
+[219]	valid_0&#39;s multi_logloss: 0.162364
+[220]	valid_0&#39;s multi_logloss: 0.162351
+[221]	valid_0&#39;s multi_logloss: 0.162346
+[222]	valid_0&#39;s multi_logloss: 0.162334
+[223]	valid_0&#39;s multi_logloss: 0.162311
+[224]	valid_0&#39;s multi_logloss: 0.162338
+[225]	valid_0&#39;s multi_logloss: 0.162352
+[226]	valid_0&#39;s multi_logloss: 0.162333
+[227]	valid_0&#39;s multi_logloss: 0.162338
+[228]	valid_0&#39;s multi_logloss: 0.162326
+[229]	valid_0&#39;s multi_logloss: 0.162359
+[230]	valid_0&#39;s multi_logloss: 0.162324
+[231]	valid_0&#39;s multi_logloss: 0.162294
+[232]	valid_0&#39;s multi_logloss: 0.16229
+[233]	valid_0&#39;s multi_logloss: 0.162317
+[234]	valid_0&#39;s multi_logloss: 0.162341
+[235]	valid_0&#39;s multi_logloss: 0.162334
+[236]	valid_0&#39;s multi_logloss: 0.162322
+[237]	valid_0&#39;s multi_logloss: 0.162331
+[238]	valid_0&#39;s multi_logloss: 0.162318
+[239]	valid_0&#39;s multi_logloss: 0.162328
+[240]	valid_0&#39;s multi_logloss: 0.162268
+[241]	valid_0&#39;s multi_logloss: 0.162259
+[242]	valid_0&#39;s multi_logloss: 0.162256
+[243]	valid_0&#39;s multi_logloss: 0.162244
+[244]	valid_0&#39;s multi_logloss: 0.162193
+[245]	valid_0&#39;s multi_logloss: 0.162188
+[246]	valid_0&#39;s multi_logloss: 0.162186
+[247]	valid_0&#39;s multi_logloss: 0.162201
+[248]	valid_0&#39;s multi_logloss: 0.162203
+[249]	valid_0&#39;s multi_logloss: 0.162183
+[250]	valid_0&#39;s multi_logloss: 0.162169
+[251]	valid_0&#39;s multi_logloss: 0.162191
+[252]	valid_0&#39;s multi_logloss: 0.162205
+[253]	valid_0&#39;s multi_logloss: 0.162186
+[254]	valid_0&#39;s multi_logloss: 0.162181
+[255]	valid_0&#39;s multi_logloss: 0.162193
+[256]	valid_0&#39;s multi_logloss: 0.162175
+[257]	valid_0&#39;s multi_logloss: 0.162145
+[258]	valid_0&#39;s multi_logloss: 0.162128
+[259]	valid_0&#39;s multi_logloss: 0.162106
+[260]	valid_0&#39;s multi_logloss: 0.162127
+[261]	valid_0&#39;s multi_logloss: 0.16214
+[262]	valid_0&#39;s multi_logloss: 0.162142
+[263]	valid_0&#39;s multi_logloss: 0.162155
+[264]	valid_0&#39;s multi_logloss: 0.162185
+[265]	valid_0&#39;s multi_logloss: 0.162204
+[266]	valid_0&#39;s multi_logloss: 0.162169
+[267]	valid_0&#39;s multi_logloss: 0.162156
+[268]	valid_0&#39;s multi_logloss: 0.162113
+[269]	valid_0&#39;s multi_logloss: 0.16212
+Early stopping, best iteration is:
+[259]	valid_0&#39;s multi_logloss: 0.162106
+training model for CV #3
+[1]	valid_0&#39;s multi_logloss: 0.889249
+Training until validation scores don&#39;t improve for 10 rounds
+[2]	valid_0&#39;s multi_logloss: 0.809122
+[3]	valid_0&#39;s multi_logloss: 0.736794
+[4]	valid_0&#39;s multi_logloss: 0.675361
+[5]	valid_0&#39;s multi_logloss: 0.62244
+[6]	valid_0&#39;s multi_logloss: 0.580969
+[7]	valid_0&#39;s multi_logloss: 0.54176
+[8]	valid_0&#39;s multi_logloss: 0.509455
+[9]	valid_0&#39;s multi_logloss: 0.482426
+[10]	valid_0&#39;s multi_logloss: 0.452944
+[11]	valid_0&#39;s multi_logloss: 0.427421
+[12]	valid_0&#39;s multi_logloss: 0.404237
+[13]	valid_0&#39;s multi_logloss: 0.383643
+[14]	valid_0&#39;s multi_logloss: 0.364981
+[15]	valid_0&#39;s multi_logloss: 0.348324
+[16]	valid_0&#39;s multi_logloss: 0.334311
+[17]	valid_0&#39;s multi_logloss: 0.321182
+[18]	valid_0&#39;s multi_logloss: 0.308879
+[19]	valid_0&#39;s multi_logloss: 0.297679
+[20]	valid_0&#39;s multi_logloss: 0.287845
+[21]	valid_0&#39;s multi_logloss: 0.278486
+[22]	valid_0&#39;s multi_logloss: 0.269943
+[23]	valid_0&#39;s multi_logloss: 0.26191
+[24]	valid_0&#39;s multi_logloss: 0.255075
+[25]	valid_0&#39;s multi_logloss: 0.249062
+[26]	valid_0&#39;s multi_logloss: 0.244481
+[27]	valid_0&#39;s multi_logloss: 0.238609
+[28]	valid_0&#39;s multi_logloss: 0.233285
+[29]	valid_0&#39;s multi_logloss: 0.228507
+[30]	valid_0&#39;s multi_logloss: 0.224082
+[31]	valid_0&#39;s multi_logloss: 0.220916
+[32]	valid_0&#39;s multi_logloss: 0.217435
+[33]	valid_0&#39;s multi_logloss: 0.213868
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[34]	valid_0&#39;s multi_logloss: 0.210625
+[35]	valid_0&#39;s multi_logloss: 0.207675
+[36]	valid_0&#39;s multi_logloss: 0.205147
+[37]	valid_0&#39;s multi_logloss: 0.20264
+[38]	valid_0&#39;s multi_logloss: 0.200329
+[39]	valid_0&#39;s multi_logloss: 0.198171
+[40]	valid_0&#39;s multi_logloss: 0.196188
+[41]	valid_0&#39;s multi_logloss: 0.194275
+[42]	valid_0&#39;s multi_logloss: 0.192641
+[43]	valid_0&#39;s multi_logloss: 0.191064
+[44]	valid_0&#39;s multi_logloss: 0.189526
+[45]	valid_0&#39;s multi_logloss: 0.188352
+[46]	valid_0&#39;s multi_logloss: 0.187087
+[47]	valid_0&#39;s multi_logloss: 0.18584
+[48]	valid_0&#39;s multi_logloss: 0.184776
+[49]	valid_0&#39;s multi_logloss: 0.183723
+[50]	valid_0&#39;s multi_logloss: 0.182657
+[51]	valid_0&#39;s multi_logloss: 0.181664
+[52]	valid_0&#39;s multi_logloss: 0.180843
+[53]	valid_0&#39;s multi_logloss: 0.180019
+[54]	valid_0&#39;s multi_logloss: 0.179386
+[55]	valid_0&#39;s multi_logloss: 0.178744
+[56]	valid_0&#39;s multi_logloss: 0.178092
+[57]	valid_0&#39;s multi_logloss: 0.177489
+[58]	valid_0&#39;s multi_logloss: 0.176858
+[59]	valid_0&#39;s multi_logloss: 0.176222
+[60]	valid_0&#39;s multi_logloss: 0.175636
+[61]	valid_0&#39;s multi_logloss: 0.175149
+[62]	valid_0&#39;s multi_logloss: 0.174722
+[63]	valid_0&#39;s multi_logloss: 0.174323
+[64]	valid_0&#39;s multi_logloss: 0.173928
+[65]	valid_0&#39;s multi_logloss: 0.17354
+[66]	valid_0&#39;s multi_logloss: 0.17317
+[67]	valid_0&#39;s multi_logloss: 0.172813
+[68]	valid_0&#39;s multi_logloss: 0.172394
+[69]	valid_0&#39;s multi_logloss: 0.172156
+[70]	valid_0&#39;s multi_logloss: 0.171763
+[71]	valid_0&#39;s multi_logloss: 0.17141
+[72]	valid_0&#39;s multi_logloss: 0.17114
+[73]	valid_0&#39;s multi_logloss: 0.17094
+[74]	valid_0&#39;s multi_logloss: 0.170764
+[75]	valid_0&#39;s multi_logloss: 0.170468
+[76]	valid_0&#39;s multi_logloss: 0.170239
+[77]	valid_0&#39;s multi_logloss: 0.169994
+[78]	valid_0&#39;s multi_logloss: 0.16984
+[79]	valid_0&#39;s multi_logloss: 0.169533
+[80]	valid_0&#39;s multi_logloss: 0.16949
+[81]	valid_0&#39;s multi_logloss: 0.169307
+[82]	valid_0&#39;s multi_logloss: 0.169063
+[83]	valid_0&#39;s multi_logloss: 0.168876
+[84]	valid_0&#39;s multi_logloss: 0.168713
+[85]	valid_0&#39;s multi_logloss: 0.168509
+[86]	valid_0&#39;s multi_logloss: 0.168341
+[87]	valid_0&#39;s multi_logloss: 0.168212
+[88]	valid_0&#39;s multi_logloss: 0.167988
+[89]	valid_0&#39;s multi_logloss: 0.167798
+[90]	valid_0&#39;s multi_logloss: 0.167651
+[91]	valid_0&#39;s multi_logloss: 0.16749
+[92]	valid_0&#39;s multi_logloss: 0.167412
+[93]	valid_0&#39;s multi_logloss: 0.167215
+[94]	valid_0&#39;s multi_logloss: 0.167101
+[95]	valid_0&#39;s multi_logloss: 0.170287
+[96]	valid_0&#39;s multi_logloss: 0.16803
+[97]	valid_0&#39;s multi_logloss: 0.167969
+[98]	valid_0&#39;s multi_logloss: 0.167877
+[99]	valid_0&#39;s multi_logloss: 0.167763
+[100]	valid_0&#39;s multi_logloss: 0.167683
+[101]	valid_0&#39;s multi_logloss: 0.167561
+[102]	valid_0&#39;s multi_logloss: 0.16756
+[103]	valid_0&#39;s multi_logloss: 0.167484
+[104]	valid_0&#39;s multi_logloss: 0.167416
+Early stopping, best iteration is:
+[94]	valid_0&#39;s multi_logloss: 0.167101
+training model for CV #4
+[1]	valid_0&#39;s multi_logloss: 0.888444
+Training until validation scores don&#39;t improve for 10 rounds
+[2]	valid_0&#39;s multi_logloss: 0.808209
+[3]	valid_0&#39;s multi_logloss: 0.735937
+[4]	valid_0&#39;s multi_logloss: 0.674783
+[5]	valid_0&#39;s multi_logloss: 0.621897
+[6]	valid_0&#39;s multi_logloss: 0.580365
+[7]	valid_0&#39;s multi_logloss: 0.541209
+[8]	valid_0&#39;s multi_logloss: 0.509023
+[9]	valid_0&#39;s multi_logloss: 0.481935
+[10]	valid_0&#39;s multi_logloss: 0.452723
+[11]	valid_0&#39;s multi_logloss: 0.427167
+[12]	valid_0&#39;s multi_logloss: 0.404007
+[13]	valid_0&#39;s multi_logloss: 0.38353
+[14]	valid_0&#39;s multi_logloss: 0.36489
+[15]	valid_0&#39;s multi_logloss: 0.348212
+[16]	valid_0&#39;s multi_logloss: 0.334078
+[17]	valid_0&#39;s multi_logloss: 0.320865
+[18]	valid_0&#39;s multi_logloss: 0.308582
+[19]	valid_0&#39;s multi_logloss: 0.297223
+[20]	valid_0&#39;s multi_logloss: 0.287362
+[21]	valid_0&#39;s multi_logloss: 0.277935
+[22]	valid_0&#39;s multi_logloss: 0.269114
+[23]	valid_0&#39;s multi_logloss: 0.261328
+[24]	valid_0&#39;s multi_logloss: 0.254698
+[25]	valid_0&#39;s multi_logloss: 0.248603
+[26]	valid_0&#39;s multi_logloss: 0.243877
+[27]	valid_0&#39;s multi_logloss: 0.238129
+[28]	valid_0&#39;s multi_logloss: 0.232998
+[29]	valid_0&#39;s multi_logloss: 0.228377
+[30]	valid_0&#39;s multi_logloss: 0.2239
+[31]	valid_0&#39;s multi_logloss: 0.220838
+[32]	valid_0&#39;s multi_logloss: 0.217446
+[33]	valid_0&#39;s multi_logloss: 0.21386
+[34]	valid_0&#39;s multi_logloss: 0.210626
+[35]	valid_0&#39;s multi_logloss: 0.207634
+[36]	valid_0&#39;s multi_logloss: 0.205075
+[37]	valid_0&#39;s multi_logloss: 0.202535
+[38]	valid_0&#39;s multi_logloss: 0.200113
+[39]	valid_0&#39;s multi_logloss: 0.198067
+[40]	valid_0&#39;s multi_logloss: 0.196041
+[41]	valid_0&#39;s multi_logloss: 0.194079
+[42]	valid_0&#39;s multi_logloss: 0.192431
+[43]	valid_0&#39;s multi_logloss: 0.190869
+[44]	valid_0&#39;s multi_logloss: 0.189335
+[45]	valid_0&#39;s multi_logloss: 0.188161
+[46]	valid_0&#39;s multi_logloss: 0.186828
+[47]	valid_0&#39;s multi_logloss: 0.185722
+[48]	valid_0&#39;s multi_logloss: 0.184685
+[49]	valid_0&#39;s multi_logloss: 0.183571
+[50]	valid_0&#39;s multi_logloss: 0.182477
+[51]	valid_0&#39;s multi_logloss: 0.181491
+[52]	valid_0&#39;s multi_logloss: 0.180663
+[53]	valid_0&#39;s multi_logloss: 0.179869
+[54]	valid_0&#39;s multi_logloss: 0.179199
+[55]	valid_0&#39;s multi_logloss: 0.178568
+[56]	valid_0&#39;s multi_logloss: 0.177956
+[57]	valid_0&#39;s multi_logloss: 0.177412
+[58]	valid_0&#39;s multi_logloss: 0.176805
+[59]	valid_0&#39;s multi_logloss: 0.176151
+[60]	valid_0&#39;s multi_logloss: 0.175572
+[61]	valid_0&#39;s multi_logloss: 0.175012
+[62]	valid_0&#39;s multi_logloss: 0.174546
+[63]	valid_0&#39;s multi_logloss: 0.17412
+[64]	valid_0&#39;s multi_logloss: 0.173652
+[65]	valid_0&#39;s multi_logloss: 0.173179
+[66]	valid_0&#39;s multi_logloss: 0.172829
+[67]	valid_0&#39;s multi_logloss: 0.172439
+[68]	valid_0&#39;s multi_logloss: 0.172038
+[69]	valid_0&#39;s multi_logloss: 0.171713
+[70]	valid_0&#39;s multi_logloss: 0.17135
+[71]	valid_0&#39;s multi_logloss: 0.171109
+[72]	valid_0&#39;s multi_logloss: 0.170846
+[73]	valid_0&#39;s multi_logloss: 0.170631
+[74]	valid_0&#39;s multi_logloss: 0.170411
+[75]	valid_0&#39;s multi_logloss: 0.170113
+[76]	valid_0&#39;s multi_logloss: 0.169889
+[77]	valid_0&#39;s multi_logloss: 0.169646
+[78]	valid_0&#39;s multi_logloss: 0.169455
+[79]	valid_0&#39;s multi_logloss: 0.169212
+[80]	valid_0&#39;s multi_logloss: 0.169047
+[81]	valid_0&#39;s multi_logloss: 0.168871
+[82]	valid_0&#39;s multi_logloss: 0.168695
+[83]	valid_0&#39;s multi_logloss: 0.168491
+[84]	valid_0&#39;s multi_logloss: 0.168295
+[85]	valid_0&#39;s multi_logloss: 0.168075
+[86]	valid_0&#39;s multi_logloss: 0.167899
+[87]	valid_0&#39;s multi_logloss: 0.167795
+[88]	valid_0&#39;s multi_logloss: 0.167622
+[89]	valid_0&#39;s multi_logloss: 0.167486
+[90]	valid_0&#39;s multi_logloss: 0.167363
+[91]	valid_0&#39;s multi_logloss: 0.167272
+[92]	valid_0&#39;s multi_logloss: 0.167143
+[93]	valid_0&#39;s multi_logloss: 0.167038
+[94]	valid_0&#39;s multi_logloss: 0.166963
+[95]	valid_0&#39;s multi_logloss: 0.166828
+[96]	valid_0&#39;s multi_logloss: 0.166732
+[97]	valid_0&#39;s multi_logloss: 0.166643
+[98]	valid_0&#39;s multi_logloss: 0.166523
+[99]	valid_0&#39;s multi_logloss: 0.166445
+[100]	valid_0&#39;s multi_logloss: 0.166381
+[101]	valid_0&#39;s multi_logloss: 0.166311
+[102]	valid_0&#39;s multi_logloss: 0.166278
+[103]	valid_0&#39;s multi_logloss: 0.166201
+[104]	valid_0&#39;s multi_logloss: 0.166096
+[105]	valid_0&#39;s multi_logloss: 0.166066
+[106]	valid_0&#39;s multi_logloss: 0.165963
+[107]	valid_0&#39;s multi_logloss: 0.166188
+[108]	valid_0&#39;s multi_logloss: 0.166068
+[109]	valid_0&#39;s multi_logloss: 0.166041
+[110]	valid_0&#39;s multi_logloss: 0.165934
+[111]	valid_0&#39;s multi_logloss: 0.165894
+[112]	valid_0&#39;s multi_logloss: 0.165821
+[113]	valid_0&#39;s multi_logloss: 0.165826
+[114]	valid_0&#39;s multi_logloss: 0.165779
+[115]	valid_0&#39;s multi_logloss: 0.165732
+[116]	valid_0&#39;s multi_logloss: 0.165697
+[117]	valid_0&#39;s multi_logloss: 0.165644
+[118]	valid_0&#39;s multi_logloss: 0.165717
+[119]	valid_0&#39;s multi_logloss: 0.165651
+[120]	valid_0&#39;s multi_logloss: 0.165575
+[121]	valid_0&#39;s multi_logloss: 0.165519
+[122]	valid_0&#39;s multi_logloss: 0.165487
+[123]	valid_0&#39;s multi_logloss: 0.165481
+[124]	valid_0&#39;s multi_logloss: 0.165427
+[125]	valid_0&#39;s multi_logloss: 0.165354
+[126]	valid_0&#39;s multi_logloss: 0.16529
+[127]	valid_0&#39;s multi_logloss: 0.165262
+[128]	valid_0&#39;s multi_logloss: 0.165192
+[129]	valid_0&#39;s multi_logloss: 0.165145
+[130]	valid_0&#39;s multi_logloss: 0.165087
+[131]	valid_0&#39;s multi_logloss: 0.165057
+[132]	valid_0&#39;s multi_logloss: 0.165037
+[133]	valid_0&#39;s multi_logloss: 0.165019
+[134]	valid_0&#39;s multi_logloss: 0.164994
+[135]	valid_0&#39;s multi_logloss: 0.16499
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[136]	valid_0&#39;s multi_logloss: 0.164964
+[137]	valid_0&#39;s multi_logloss: 0.164927
+[138]	valid_0&#39;s multi_logloss: 0.164865
+[139]	valid_0&#39;s multi_logloss: 0.164844
+[140]	valid_0&#39;s multi_logloss: 0.164841
+[141]	valid_0&#39;s multi_logloss: 0.164825
+[142]	valid_0&#39;s multi_logloss: 0.164826
+[143]	valid_0&#39;s multi_logloss: 0.164768
+[144]	valid_0&#39;s multi_logloss: 0.164733
+[145]	valid_0&#39;s multi_logloss: 0.164709
+[146]	valid_0&#39;s multi_logloss: 0.164699
+[147]	valid_0&#39;s multi_logloss: 0.164654
+[148]	valid_0&#39;s multi_logloss: 0.164605
+[149]	valid_0&#39;s multi_logloss: 0.164593
+[150]	valid_0&#39;s multi_logloss: 0.164566
+[151]	valid_0&#39;s multi_logloss: 0.164526
+[152]	valid_0&#39;s multi_logloss: 0.164456
+[153]	valid_0&#39;s multi_logloss: 0.16446
+[154]	valid_0&#39;s multi_logloss: 0.164389
+[155]	valid_0&#39;s multi_logloss: 0.164354
+[156]	valid_0&#39;s multi_logloss: 0.164278
+[157]	valid_0&#39;s multi_logloss: 0.164207
+[158]	valid_0&#39;s multi_logloss: 0.164227
+[159]	valid_0&#39;s multi_logloss: 0.164233
+[160]	valid_0&#39;s multi_logloss: 0.164213
+[161]	valid_0&#39;s multi_logloss: 0.1642
+[162]	valid_0&#39;s multi_logloss: 0.164171
+[163]	valid_0&#39;s multi_logloss: 0.164187
+[164]	valid_0&#39;s multi_logloss: 0.1642
+[165]	valid_0&#39;s multi_logloss: 0.164176
+[166]	valid_0&#39;s multi_logloss: 0.164173
+[167]	valid_0&#39;s multi_logloss: 0.164186
+[168]	valid_0&#39;s multi_logloss: 0.164186
+[169]	valid_0&#39;s multi_logloss: 0.164177
+[170]	valid_0&#39;s multi_logloss: 0.164175
+[171]	valid_0&#39;s multi_logloss: 0.164156
+[172]	valid_0&#39;s multi_logloss: 0.164137
+[173]	valid_0&#39;s multi_logloss: 0.164095
+[174]	valid_0&#39;s multi_logloss: 0.164113
+[175]	valid_0&#39;s multi_logloss: 0.164103
+[176]	valid_0&#39;s multi_logloss: 0.164105
+[177]	valid_0&#39;s multi_logloss: 0.164108
+[178]	valid_0&#39;s multi_logloss: 0.16408
+[179]	valid_0&#39;s multi_logloss: 0.164036
+[180]	valid_0&#39;s multi_logloss: 0.163974
+[181]	valid_0&#39;s multi_logloss: 0.16396
+[182]	valid_0&#39;s multi_logloss: 0.163971
+[183]	valid_0&#39;s multi_logloss: 0.163926
+[184]	valid_0&#39;s multi_logloss: 0.163898
+[185]	valid_0&#39;s multi_logloss: 0.163904
+[186]	valid_0&#39;s multi_logloss: 0.163892
+[187]	valid_0&#39;s multi_logloss: 0.163876
+[188]	valid_0&#39;s multi_logloss: 0.163908
+[189]	valid_0&#39;s multi_logloss: 0.163908
+[190]	valid_0&#39;s multi_logloss: 0.163926
+[191]	valid_0&#39;s multi_logloss: 0.163874
+[192]	valid_0&#39;s multi_logloss: 0.163888
+[193]	valid_0&#39;s multi_logloss: 0.163868
+[194]	valid_0&#39;s multi_logloss: 0.16386
+[195]	valid_0&#39;s multi_logloss: 0.163868
+[196]	valid_0&#39;s multi_logloss: 0.163833
+[197]	valid_0&#39;s multi_logloss: 0.163797
+[198]	valid_0&#39;s multi_logloss: 0.163793
+[199]	valid_0&#39;s multi_logloss: 0.163779
+[200]	valid_0&#39;s multi_logloss: 0.163745
+[201]	valid_0&#39;s multi_logloss: 0.163764
+[202]	valid_0&#39;s multi_logloss: 0.163746
+[203]	valid_0&#39;s multi_logloss: 0.163752
+[204]	valid_0&#39;s multi_logloss: 0.163742
+[205]	valid_0&#39;s multi_logloss: 0.163741
+[206]	valid_0&#39;s multi_logloss: 0.163758
+[207]	valid_0&#39;s multi_logloss: 0.163756
+[208]	valid_0&#39;s multi_logloss: 0.163735
+[209]	valid_0&#39;s multi_logloss: 0.163746
+[210]	valid_0&#39;s multi_logloss: 0.163717
+[211]	valid_0&#39;s multi_logloss: 0.163694
+[212]	valid_0&#39;s multi_logloss: 0.163673
+[213]	valid_0&#39;s multi_logloss: 0.163678
+[214]	valid_0&#39;s multi_logloss: 0.163684
+[215]	valid_0&#39;s multi_logloss: 0.163705
+[216]	valid_0&#39;s multi_logloss: 0.163688
+[217]	valid_0&#39;s multi_logloss: 0.16368
+[218]	valid_0&#39;s multi_logloss: 0.16369
+[219]	valid_0&#39;s multi_logloss: 0.163681
+[220]	valid_0&#39;s multi_logloss: 0.163677
+[221]	valid_0&#39;s multi_logloss: 0.163664
+[222]	valid_0&#39;s multi_logloss: 0.163661
+[223]	valid_0&#39;s multi_logloss: 0.163628
+[224]	valid_0&#39;s multi_logloss: 0.163597
+[225]	valid_0&#39;s multi_logloss: 0.163598
+[226]	valid_0&#39;s multi_logloss: 0.163607
+[227]	valid_0&#39;s multi_logloss: 0.163606
+[228]	valid_0&#39;s multi_logloss: 0.163635
+[229]	valid_0&#39;s multi_logloss: 0.163651
+[230]	valid_0&#39;s multi_logloss: 0.163644
+[231]	valid_0&#39;s multi_logloss: 0.163639
+[232]	valid_0&#39;s multi_logloss: 0.163635
+[233]	valid_0&#39;s multi_logloss: 0.16366
+[234]	valid_0&#39;s multi_logloss: 0.163668
+Early stopping, best iteration is:
+[224]	valid_0&#39;s multi_logloss: 0.163597
+training model for CV #5
+[1]	valid_0&#39;s multi_logloss: 0.889301
+Training until validation scores don&#39;t improve for 10 rounds
+[2]	valid_0&#39;s multi_logloss: 0.809186
+[3]	valid_0&#39;s multi_logloss: 0.736954
+[4]	valid_0&#39;s multi_logloss: 0.67563
+[5]	valid_0&#39;s multi_logloss: 0.622468
+[6]	valid_0&#39;s multi_logloss: 0.581094
+[7]	valid_0&#39;s multi_logloss: 0.541842
+[8]	valid_0&#39;s multi_logloss: 0.509582
+[9]	valid_0&#39;s multi_logloss: 0.482569
+[10]	valid_0&#39;s multi_logloss: 0.4531
+[11]	valid_0&#39;s multi_logloss: 0.427371
+[12]	valid_0&#39;s multi_logloss: 0.404198
+[13]	valid_0&#39;s multi_logloss: 0.383482
+[14]	valid_0&#39;s multi_logloss: 0.364686
+[15]	valid_0&#39;s multi_logloss: 0.348147
+[16]	valid_0&#39;s multi_logloss: 0.334011
+[17]	valid_0&#39;s multi_logloss: 0.320785
+[18]	valid_0&#39;s multi_logloss: 0.30852
+[19]	valid_0&#39;s multi_logloss: 0.297246
+[20]	valid_0&#39;s multi_logloss: 0.287348
+[21]	valid_0&#39;s multi_logloss: 0.277689
+[22]	valid_0&#39;s multi_logloss: 0.269092
+[23]	valid_0&#39;s multi_logloss: 0.26126
+[24]	valid_0&#39;s multi_logloss: 0.254451
+[25]	valid_0&#39;s multi_logloss: 0.248264
+[26]	valid_0&#39;s multi_logloss: 0.243645
+[27]	valid_0&#39;s multi_logloss: 0.23789
+[28]	valid_0&#39;s multi_logloss: 0.232534
+[29]	valid_0&#39;s multi_logloss: 0.227853
+[30]	valid_0&#39;s multi_logloss: 0.223361
+[31]	valid_0&#39;s multi_logloss: 0.22008
+[32]	valid_0&#39;s multi_logloss: 0.216581
+[33]	valid_0&#39;s multi_logloss: 0.213039
+[34]	valid_0&#39;s multi_logloss: 0.209877
+[35]	valid_0&#39;s multi_logloss: 0.206866
+[36]	valid_0&#39;s multi_logloss: 0.204435
+[37]	valid_0&#39;s multi_logloss: 0.201927
+[38]	valid_0&#39;s multi_logloss: 0.199452
+[39]	valid_0&#39;s multi_logloss: 0.197402
+[40]	valid_0&#39;s multi_logloss: 0.19534
+[41]	valid_0&#39;s multi_logloss: 0.19337
+[42]	valid_0&#39;s multi_logloss: 0.191749
+[43]	valid_0&#39;s multi_logloss: 0.190056
+[44]	valid_0&#39;s multi_logloss: 0.188624
+[45]	valid_0&#39;s multi_logloss: 0.187468
+[46]	valid_0&#39;s multi_logloss: 0.186104
+[47]	valid_0&#39;s multi_logloss: 0.184786
+[48]	valid_0&#39;s multi_logloss: 0.183777
+[49]	valid_0&#39;s multi_logloss: 0.182641
+[50]	valid_0&#39;s multi_logloss: 0.18162
+[51]	valid_0&#39;s multi_logloss: 0.180622
+[52]	valid_0&#39;s multi_logloss: 0.179904
+[53]	valid_0&#39;s multi_logloss: 0.179078
+[54]	valid_0&#39;s multi_logloss: 0.178425
+[55]	valid_0&#39;s multi_logloss: 0.177712
+[56]	valid_0&#39;s multi_logloss: 0.177134
+[57]	valid_0&#39;s multi_logloss: 0.176609
+[58]	valid_0&#39;s multi_logloss: 0.176058
+[59]	valid_0&#39;s multi_logloss: 0.175442
+[60]	valid_0&#39;s multi_logloss: 0.174972
+[61]	valid_0&#39;s multi_logloss: 0.174526
+[62]	valid_0&#39;s multi_logloss: 0.17405
+[63]	valid_0&#39;s multi_logloss: 0.173614
+[64]	valid_0&#39;s multi_logloss: 0.173127
+[65]	valid_0&#39;s multi_logloss: 0.172728
+[66]	valid_0&#39;s multi_logloss: 0.172312
+[67]	valid_0&#39;s multi_logloss: 0.17187
+[68]	valid_0&#39;s multi_logloss: 0.171479
+[69]	valid_0&#39;s multi_logloss: 0.171167
+[70]	valid_0&#39;s multi_logloss: 0.170794
+[71]	valid_0&#39;s multi_logloss: 0.170392
+[72]	valid_0&#39;s multi_logloss: 0.170082
+[73]	valid_0&#39;s multi_logloss: 0.169806
+[74]	valid_0&#39;s multi_logloss: 0.169614
+[75]	valid_0&#39;s multi_logloss: 0.169286
+[76]	valid_0&#39;s multi_logloss: 0.168994
+[77]	valid_0&#39;s multi_logloss: 0.168701
+[78]	valid_0&#39;s multi_logloss: 0.168551
+[79]	valid_0&#39;s multi_logloss: 0.16838
+[80]	valid_0&#39;s multi_logloss: 0.16818
+[81]	valid_0&#39;s multi_logloss: 0.167997
+[82]	valid_0&#39;s multi_logloss: 0.167787
+[83]	valid_0&#39;s multi_logloss: 0.167625
+[84]	valid_0&#39;s multi_logloss: 0.167457
+[85]	valid_0&#39;s multi_logloss: 0.167309
+[86]	valid_0&#39;s multi_logloss: 0.167155
+[87]	valid_0&#39;s multi_logloss: 0.166982
+[88]	valid_0&#39;s multi_logloss: 0.166867
+[89]	valid_0&#39;s multi_logloss: 0.167041
+[90]	valid_0&#39;s multi_logloss: 0.166743
+[91]	valid_0&#39;s multi_logloss: 0.166582
+[92]	valid_0&#39;s multi_logloss: 0.166462
+[93]	valid_0&#39;s multi_logloss: 0.166272
+[94]	valid_0&#39;s multi_logloss: 0.166177
+[95]	valid_0&#39;s multi_logloss: 0.16605
+[96]	valid_0&#39;s multi_logloss: 0.165935
+[97]	valid_0&#39;s multi_logloss: 0.165868
+[98]	valid_0&#39;s multi_logloss: 0.165753
+[99]	valid_0&#39;s multi_logloss: 0.165654
+[100]	valid_0&#39;s multi_logloss: 0.165534
+[101]	valid_0&#39;s multi_logloss: 0.165444
+[102]	valid_0&#39;s multi_logloss: 0.165319
+[103]	valid_0&#39;s multi_logloss: 0.16522
+[104]	valid_0&#39;s multi_logloss: 0.165149
+[105]	valid_0&#39;s multi_logloss: 0.165096
+[106]	valid_0&#39;s multi_logloss: 0.165002
+[107]	valid_0&#39;s multi_logloss: 0.164923
+[108]	valid_0&#39;s multi_logloss: 0.164866
+[109]	valid_0&#39;s multi_logloss: 0.16479
+[110]	valid_0&#39;s multi_logloss: 0.164734
+[111]	valid_0&#39;s multi_logloss: 0.16486
+[112]	valid_0&#39;s multi_logloss: 0.164721
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[113]	valid_0&#39;s multi_logloss: 0.164593
+[114]	valid_0&#39;s multi_logloss: 0.164935
+[115]	valid_0&#39;s multi_logloss: 0.164825
+[116]	valid_0&#39;s multi_logloss: 0.164531
+[117]	valid_0&#39;s multi_logloss: 0.164465
+[118]	valid_0&#39;s multi_logloss: 0.164425
+[119]	valid_0&#39;s multi_logloss: 0.164327
+[120]	valid_0&#39;s multi_logloss: 0.16428
+[121]	valid_0&#39;s multi_logloss: 0.164234
+[122]	valid_0&#39;s multi_logloss: 0.164206
+[123]	valid_0&#39;s multi_logloss: 0.164153
+[124]	valid_0&#39;s multi_logloss: 0.164138
+[125]	valid_0&#39;s multi_logloss: 0.16408
+[126]	valid_0&#39;s multi_logloss: 0.164009
+[127]	valid_0&#39;s multi_logloss: 0.164
+[128]	valid_0&#39;s multi_logloss: 0.163976
+[129]	valid_0&#39;s multi_logloss: 0.163996
+[130]	valid_0&#39;s multi_logloss: 0.163968
+[131]	valid_0&#39;s multi_logloss: 0.163916
+[132]	valid_0&#39;s multi_logloss: 0.163788
+[133]	valid_0&#39;s multi_logloss: 0.163761
+[134]	valid_0&#39;s multi_logloss: 0.163759
+[135]	valid_0&#39;s multi_logloss: 0.163752
+[136]	valid_0&#39;s multi_logloss: 0.163708
+[137]	valid_0&#39;s multi_logloss: 0.163663
+[138]	valid_0&#39;s multi_logloss: 0.16362
+[139]	valid_0&#39;s multi_logloss: 0.163606
+[140]	valid_0&#39;s multi_logloss: 0.163561
+[141]	valid_0&#39;s multi_logloss: 0.163539
+[142]	valid_0&#39;s multi_logloss: 0.163524
+[143]	valid_0&#39;s multi_logloss: 0.163465
+[144]	valid_0&#39;s multi_logloss: 0.163464
+[145]	valid_0&#39;s multi_logloss: 0.16346
+[146]	valid_0&#39;s multi_logloss: 0.1634
+[147]	valid_0&#39;s multi_logloss: 0.163362
+[148]	valid_0&#39;s multi_logloss: 0.163349
+[149]	valid_0&#39;s multi_logloss: 0.163254
+[150]	valid_0&#39;s multi_logloss: 0.163215
+[151]	valid_0&#39;s multi_logloss: 0.163189
+[152]	valid_0&#39;s multi_logloss: 0.163152
+[153]	valid_0&#39;s multi_logloss: 0.163151
+[154]	valid_0&#39;s multi_logloss: 0.163078
+[155]	valid_0&#39;s multi_logloss: 0.163018
+[156]	valid_0&#39;s multi_logloss: 0.163014
+[157]	valid_0&#39;s multi_logloss: 0.162995
+[158]	valid_0&#39;s multi_logloss: 0.162981
+[159]	valid_0&#39;s multi_logloss: 0.162968
+[160]	valid_0&#39;s multi_logloss: 0.16294
+[161]	valid_0&#39;s multi_logloss: 0.162916
+[162]	valid_0&#39;s multi_logloss: 0.162923
+[163]	valid_0&#39;s multi_logloss: 0.162934
+[164]	valid_0&#39;s multi_logloss: 0.162908
+[165]	valid_0&#39;s multi_logloss: 0.162915
+[166]	valid_0&#39;s multi_logloss: 0.162939
+[167]	valid_0&#39;s multi_logloss: 0.162942
+[168]	valid_0&#39;s multi_logloss: 0.162923
+[169]	valid_0&#39;s multi_logloss: 0.162937
+[170]	valid_0&#39;s multi_logloss: 0.162955
+[171]	valid_0&#39;s multi_logloss: 0.162952
+[172]	valid_0&#39;s multi_logloss: 0.162952
+[173]	valid_0&#39;s multi_logloss: 0.162936
+[174]	valid_0&#39;s multi_logloss: 0.162936
+Early stopping, best iteration is:
+[164]	valid_0&#39;s multi_logloss: 0.162908
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">p_val</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>93.1306%
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">p_val</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">p_tst</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(320000, 3) (80000, 3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="n">p_val_file</span><span class="p">,</span> <span class="n">p_val</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%.6f</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="n">p_tst_file</span><span class="p">,</span> <span class="n">p_tst</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%.6f</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>피처 중요도 시각화<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;feature&#39;</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="s1">&#39;importance&#39;</span><span class="p">:</span> <span class="n">clf</span><span class="o">.</span><span class="n">feature_importances_</span><span class="p">})</span>
+<span class="n">imp</span> <span class="o">=</span> <span class="n">imp</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;importance&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;feature&#39;</span><span class="p">)</span>
+<span class="n">imp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;barh&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fdd61b17650&gt;
+</pre></div>
+</div>
+<img alt="../_images/08-lightgbm-cv_19_1.png" src="../_images/08-lightgbm-cv_19_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>제출 파일 생성<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">sample_file</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sub</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">sub</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(80000, 1)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>class</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>320000</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>320001</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>320002</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>320003</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>320004</th>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="p">[</span><span class="n">target_col</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">p_tst</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">sub</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>class</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>320000</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>320001</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>320002</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>320003</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>320004</th>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="p">[</span><span class="n">target_col</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2    41170
+0    29971
+1     8859
+Name: class, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">sub_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="07-rf.html" title="previous page">데모</a>
+    <a class='right-next' id="next-link" href="08-lr-cv.html" title="next page">데모</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Kaggler-TV<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

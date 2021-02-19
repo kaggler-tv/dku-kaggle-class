@@ -1,0 +1,44 @@
+file: README
+sections:
+  - file: lectures/03-pandas-eda
+    title: 03-pandas-eda
+  - file: lectures/04-numpy-lr
+    title: 04-numpy-lr
+  - file: lectures/05-numerical-features
+    title: 05-numerical-features
+  - file: lectures/06-decision-trees
+    title: 06-decision-trees
+  - file: lectures/07-lightgbm
+    title: 07-lightgbm
+  - file: lectures/07-rf
+    title: 07-rf
+  - file: lectures/08-lightgbm-cv
+    title: 08-lightgbm-cv
+  - file: lectures/08-lr-cv
+    title: 08-lr-cv
+  - file: lectures/08-rf-cv
+    title: 08-rf-cv
+  - file: lectures/08-stacking-lgb
+    title: 08-stacking-lgb
+  - file: lectures/08-stacking-lr
+    title: 08-stacking-lr
+  - file: lectures/09-lightgbm-hyperopt
+    title: 09-lightgbm-hyperopt
+  - file: lectures/09-lightgbm-optuna
+    title: 09-lightgbm-optuna
+  - file: lectures/11-categorical-features
+    title: 11-categorical-features
+  - file: lectures/12-nn-cv
+    title: 12-nn-cv
+  - file: lectures/13-lr-tfidf
+    title: 13-lr-tfidf
+  - file: lectures/14-cnn-emb
+    title: 14-cnn-emb
+  - file: lectures/14-lstm-emb
+    title: 14-lstm-emb
+  - file: lectures/15-bert
+    title: 15-bert
+  - file: lectures/15-lstm-glove
+    title: 15-lstm-glove
+  - file: lectures/16-attention
+    title: 16-attention

@@ -1,0 +1,1946 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>범주형변수 가공 데모 &#8212; 단국대 2020 캐글 뽀개기</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="데모" href="12-nn-cv.html" />
+    <link rel="prev" title="데모" href="09-lightgbm-optuna.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">단국대 2020 캐글 뽀개기</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   단국대 2020년 가을학기 캐글 뽀개기 강좌
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-pandas-eda.html">
+   03-pandas-eda
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-numpy-lr.html">
+   04-numpy-lr
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-numerical-features.html">
+   05-numerical-features
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-decision-trees.html">
+   06-decision-trees
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-lightgbm.html">
+   07-lightgbm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-rf.html">
+   07-rf
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-lightgbm-cv.html">
+   08-lightgbm-cv
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-lr-cv.html">
+   08-lr-cv
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-rf-cv.html">
+   08-rf-cv
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-stacking-lgb.html">
+   08-stacking-lgb
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-stacking-lr.html">
+   08-stacking-lr
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09-lightgbm-hyperopt.html">
+   09-lightgbm-hyperopt
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09-lightgbm-optuna.html">
+   09-lightgbm-optuna
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   11-categorical-features
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12-nn-cv.html">
+   12-nn-cv
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13-lr-tfidf.html">
+   13-lr-tfidf
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14-cnn-emb.html">
+   14-cnn-emb
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14-lstm-emb.html">
+   14-lstm-emb
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15-bert.html">
+   15-bert
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15-lstm-glove.html">
+   15-lstm-glove
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-attention.html">
+   16-attention
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lectures/11-categorical-features.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/SDSTony/dku-kaggle-class"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/SDSTony/dku-kaggle-class/issues/new?title=Issue%20on%20page%20%2Flectures/11-categorical-features.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/SDSTony/dku-kaggle-class/master?urlpath=tree/lectures/11-categorical-features.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import">
+   라이브러리 import 및 설정
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   학습데이터 로드
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eda-exploratory-data-analysis">
+   EDA (Exploratory Data Analysis)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eda">
+     범주형변수 EDA
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   수치형/시계열변수 가공
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   범주형변수 가공
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ordinal-encoding">
+     Ordinal Encoding
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#label-encoding-with-grouping">
+     Label Encoding with Grouping
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#one-hot-encoding">
+     One-Hot-Encoding
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#one-hot-encoding-with-grouping">
+     One-Hot-Encoding with Grouping
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#target-encoding-without-cross-validation">
+     Target Encoding without Cross-Validation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#target-encoding-with-cross-validation">
+     Target Encoding with Cross-Validation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#frequency-encoding">
+     Frequency Encoding
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hash-encoding">
+     Hash Encoding
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="id1">
+<h1>범주형변수 가공 데모<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="import">
+<h2>라이브러리 import 및 설정<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reload_ext</span> autoreload
+<span class="o">%</span><span class="k">autoreload</span> 2
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">kaggler</span>
+<span class="kn">from</span> <span class="nn">lightgbm</span> <span class="kn">import</span> <span class="n">LGBMRegressor</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">scipy.sparse</span> <span class="kn">import</span> <span class="n">hstack</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">warnings</span> <span class="kn">import</span> <span class="n">simplefilter</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
+<span class="n">simplefilter</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>학습데이터 로드<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>학습데이터는 데이콘 <a class="reference external" href="https://dacon.io/competitions/open/235536/data/">영화 관객수 예측 모델 개발</a> 페이지에서 다운로드하여 <code class="docutils literal notranslate"><span class="pre">../data/movies/</span></code> 폴더에 저장해 둔다.</p>
+<p>이 데이터는 영화의 장르, 개봉일, 상영시간 등과 같은 데이터로 영화 총 관객수 (<code class="docutils literal notranslate"><span class="pre">box_off_num</span></code>)를 예측하는 데이터이다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../data/movies/&#39;</span><span class="p">)</span>
+<span class="n">trn_file</span> <span class="o">=</span> <span class="n">data_dir</span> <span class="o">/</span> <span class="s1">&#39;movies_train.csv&#39;</span>
+<span class="n">seed</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="n">target_col</span> <span class="o">=</span> <span class="s1">&#39;box_off_num&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">trn_file</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(600, 11)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>distributor</th>
+      <th>genre</th>
+      <th>release_time</th>
+      <th>time</th>
+      <th>screening_rat</th>
+      <th>director</th>
+      <th>dir_prev_bfnum</th>
+      <th>dir_prev_num</th>
+      <th>num_staff</th>
+      <th>num_actor</th>
+      <th>box_off_num</th>
+    </tr>
+    <tr>
+      <th>title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>개들의 전쟁</th>
+      <td>롯데엔터테인먼트</td>
+      <td>액션</td>
+      <td>2012-11-22</td>
+      <td>96</td>
+      <td>청소년 관람불가</td>
+      <td>조병옥</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>91</td>
+      <td>2</td>
+      <td>23398</td>
+    </tr>
+    <tr>
+      <th>내부자들</th>
+      <td>(주)쇼박스</td>
+      <td>느와르</td>
+      <td>2015-11-19</td>
+      <td>130</td>
+      <td>청소년 관람불가</td>
+      <td>우민호</td>
+      <td>1161602.50</td>
+      <td>2</td>
+      <td>387</td>
+      <td>3</td>
+      <td>7072501</td>
+    </tr>
+    <tr>
+      <th>은밀하게 위대하게</th>
+      <td>(주)쇼박스</td>
+      <td>액션</td>
+      <td>2013-06-05</td>
+      <td>123</td>
+      <td>15세 관람가</td>
+      <td>장철수</td>
+      <td>220775.25</td>
+      <td>4</td>
+      <td>343</td>
+      <td>4</td>
+      <td>6959083</td>
+    </tr>
+    <tr>
+      <th>나는 공무원이다</th>
+      <td>(주)NEW</td>
+      <td>코미디</td>
+      <td>2012-07-12</td>
+      <td>101</td>
+      <td>전체 관람가</td>
+      <td>구자홍</td>
+      <td>23894.00</td>
+      <td>2</td>
+      <td>20</td>
+      <td>6</td>
+      <td>217866</td>
+    </tr>
+    <tr>
+      <th>불량남녀</th>
+      <td>쇼박스(주)미디어플렉스</td>
+      <td>코미디</td>
+      <td>2010-11-04</td>
+      <td>108</td>
+      <td>15세 관람가</td>
+      <td>신근호</td>
+      <td>1.00</td>
+      <td>1</td>
+      <td>251</td>
+      <td>2</td>
+      <td>483387</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="eda-exploratory-data-analysis">
+<h2>EDA (Exploratory Data Analysis)<a class="headerlink" href="#eda-exploratory-data-analysis" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Index: 600 entries, 개들의 전쟁 to 베를린
+Data columns (total 11 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   distributor     600 non-null    object 
+ 1   genre           600 non-null    object 
+ 2   release_time    600 non-null    object 
+ 3   time            600 non-null    int64  
+ 4   screening_rat   600 non-null    object 
+ 5   director        600 non-null    object 
+ 6   dir_prev_bfnum  270 non-null    float64
+ 7   dir_prev_num    600 non-null    int64  
+ 8   num_staff       600 non-null    int64  
+ 9   num_actor       600 non-null    int64  
+ 10  box_off_num     600 non-null    int64  
+dtypes: float64(1), int64(5), object(5)
+memory usage: 56.2+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>독립변수를 포함 총 6개의 수치형변수가 있다. 그 중 <code class="docutils literal notranslate"><span class="pre">dir_prev_bfnum</span></code>은 결측값이 많음을 확인할 수 있다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">distributor</span></code>, <code class="docutils literal notranslate"><span class="pre">genre</span></code>, <code class="docutils literal notranslate"><span class="pre">screening_rat</span></code>, <code class="docutils literal notranslate"><span class="pre">director</span></code>의 총 4개의 범주형변수가 있다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">release_time</span></code>은 시계열변수이지만 문자열 (<code class="docutils literal notranslate"><span class="pre">object</span></code>)으로 인식하고 있다.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;release_time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;release_time&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;release_time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime64[ns]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Index: 600 entries, 개들의 전쟁 to 베를린
+Data columns (total 11 columns):
+ #   Column          Non-Null Count  Dtype         
+---  ------          --------------  -----         
+ 0   distributor     600 non-null    object        
+ 1   genre           600 non-null    object        
+ 2   release_time    600 non-null    datetime64[ns]
+ 3   time            600 non-null    int64         
+ 4   screening_rat   600 non-null    object        
+ 5   director        600 non-null    object        
+ 6   dir_prev_bfnum  600 non-null    float64       
+ 7   dir_prev_num    600 non-null    int64         
+ 8   num_staff       600 non-null    int64         
+ 9   num_actor       600 non-null    int64         
+ 10  box_off_num     600 non-null    int64         
+dtypes: datetime64[ns](1), float64(1), int64(5), object(4)
+memory usage: 56.2+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">release_time</span></code>을 시계열타입 (<code class="docutils literal notranslate"><span class="pre">datetime</span></code>)으로 변환하고 결측값을 0으로 대체하였다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">df</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="ow">in</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">]</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">target_col</span><span class="p">]</span>
+<span class="n">cat_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;distributor&#39;</span><span class="p">,</span> <span class="s1">&#39;genre&#39;</span><span class="p">,</span> <span class="s1">&#39;screening_rat&#39;</span><span class="p">,</span> <span class="s1">&#39;director&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;    numeric (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">num_cols</span><span class="p">)</span><span class="si">}</span><span class="s1">):</span><span class="se">\t</span><span class="si">{</span><span class="n">num_cols</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;categorical (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">cat_cols</span><span class="p">)</span><span class="si">}</span><span class="s1">):</span><span class="se">\t</span><span class="si">{</span><span class="n">cat_cols</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    numeric (5):	[&#39;time&#39;, &#39;dir_prev_bfnum&#39;, &#39;dir_prev_num&#39;, &#39;num_staff&#39;, &#39;num_actor&#39;]
+categorical (4):	[&#39;distributor&#39;, &#39;genre&#39;, &#39;screening_rat&#39;, &#39;director&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="eda">
+<h3>범주형변수 EDA<a class="headerlink" href="#eda" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cat_cols</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;distributor&#39;, &#39;genre&#39;, &#39;screening_rat&#39;, &#39;director&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;distributor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>distributor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>CJ 엔터테인먼트</th>
+      <td>54</td>
+    </tr>
+    <tr>
+      <th>롯데엔터테인먼트</th>
+      <td>52</td>
+    </tr>
+    <tr>
+      <th>(주)NEW</th>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>(주)마운틴픽쳐스</th>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th>인디스토리</th>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>(주)팝 파트너스</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>스폰지이엔티</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>(주)JK필름</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>디 씨드</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>스튜디오 블루</th>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>169 rows × 1 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;genre&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>genre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>드라마</th>
+      <td>221</td>
+    </tr>
+    <tr>
+      <th>다큐멘터리</th>
+      <td>93</td>
+    </tr>
+    <tr>
+      <th>멜로/로맨스</th>
+      <td>78</td>
+    </tr>
+    <tr>
+      <th>코미디</th>
+      <td>53</td>
+    </tr>
+    <tr>
+      <th>공포</th>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th>액션</th>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>느와르</th>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th>애니메이션</th>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>미스터리</th>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>SF</th>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>뮤지컬</th>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>서스펜스</th>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;screening_rat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>screening_rat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>청소년 관람불가</th>
+      <td>204</td>
+    </tr>
+    <tr>
+      <th>15세 관람가</th>
+      <td>202</td>
+    </tr>
+    <tr>
+      <th>12세 관람가</th>
+      <td>102</td>
+    </tr>
+    <tr>
+      <th>전체 관람가</th>
+      <td>92</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;director&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>director</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>홍상수</th>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>노진수</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>장률</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>전규환</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>신재호</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>안상훈</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>한준희</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>이광호</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>김동빈</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>전윤수</th>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>472 rows × 1 columns</p>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>수치형/시계열변수 가공<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>수치형 독립변수 중 멱변환 분포를 따르는 변수에도 <code class="docutils literal notranslate"><span class="pre">np.log1p()</span></code> 변환을 적용하였다.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;dir_prev_bfnum&#39;</span><span class="p">,</span> <span class="s1">&#39;dir_prev_num&#39;</span><span class="p">,</span> <span class="s1">&#39;num_staff&#39;</span><span class="p">,</span> <span class="s1">&#39;num_actor&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;dir_prev_bfnum&#39;</span><span class="p">,</span> <span class="s1">&#39;dir_prev_num&#39;</span><span class="p">,</span> <span class="s1">&#39;num_staff&#39;</span><span class="p">,</span> <span class="s1">&#39;num_actor&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="n">num_cols</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>time</th>
+      <th>dir_prev_bfnum</th>
+      <th>dir_prev_num</th>
+      <th>num_staff</th>
+      <th>num_actor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>600.000000</td>
+      <td>600.000000</td>
+      <td>600.000000</td>
+      <td>600.000000</td>
+      <td>600.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>100.863333</td>
+      <td>5.305796</td>
+      <td>0.462197</td>
+      <td>4.026352</td>
+      <td>1.446130</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>18.097528</td>
+      <td>6.254561</td>
+      <td>0.555570</td>
+      <td>1.789517</td>
+      <td>0.446256</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>45.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>89.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>2.890372</td>
+      <td>1.098612</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>100.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>4.424829</td>
+      <td>1.386294</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>114.000000</td>
+      <td>12.837611</td>
+      <td>1.098612</td>
+      <td>5.579730</td>
+      <td>1.609438</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>180.000000</td>
+      <td>16.684279</td>
+      <td>1.791759</td>
+      <td>6.768493</td>
+      <td>3.258097</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;release_time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;release_time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>distributor</th>
+      <th>genre</th>
+      <th>release_time</th>
+      <th>time</th>
+      <th>screening_rat</th>
+      <th>director</th>
+      <th>dir_prev_bfnum</th>
+      <th>dir_prev_num</th>
+      <th>num_staff</th>
+      <th>num_actor</th>
+      <th>box_off_num</th>
+      <th>year</th>
+      <th>month</th>
+    </tr>
+    <tr>
+      <th>title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>개들의 전쟁</th>
+      <td>롯데엔터테인먼트</td>
+      <td>액션</td>
+      <td>2012-11-22</td>
+      <td>96</td>
+      <td>청소년 관람불가</td>
+      <td>조병옥</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>4.521789</td>
+      <td>1.098612</td>
+      <td>23398</td>
+      <td>2012</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>내부자들</th>
+      <td>(주)쇼박스</td>
+      <td>느와르</td>
+      <td>2015-11-19</td>
+      <td>130</td>
+      <td>청소년 관람불가</td>
+      <td>우민호</td>
+      <td>13.965312</td>
+      <td>1.098612</td>
+      <td>5.961005</td>
+      <td>1.386294</td>
+      <td>7072501</td>
+      <td>2015</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>은밀하게 위대하게</th>
+      <td>(주)쇼박스</td>
+      <td>액션</td>
+      <td>2013-06-05</td>
+      <td>123</td>
+      <td>15세 관람가</td>
+      <td>장철수</td>
+      <td>12.304905</td>
+      <td>1.609438</td>
+      <td>5.840642</td>
+      <td>1.609438</td>
+      <td>6959083</td>
+      <td>2013</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>나는 공무원이다</th>
+      <td>(주)NEW</td>
+      <td>코미디</td>
+      <td>2012-07-12</td>
+      <td>101</td>
+      <td>전체 관람가</td>
+      <td>구자홍</td>
+      <td>10.081425</td>
+      <td>1.098612</td>
+      <td>3.044522</td>
+      <td>1.945910</td>
+      <td>217866</td>
+      <td>2012</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>불량남녀</th>
+      <td>쇼박스(주)미디어플렉스</td>
+      <td>코미디</td>
+      <td>2010-11-04</td>
+      <td>108</td>
+      <td>15세 관람가</td>
+      <td>신근호</td>
+      <td>0.693147</td>
+      <td>0.693147</td>
+      <td>5.529429</td>
+      <td>1.098612</td>
+      <td>483387</td>
+      <td>2010</td>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_cols</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">num_cols</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;time&#39;, &#39;dir_prev_bfnum&#39;, &#39;dir_prev_num&#39;, &#39;num_staff&#39;, &#39;num_actor&#39;, &#39;year&#39;, &#39;month&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="n">num_cols</span> <span class="o">+</span> <span class="n">cat_cols</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;time&#39;, &#39;dir_prev_bfnum&#39;, &#39;dir_prev_num&#39;, &#39;num_staff&#39;, &#39;num_actor&#39;, &#39;year&#39;, &#39;month&#39;, &#39;distributor&#39;, &#39;genre&#39;, &#39;screening_rat&#39;, &#39;director&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>범주형변수 가공<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rmse</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">y</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">p</span><span class="p">))</span>
+<span class="n">rmsle</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">y</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">p</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="ordinal-encoding">
+<h3>Ordinal Encoding<a class="headerlink" href="#ordinal-encoding" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">OrdinalEncoder</span>
+<span class="n">df_cat</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">oe</span> <span class="o">=</span> <span class="n">OrdinalEncoder</span><span class="p">()</span>
+<span class="n">df_cat</span><span class="p">[</span><span class="n">cat_cols</span><span class="p">]</span> <span class="o">=</span> <span class="n">oe</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">cat_cols</span><span class="p">])</span>
+<span class="n">df_cat</span><span class="p">[</span><span class="n">cat_cols</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>distributor</th>
+      <th>genre</th>
+      <th>screening_rat</th>
+      <th>director</th>
+    </tr>
+    <tr>
+      <th>title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>개들의 전쟁</th>
+      <td>80.0</td>
+      <td>10.0</td>
+      <td>3.0</td>
+      <td>393.0</td>
+    </tr>
+    <tr>
+      <th>내부자들</th>
+      <td>21.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>252.0</td>
+    </tr>
+    <tr>
+      <th>은밀하게 위대하게</th>
+      <td>21.0</td>
+      <td>10.0</td>
+      <td>1.0</td>
+      <td>357.0</td>
+    </tr>
+    <tr>
+      <th>나는 공무원이다</th>
+      <td>6.0</td>
+      <td>11.0</td>
+      <td>2.0</td>
+      <td>17.0</td>
+    </tr>
+    <tr>
+      <th>불량남녀</th>
+      <td>96.0</td>
+      <td>11.0</td>
+      <td>1.0</td>
+      <td>218.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trn</span><span class="p">,</span> <span class="n">tst</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">df_cat</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=.</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">LGBMRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">trn</span><span class="p">[</span><span class="n">features</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">trn</span><span class="p">[</span><span class="n">target_col</span><span class="p">]))</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expm1</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">tst</span><span class="p">[</span><span class="n">features</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39; RMSE:</span><span class="se">\t</span><span class="si">{</span><span class="n">rmse</span><span class="p">(</span><span class="n">tst</span><span class="p">[</span><span class="n">target_col</span><span class="p">],</span> <span class="n">p</span><span class="p">)</span><span class="si">:</span><span class="s1">12.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;RMSLE:</span><span class="se">\t</span><span class="si">{</span><span class="n">rmsle</span><span class="p">(</span><span class="n">tst</span><span class="p">[</span><span class="n">target_col</span><span class="p">],</span> <span class="n">p</span><span class="p">)</span><span class="si">:</span><span class="s1">12.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> RMSE:	  1412591.02
+RMSLE:	        1.98
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="label-encoding-with-grouping">
+<h3>Label Encoding with Grouping<a class="headerlink" href="#label-encoding-with-grouping" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">kaggler.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
+<span class="n">df_cat</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">le</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">(</span><span class="n">min_obs</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">df_cat</span><span class="p">[</span><span class="n">cat_cols</span><span class="p">]</span> <span class="o">=</span> <span class="n">le</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">cat_cols</span><span class="p">])</span>
+<span class="n">df_cat</span><span class="p">[</span><span class="n">cat_cols</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using TensorFlow backend.
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>distributor</th>
+      <th>genre</th>
+      <th>screening_rat</th>
+      <th>director</th>
+    </tr>
+    <tr>
+      <th>title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>개들의 전쟁</th>
+      <td>2.0</td>
+      <td>5</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>내부자들</th>
+      <td>6.0</td>
+      <td>6</td>
+      <td>0</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <th>은밀하게 위대하게</th>
+      <td>6.0</td>
+      <td>5</td>
+      <td>1</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>나는 공무원이다</th>
+      <td>3.0</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>불량남녀</th>
+      <td>66.0</td>
+      <td>3</td>
+      <td>1</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trn</span><span class="p">,</span> <span class="n">tst</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">df_cat</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=.</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">LGBMRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">trn</span><span class="p">[</span><span class="n">features</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">trn</span><span class="p">[</span><span class="n">target_col</span><span class="p">]))</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expm1</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">tst</span><span class="p">[</span><span class="n">features</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39; RMSE:</span><span class="se">\t</span><span class="si">{</span><span class="n">rmse</span><span class="p">(</span><span class="n">tst</span><span class="p">[</span><span class="n">target_col</span><span class="p">],</span> <span class="n">p</span><span class="p">)</span><span class="si">:</span><span class="s1">12.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;RMSLE:</span><span class="se">\t</span><span class="si">{</span><span class="n">rmsle</span><span class="p">(</span><span class="n">tst</span><span class="p">[</span><span class="n">target_col</span><span class="p">],</span> <span class="n">p</span><span class="p">)</span><span class="si">:</span><span class="s1">12.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> RMSE:	  1182500.97
+RMSLE:	        1.92
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="one-hot-encoding">
+<h3>One-Hot-Encoding<a class="headerlink" href="#one-hot-encoding" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">OneHotEncoder</span>
+<span class="n">ohe</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">()</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">hstack</span><span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="n">num_cols</span><span class="p">],</span>
+            <span class="n">ohe</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">cat_cols</span><span class="p">])))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(600, 664)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_trn</span><span class="p">,</span> <span class="n">X_tst</span><span class="p">,</span> <span class="n">y_trn</span><span class="p">,</span> <span class="n">y_tst</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="n">target_col</span><span class="p">],</span> <span class="n">test_size</span><span class="o">=.</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">LGBMRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_trn</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">y_trn</span><span class="p">))</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expm1</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_tst</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39; RMSE:</span><span class="se">\t</span><span class="si">{</span><span class="n">rmse</span><span class="p">(</span><span class="n">tst</span><span class="p">[</span><span class="n">target_col</span><span class="p">],</span> <span class="n">p</span><span class="p">)</span><span class="si">:</span><span class="s1">12.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;RMSLE:</span><span class="se">\t</span><span class="si">{</span><span class="n">rmsle</span><span class="p">(</span><span class="n">tst</span><span class="p">[</span><span class="n">target_col</span><span class="p">],</span> <span class="n">p</span><span class="p">)</span><span class="si">:</span><span class="s1">12.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> RMSE:	  1239343.52
+RMSLE:	        1.99
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="one-hot-encoding-with-grouping">
+<h3>One-Hot-Encoding with Grouping<a class="headerlink" href="#one-hot-encoding-with-grouping" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">kaggler.preprocessing</span> <span class="kn">import</span> <span class="n">OneHotEncoder</span>
+<span class="n">ohe</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">min_obs</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">hstack</span><span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="n">num_cols</span><span class="p">],</span>
+            <span class="n">ohe</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">cat_cols</span><span class="p">])))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(600, 187)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_trn</span><span class="p">,</span> <span class="n">X_tst</span><span class="p">,</span> <span class="n">y_trn</span><span class="p">,</span> <span class="n">y_tst</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="n">target_col</span><span class="p">],</span> <span class="n">test_size</span><span class="o">=.</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">LGBMRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_trn</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">y_trn</span><span class="p">))</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expm1</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_tst</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39; RMSE:</span><span class="se">\t</span><span class="si">{</span><span class="n">rmse</span><span class="p">(</span><span class="n">tst</span><span class="p">[</span><span class="n">target_col</span><span class="p">],</span> <span class="n">p</span><span class="p">)</span><span class="si">:</span><span class="s1">12.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;RMSLE:</span><span class="se">\t</span><span class="si">{</span><span class="n">rmsle</span><span class="p">(</span><span class="n">tst</span><span class="p">[</span><span class="n">target_col</span><span class="p">],</span> <span class="n">p</span><span class="p">)</span><span class="si">:</span><span class="s1">12.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> RMSE:	  1183708.39
+RMSLE:	        1.96
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="target-encoding-without-cross-validation">
+<h3>Target Encoding without Cross-Validation<a class="headerlink" href="#target-encoding-without-cross-validation" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">kaggler.preprocessing</span> <span class="kn">import</span> <span class="n">TargetEncoder</span>
+<span class="n">trn</span><span class="p">,</span> <span class="n">tst</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=.</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+<span class="n">te</span> <span class="o">=</span> <span class="n">TargetEncoder</span><span class="p">(</span><span class="n">cv</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">trn</span><span class="p">[</span><span class="n">cat_cols</span><span class="p">]</span> <span class="o">=</span> <span class="n">te</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">trn</span><span class="p">[</span><span class="n">cat_cols</span><span class="p">],</span> <span class="n">trn</span><span class="p">[</span><span class="n">target_col</span><span class="p">])</span>
+<span class="n">tst</span><span class="p">[</span><span class="n">cat_cols</span><span class="p">]</span> <span class="o">=</span> <span class="n">te</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">tst</span><span class="p">[</span><span class="n">cat_cols</span><span class="p">])</span>
+<span class="n">trn</span><span class="p">[</span><span class="n">cat_cols</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>distributor</th>
+      <th>genre</th>
+      <th>screening_rat</th>
+      <th>director</th>
+    </tr>
+    <tr>
+      <th>title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>돼지의 왕</th>
+      <td>721746.077154</td>
+      <td>1.998008e+05</td>
+      <td>3.511182e+05</td>
+      <td>723283.709843</td>
+    </tr>
+    <tr>
+      <th>청춘그루브</th>
+      <td>723430.057925</td>
+      <td>6.093409e+05</td>
+      <td>1.289088e+06</td>
+      <td>723430.057925</td>
+    </tr>
+    <tr>
+      <th>행복한 울릉인</th>
+      <td>722860.857509</td>
+      <td>7.472685e+04</td>
+      <td>1.529000e+05</td>
+      <td>723430.082604</td>
+    </tr>
+    <tr>
+      <th>옥희의 영화</th>
+      <td>718805.251941</td>
+      <td>6.093409e+05</td>
+      <td>3.511182e+05</td>
+      <td>711379.735399</td>
+    </tr>
+    <tr>
+      <th>권법형사 : 차이나타운</th>
+      <td>90921.244145</td>
+      <td>2.212935e+06</td>
+      <td>3.511182e+05</td>
+      <td>723429.982531</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf</span> <span class="o">=</span> <span class="n">LGBMRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">trn</span><span class="p">[</span><span class="n">features</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">trn</span><span class="p">[</span><span class="n">target_col</span><span class="p">]))</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expm1</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">tst</span><span class="p">[</span><span class="n">features</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39; RMSE:</span><span class="se">\t</span><span class="si">{</span><span class="n">rmse</span><span class="p">(</span><span class="n">tst</span><span class="p">[</span><span class="n">target_col</span><span class="p">],</span> <span class="n">p</span><span class="p">)</span><span class="si">:</span><span class="s1">12.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;RMSLE:</span><span class="se">\t</span><span class="si">{</span><span class="n">rmsle</span><span class="p">(</span><span class="n">tst</span><span class="p">[</span><span class="n">target_col</span><span class="p">],</span> <span class="n">p</span><span class="p">)</span><span class="si">:</span><span class="s1">12.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> RMSE:	  1271836.20
+RMSLE:	        3.40
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="target-encoding-with-cross-validation">
+<h3>Target Encoding with Cross-Validation<a class="headerlink" href="#target-encoding-with-cross-validation" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trn</span><span class="p">,</span> <span class="n">tst</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=.</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+<span class="n">te</span> <span class="o">=</span> <span class="n">TargetEncoder</span><span class="p">()</span>
+<span class="n">trn</span><span class="p">[</span><span class="n">cat_cols</span><span class="p">]</span> <span class="o">=</span> <span class="n">te</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">trn</span><span class="p">[</span><span class="n">cat_cols</span><span class="p">],</span> <span class="n">trn</span><span class="p">[</span><span class="n">target_col</span><span class="p">])</span>
+<span class="n">tst</span><span class="p">[</span><span class="n">cat_cols</span><span class="p">]</span> <span class="o">=</span> <span class="n">te</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">tst</span><span class="p">[</span><span class="n">cat_cols</span><span class="p">])</span>
+<span class="n">trn</span><span class="p">[</span><span class="n">cat_cols</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>distributor</th>
+      <th>genre</th>
+      <th>screening_rat</th>
+      <th>director</th>
+    </tr>
+    <tr>
+      <th>title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>돼지의 왕</th>
+      <td>723277.447850</td>
+      <td>267982.096480</td>
+      <td>348028.101562</td>
+      <td>723432.730281</td>
+    </tr>
+    <tr>
+      <th>청춘그루브</th>
+      <td>742425.489583</td>
+      <td>742425.489583</td>
+      <td>742425.489583</td>
+      <td>742425.489583</td>
+    </tr>
+    <tr>
+      <th>행복한 울릉인</th>
+      <td>768901.203125</td>
+      <td>10425.029522</td>
+      <td>122162.823956</td>
+      <td>768901.203125</td>
+    </tr>
+    <tr>
+      <th>옥희의 영화</th>
+      <td>722877.805490</td>
+      <td>813347.509259</td>
+      <td>380361.663366</td>
+      <td>721858.927057</td>
+    </tr>
+    <tr>
+      <th>권법형사 : 차이나타운</th>
+      <td>722864.097814</td>
+      <td>727096.433397</td>
+      <td>115692.865474</td>
+      <td>597129.065104</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf</span> <span class="o">=</span> <span class="n">LGBMRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">trn</span><span class="p">[</span><span class="n">features</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">trn</span><span class="p">[</span><span class="n">target_col</span><span class="p">]))</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expm1</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">tst</span><span class="p">[</span><span class="n">features</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39; RMSE:</span><span class="se">\t</span><span class="si">{</span><span class="n">rmse</span><span class="p">(</span><span class="n">tst</span><span class="p">[</span><span class="n">target_col</span><span class="p">],</span> <span class="n">p</span><span class="p">)</span><span class="si">:</span><span class="s1">12.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;RMSLE:</span><span class="se">\t</span><span class="si">{</span><span class="n">rmsle</span><span class="p">(</span><span class="n">tst</span><span class="p">[</span><span class="n">target_col</span><span class="p">],</span> <span class="n">p</span><span class="p">)</span><span class="si">:</span><span class="s1">12.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> RMSE:	  1529036.45
+RMSLE:	        2.12
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="frequency-encoding">
+<h3>Frequency Encoding<a class="headerlink" href="#frequency-encoding" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">kaggler.preprocessing</span> <span class="kn">import</span> <span class="n">FrequencyEncoder</span>
+<span class="n">df_cat</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">fe</span> <span class="o">=</span> <span class="n">FrequencyEncoder</span><span class="p">()</span>
+<span class="n">df_cat</span><span class="p">[</span><span class="n">cat_cols</span><span class="p">]</span> <span class="o">=</span> <span class="n">fe</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">cat_cols</span><span class="p">])</span>
+<span class="n">df_cat</span><span class="p">[</span><span class="n">cat_cols</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>distributor</th>
+      <th>genre</th>
+      <th>screening_rat</th>
+      <th>director</th>
+    </tr>
+    <tr>
+      <th>title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>개들의 전쟁</th>
+      <td>52</td>
+      <td>28</td>
+      <td>204</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>내부자들</th>
+      <td>26</td>
+      <td>27</td>
+      <td>204</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>은밀하게 위대하게</th>
+      <td>26</td>
+      <td>28</td>
+      <td>202</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>나는 공무원이다</th>
+      <td>30</td>
+      <td>53</td>
+      <td>92</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>불량남녀</th>
+      <td>2</td>
+      <td>53</td>
+      <td>202</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trn</span><span class="p">,</span> <span class="n">tst</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">df_cat</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=.</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">LGBMRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">trn</span><span class="p">[</span><span class="n">features</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">trn</span><span class="p">[</span><span class="n">target_col</span><span class="p">]))</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expm1</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">tst</span><span class="p">[</span><span class="n">features</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39; RMSE:</span><span class="se">\t</span><span class="si">{</span><span class="n">rmse</span><span class="p">(</span><span class="n">tst</span><span class="p">[</span><span class="n">target_col</span><span class="p">],</span> <span class="n">p</span><span class="p">)</span><span class="si">:</span><span class="s1">12.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;RMSLE:</span><span class="se">\t</span><span class="si">{</span><span class="n">rmsle</span><span class="p">(</span><span class="n">tst</span><span class="p">[</span><span class="n">target_col</span><span class="p">],</span> <span class="n">p</span><span class="p">)</span><span class="si">:</span><span class="s1">12.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> RMSE:	  1258846.99
+RMSLE:	        1.96
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="hash-encoding">
+<h3>Hash Encoding<a class="headerlink" href="#hash-encoding" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction</span> <span class="kn">import</span> <span class="n">FeatureHasher</span>
+<span class="n">fh</span> <span class="o">=</span> <span class="n">FeatureHasher</span><span class="p">(</span><span class="n">n_features</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">input_type</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">hstack</span><span class="p">([</span><span class="n">df</span><span class="p">[</span><span class="n">num_cols</span><span class="p">]]</span> <span class="o">+</span> <span class="p">[</span><span class="n">fh</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">])</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">cat_cols</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(600, 519)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_trn</span><span class="p">,</span> <span class="n">X_tst</span><span class="p">,</span> <span class="n">y_trn</span><span class="p">,</span> <span class="n">y_tst</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="n">target_col</span><span class="p">],</span> <span class="n">test_size</span><span class="o">=.</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">LGBMRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_trn</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">y_trn</span><span class="p">))</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expm1</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_tst</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39; RMSE:</span><span class="se">\t</span><span class="si">{</span><span class="n">rmse</span><span class="p">(</span><span class="n">tst</span><span class="p">[</span><span class="n">target_col</span><span class="p">],</span> <span class="n">p</span><span class="p">)</span><span class="si">:</span><span class="s1">12.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;RMSLE:</span><span class="se">\t</span><span class="si">{</span><span class="n">rmsle</span><span class="p">(</span><span class="n">tst</span><span class="p">[</span><span class="n">target_col</span><span class="p">],</span> <span class="n">p</span><span class="p">)</span><span class="si">:</span><span class="s1">12.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> RMSE:	  1261559.18
+RMSLE:	        1.95
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="09-lightgbm-optuna.html" title="previous page">데모</a>
+    <a class='right-next' id="next-link" href="12-nn-cv.html" title="next page">데모</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Kaggler-TV<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
