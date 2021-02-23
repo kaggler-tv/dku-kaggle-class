@@ -1,44 +1,49 @@
-file: index
+file: main
 sections:
   - file: lectures/03-pandas-eda
-    title: 03-pandas-eda
+    title: 3장. Pandas
   - file: lectures/04-numpy-lr
-    title: 04-numpy-lr
+    title: 4장. Numpy, 선형회귀, 로지스틱회귀
   - file: lectures/05-numerical-features
-    title: 05-numerical-features
+    title: 5장. 수치형변수 가공
   - file: lectures/06-decision-trees
-    title: 06-decision-trees
+    title: 6장. Scikit-learn, 결정트리 
   - file: lectures/07-lightgbm
-    title: 07-lightgbm
-  - file: lectures/07-rf
-    title: 07-rf
+    title: 7장. Random Forest, GBM (1)
+    sections:
+    - file: lectures/07-rf
+      title: 7장. Random Forest, GBM (2)
   - file: lectures/08-lightgbm-cv
-    title: 08-lightgbm-cv
-  - file: lectures/08-lr-cv
-    title: 08-lr-cv
-  - file: lectures/08-rf-cv
-    title: 08-rf-cv
-  - file: lectures/08-stacking-lgb
-    title: 08-stacking-lgb
-  - file: lectures/08-stacking-lr
-    title: 08-stacking-lr
+    title: 8장. Cross-Validation, Stacking (1)
+    sections:
+    - file: lectures/08-lr-cv
+      title: 8장. Cross-Validation, Stacking (2)
+    - file: lectures/08-rf-cv
+      title: 8장. Cross-Validation, Stacking (3)
+    - file: lectures/08-stacking-lgb
+      title: 8장. Cross-Validation, Stacking (4)
+    - file: lectures/08-stacking-lr
+      title: 8장. Cross-Validation, Stacking (5)
   - file: lectures/09-lightgbm-hyperopt
-    title: 09-lightgbm-hyperopt
-  - file: lectures/09-lightgbm-optuna
-    title: 09-lightgbm-optuna
+    title: 9장. 모델 튜닝, Hyperopt, Optuna (1)
+    sections:
+    - file: lectures/09-lightgbm-optuna
+      title: 9장. 모델 튜닝, Hyperopt, Optuna (2)
   - file: lectures/11-categorical-features
-    title: 11-categorical-features
+    title: 11장. 범주형변수
   - file: lectures/12-nn-cv
-    title: 12-nn-cv
+    title: 12장. 신경망, Keras
   - file: lectures/13-lr-tfidf
-    title: 13-lr-tfidf
+    title: 13장. 문자열변수 가공
   - file: lectures/14-cnn-emb
-    title: 14-cnn-emb
-  - file: lectures/14-lstm-emb
-    title: 14-lstm-emb
+    title: 14장. Embedding, RNN (1)
+    sections:
+    - file: lectures/14-lstm-emb
+      title: 14장. Embedding, RNN (2)
   - file: lectures/15-bert
-    title: 15-bert
-  - file: lectures/15-lstm-glove
-    title: 15-lstm-glove
+    title: 15장. 선학습 임베딩, 전이학습 (1)
+    sections:
+    - file: lectures/15-lstm-glove
+      title: 15장. 선학습 임베딩, 전이학습 (2)
   - file: lectures/16-attention
-    title: 16-attention
+    title: 16장. Data Augmentation

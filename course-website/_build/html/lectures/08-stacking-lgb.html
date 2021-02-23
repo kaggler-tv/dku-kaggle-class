@@ -1,0 +1,1213 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>데모 &#8212; 단국대 2020 캐글 뽀개기</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="데모" href="08-stacking-lr.html" />
+    <link rel="prev" title="데모" href="08-rf-cv.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">단국대 2020 캐글 뽀개기</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../main.html">
+   단국대 2020년 가을학기 캐글 뽀개기 강좌
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-pandas-eda.html">
+   3장. Pandas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-numpy-lr.html">
+   4장. Numpy, 선형회귀, 로지스틱회귀
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-numerical-features.html">
+   5장. 수치형변수 가공
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-decision-trees.html">
+   6장. Scikit-learn, 결정트리
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="07-lightgbm.html">
+   7장. Random Forest, GBM (1)
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="07-rf.html">
+     7장. Random Forest, GBM (2)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="08-lightgbm-cv.html">
+   8장. Cross-Validation, Stacking (1)
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-lr-cv.html">
+     8장. Cross-Validation, Stacking (2)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-rf-cv.html">
+     8장. Cross-Validation, Stacking (3)
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     8장. Cross-Validation, Stacking (4)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-stacking-lr.html">
+     8장. Cross-Validation, Stacking (5)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="09-lightgbm-hyperopt.html">
+   9장. 모델 튜닝, Hyperopt, Optuna (1)
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="09-lightgbm-optuna.html">
+     9장. 모델 튜닝, Hyperopt, Optuna (2)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11-categorical-features.html">
+   11장. 범주형변수
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12-nn-cv.html">
+   12장. 신경망, Keras
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13-lr-tfidf.html">
+   13장. 문자열변수 가공
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="14-cnn-emb.html">
+   14장. Embedding, RNN (1)
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-lstm-emb.html">
+     14장. Embedding, RNN (2)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="15-bert.html">
+   15장. 선학습 임베딩, 전이학습 (1)
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="15-lstm-glove.html">
+     15장. 선학습 임베딩, 전이학습 (2)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-attention.html">
+   16장. Data Augmentation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lectures/08-stacking-lgb.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/SDSTony/dku-kaggle-class"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/SDSTony/dku-kaggle-class/issues/new?title=Issue%20on%20page%20%2Flectures/08-stacking-lgb.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/SDSTony/dku-kaggle-class/master?urlpath=tree/lectures/08-stacking-lgb.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import">
+   라이브러리 import 및 설정
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   학습데이터 로드
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stacking-feature">
+   Stacking Feature 생성
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stratified-k-fold-cross-validation">
+   Stratified K-Fold Cross Validation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lightgbm">
+   LightGBM 모델 학습
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   피처 중요도 시각화
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   제출 파일 생성
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="id1">
+<h1>데모<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="import">
+<h2>라이브러리 import 및 설정<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reload_ext</span> autoreload
+<span class="o">%</span><span class="k">autoreload</span> 2
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lightgbm</span> <span class="k">as</span> <span class="nn">lgb</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">StratifiedKFold</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;max_columns&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.precision&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>학습데이터 로드<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/kaggler-tv/dku-kaggle-class/blob/master/notebook/03-pandas-eda.ipynb">03-pandas-eda.ipynb</a>에서 생성한 <code class="docutils literal notranslate"><span class="pre">feature.csv</span></code> 피처파일 사용</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../data/dacon-dku&#39;</span><span class="p">)</span>
+<span class="n">feature_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../build/feature&#39;</span><span class="p">)</span>
+<span class="n">val_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../build/val&#39;</span><span class="p">)</span>
+<span class="n">tst_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../build/tst&#39;</span><span class="p">)</span>
+<span class="n">sub_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../build/sub&#39;</span><span class="p">)</span>
+
+<span class="n">trn_file</span> <span class="o">=</span> <span class="n">data_dir</span> <span class="o">/</span> <span class="s1">&#39;train.csv&#39;</span>
+<span class="n">tst_file</span> <span class="o">=</span> <span class="n">data_dir</span> <span class="o">/</span> <span class="s1">&#39;test.csv&#39;</span>
+<span class="n">sample_file</span> <span class="o">=</span> <span class="n">data_dir</span> <span class="o">/</span> <span class="s1">&#39;sample_submission.csv&#39;</span>
+
+<span class="n">target_col</span> <span class="o">=</span> <span class="s1">&#39;class&#39;</span>
+<span class="n">n_fold</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">n_class</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">seed</span> <span class="o">=</span> <span class="mi">42</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">algo_name</span> <span class="o">=</span> <span class="s1">&#39;lgbcv&#39;</span>
+<span class="n">feature_name</span> <span class="o">=</span> <span class="s1">&#39;stacking1&#39;</span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">algo_name</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">feature_name</span><span class="si">}</span><span class="s1">&#39;</span>
+
+<span class="n">feature_file</span> <span class="o">=</span> <span class="n">feature_dir</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">feature_name</span><span class="si">}</span><span class="s1">.csv&#39;</span>
+<span class="n">p_val_file</span> <span class="o">=</span> <span class="n">val_dir</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s1">.val.csv&#39;</span>
+<span class="n">p_tst_file</span> <span class="o">=</span> <span class="n">tst_dir</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s1">.tst.csv&#39;</span>
+<span class="n">sub_file</span> <span class="o">=</span> <span class="n">sub_dir</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s1">.csv&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="stacking-feature">
+<h2>Stacking Feature 생성<a class="headerlink" href="#stacking-feature" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;lrcv_polyfeature&#39;</span><span class="p">,</span> <span class="s1">&#39;rfcv_feature&#39;</span><span class="p">,</span> <span class="s1">&#39;lgbcv_feature&#39;</span><span class="p">]</span>
+<span class="n">trn</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">tst</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">feature_names</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">model_names</span><span class="p">:</span>
+    <span class="n">trn</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">val_dir</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s1">.val.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">))</span>
+    <span class="n">tst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">tst_dir</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s1">.tst.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">))</span>
+    <span class="n">feature_names</span> <span class="o">+=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s1">_class0&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s1">_class1&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s1">_class2&#39;</span><span class="p">]</span>
+    
+<span class="n">trn</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span><span class="n">trn</span><span class="p">)</span>
+<span class="n">tst</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span><span class="n">tst</span><span class="p">)</span>
+<span class="n">feature_names</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;lrcv_polyfeature_class0&#39;,
+ &#39;lrcv_polyfeature_class1&#39;,
+ &#39;lrcv_polyfeature_class2&#39;,
+ &#39;rfcv_feature_class0&#39;,
+ &#39;rfcv_feature_class1&#39;,
+ &#39;rfcv_feature_class2&#39;,
+ &#39;lgbcv_feature_class0&#39;,
+ &#39;lgbcv_feature_class1&#39;,
+ &#39;lgbcv_feature_class2&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">trn_file</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">target_col</span><span class="p">])</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+<span class="n">y</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(320000,)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="stratified-k-fold-cross-validation">
+<h2>Stratified K-Fold Cross Validation<a class="headerlink" href="#stratified-k-fold-cross-validation" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cv</span> <span class="o">=</span> <span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="n">n_fold</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="lightgbm">
+<h2>LightGBM 모델 학습<a class="headerlink" href="#lightgbm" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">trn</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">n_class</span><span class="p">))</span>
+<span class="n">p_tst</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">tst</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">n_class</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">i_trn</span><span class="p">,</span> <span class="n">i_val</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cv</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">trn</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;training model for CV #</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">clf</span> <span class="o">=</span> <span class="n">lgb</span><span class="o">.</span><span class="n">LGBMClassifier</span><span class="p">(</span><span class="n">objective</span><span class="o">=</span><span class="s1">&#39;multiclass&#39;</span><span class="p">,</span>
+                             <span class="n">n_estimators</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+                             <span class="n">num_leaves</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span>
+                             <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+                             <span class="n">min_child_samples</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                             <span class="n">subsample</span><span class="o">=.</span><span class="mi">5</span><span class="p">,</span>
+                             <span class="n">subsample_freq</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                             <span class="n">colsample_bytree</span><span class="o">=.</span><span class="mi">8</span><span class="p">,</span>
+                             <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">,</span>
+                             <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">trn</span><span class="p">[</span><span class="n">i_trn</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">i_trn</span><span class="p">],</span>
+            <span class="n">eval_set</span><span class="o">=</span><span class="p">[(</span><span class="n">trn</span><span class="p">[</span><span class="n">i_val</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">i_val</span><span class="p">])],</span>
+            <span class="n">eval_metric</span><span class="o">=</span><span class="s1">&#39;multiclass&#39;</span><span class="p">,</span>
+            <span class="n">early_stopping_rounds</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    
+    <span class="n">p_val</span><span class="p">[</span><span class="n">i_val</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">trn</span><span class="p">[</span><span class="n">i_val</span><span class="p">])</span>
+    <span class="n">p_tst</span> <span class="o">+=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">tst</span><span class="p">)</span> <span class="o">/</span> <span class="n">n_fold</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>training model for CV #1
+[1]	valid_0&#39;s multi_logloss: 0.872561
+Training until validation scores don&#39;t improve for 10 rounds
+[2]	valid_0&#39;s multi_logloss: 0.781259
+[3]	valid_0&#39;s multi_logloss: 0.705565
+[4]	valid_0&#39;s multi_logloss: 0.641647
+[5]	valid_0&#39;s multi_logloss: 0.586861
+[6]	valid_0&#39;s multi_logloss: 0.539686
+[7]	valid_0&#39;s multi_logloss: 0.498697
+[8]	valid_0&#39;s multi_logloss: 0.462928
+[9]	valid_0&#39;s multi_logloss: 0.431543
+[10]	valid_0&#39;s multi_logloss: 0.403925
+[11]	valid_0&#39;s multi_logloss: 0.379427
+[12]	valid_0&#39;s multi_logloss: 0.357745
+[13]	valid_0&#39;s multi_logloss: 0.33846
+[14]	valid_0&#39;s multi_logloss: 0.321341
+[15]	valid_0&#39;s multi_logloss: 0.306008
+[16]	valid_0&#39;s multi_logloss: 0.292285
+[17]	valid_0&#39;s multi_logloss: 0.280025
+[18]	valid_0&#39;s multi_logloss: 0.269093
+[19]	valid_0&#39;s multi_logloss: 0.259231
+[20]	valid_0&#39;s multi_logloss: 0.250454
+[21]	valid_0&#39;s multi_logloss: 0.242495
+[22]	valid_0&#39;s multi_logloss: 0.235348
+[23]	valid_0&#39;s multi_logloss: 0.228915
+[24]	valid_0&#39;s multi_logloss: 0.223113
+[25]	valid_0&#39;s multi_logloss: 0.217877
+[26]	valid_0&#39;s multi_logloss: 0.21314
+[27]	valid_0&#39;s multi_logloss: 0.208835
+[28]	valid_0&#39;s multi_logloss: 0.204941
+[29]	valid_0&#39;s multi_logloss: 0.201432
+[30]	valid_0&#39;s multi_logloss: 0.198208
+[31]	valid_0&#39;s multi_logloss: 0.19532
+[32]	valid_0&#39;s multi_logloss: 0.192669
+[33]	valid_0&#39;s multi_logloss: 0.190273
+[34]	valid_0&#39;s multi_logloss: 0.188068
+[35]	valid_0&#39;s multi_logloss: 0.186113
+[36]	valid_0&#39;s multi_logloss: 0.184264
+[37]	valid_0&#39;s multi_logloss: 0.182672
+[38]	valid_0&#39;s multi_logloss: 0.181179
+[39]	valid_0&#39;s multi_logloss: 0.179791
+[40]	valid_0&#39;s multi_logloss: 0.178508
+[41]	valid_0&#39;s multi_logloss: 0.177326
+[42]	valid_0&#39;s multi_logloss: 0.176257
+[43]	valid_0&#39;s multi_logloss: 0.175299
+[44]	valid_0&#39;s multi_logloss: 0.174391
+[45]	valid_0&#39;s multi_logloss: 0.173569
+[46]	valid_0&#39;s multi_logloss: 0.172829
+[47]	valid_0&#39;s multi_logloss: 0.172107
+[48]	valid_0&#39;s multi_logloss: 0.171481
+[49]	valid_0&#39;s multi_logloss: 0.170876
+[50]	valid_0&#39;s multi_logloss: 0.170352
+[51]	valid_0&#39;s multi_logloss: 0.169814
+[52]	valid_0&#39;s multi_logloss: 0.169338
+[53]	valid_0&#39;s multi_logloss: 0.168891
+[54]	valid_0&#39;s multi_logloss: 0.168508
+[55]	valid_0&#39;s multi_logloss: 0.168146
+[56]	valid_0&#39;s multi_logloss: 0.167838
+[57]	valid_0&#39;s multi_logloss: 0.167517
+[58]	valid_0&#39;s multi_logloss: 0.167205
+[59]	valid_0&#39;s multi_logloss: 0.16696
+[60]	valid_0&#39;s multi_logloss: 0.166668
+[61]	valid_0&#39;s multi_logloss: 0.166455
+[62]	valid_0&#39;s multi_logloss: 0.166238
+[63]	valid_0&#39;s multi_logloss: 0.166082
+[64]	valid_0&#39;s multi_logloss: 0.16592
+[65]	valid_0&#39;s multi_logloss: 0.165746
+[66]	valid_0&#39;s multi_logloss: 0.165551
+[67]	valid_0&#39;s multi_logloss: 0.165416
+[68]	valid_0&#39;s multi_logloss: 0.165258
+[69]	valid_0&#39;s multi_logloss: 0.165123
+[70]	valid_0&#39;s multi_logloss: 0.165009
+[71]	valid_0&#39;s multi_logloss: 0.164925
+[72]	valid_0&#39;s multi_logloss: 0.164826
+[73]	valid_0&#39;s multi_logloss: 0.164745
+[74]	valid_0&#39;s multi_logloss: 0.164649
+[75]	valid_0&#39;s multi_logloss: 0.164562
+[76]	valid_0&#39;s multi_logloss: 0.164544
+[77]	valid_0&#39;s multi_logloss: 0.164477
+[78]	valid_0&#39;s multi_logloss: 0.164384
+[79]	valid_0&#39;s multi_logloss: 0.16433
+[80]	valid_0&#39;s multi_logloss: 0.164247
+[81]	valid_0&#39;s multi_logloss: 0.164178
+[82]	valid_0&#39;s multi_logloss: 0.16412
+[83]	valid_0&#39;s multi_logloss: 0.164029
+[84]	valid_0&#39;s multi_logloss: 0.16399
+[85]	valid_0&#39;s multi_logloss: 0.163989
+[86]	valid_0&#39;s multi_logloss: 0.163934
+[87]	valid_0&#39;s multi_logloss: 0.163912
+[88]	valid_0&#39;s multi_logloss: 0.163863
+[89]	valid_0&#39;s multi_logloss: 0.163824
+[90]	valid_0&#39;s multi_logloss: 0.163786
+[91]	valid_0&#39;s multi_logloss: 0.163764
+[92]	valid_0&#39;s multi_logloss: 0.163741
+[93]	valid_0&#39;s multi_logloss: 0.163714
+[94]	valid_0&#39;s multi_logloss: 0.163693
+[95]	valid_0&#39;s multi_logloss: 0.163672
+[96]	valid_0&#39;s multi_logloss: 0.163659
+[97]	valid_0&#39;s multi_logloss: 0.163627
+[98]	valid_0&#39;s multi_logloss: 0.163612
+[99]	valid_0&#39;s multi_logloss: 0.163636
+[100]	valid_0&#39;s multi_logloss: 0.16364
+[101]	valid_0&#39;s multi_logloss: 0.163627
+[102]	valid_0&#39;s multi_logloss: 0.163662
+[103]	valid_0&#39;s multi_logloss: 0.163649
+[104]	valid_0&#39;s multi_logloss: 0.163668
+[105]	valid_0&#39;s multi_logloss: 0.163675
+[106]	valid_0&#39;s multi_logloss: 0.163678
+[107]	valid_0&#39;s multi_logloss: 0.163689
+[108]	valid_0&#39;s multi_logloss: 0.163684
+Early stopping, best iteration is:
+[98]	valid_0&#39;s multi_logloss: 0.163612
+training model for CV #2
+[1]	valid_0&#39;s multi_logloss: 0.87104
+Training until validation scores don&#39;t improve for 10 rounds
+[2]	valid_0&#39;s multi_logloss: 0.779017
+[3]	valid_0&#39;s multi_logloss: 0.702984
+[4]	valid_0&#39;s multi_logloss: 0.638549
+[5]	valid_0&#39;s multi_logloss: 0.583572
+[6]	valid_0&#39;s multi_logloss: 0.536297
+[7]	valid_0&#39;s multi_logloss: 0.495139
+[8]	valid_0&#39;s multi_logloss: 0.459251
+[9]	valid_0&#39;s multi_logloss: 0.427733
+[10]	valid_0&#39;s multi_logloss: 0.399993
+[11]	valid_0&#39;s multi_logloss: 0.375475
+[12]	valid_0&#39;s multi_logloss: 0.353711
+[13]	valid_0&#39;s multi_logloss: 0.334478
+[14]	valid_0&#39;s multi_logloss: 0.317348
+[15]	valid_0&#39;s multi_logloss: 0.302085
+[16]	valid_0&#39;s multi_logloss: 0.288467
+[17]	valid_0&#39;s multi_logloss: 0.276335
+[18]	valid_0&#39;s multi_logloss: 0.265425
+[19]	valid_0&#39;s multi_logloss: 0.255703
+[20]	valid_0&#39;s multi_logloss: 0.246887
+[21]	valid_0&#39;s multi_logloss: 0.238999
+[22]	valid_0&#39;s multi_logloss: 0.231934
+[23]	valid_0&#39;s multi_logloss: 0.225559
+[24]	valid_0&#39;s multi_logloss: 0.219843
+[25]	valid_0&#39;s multi_logloss: 0.214677
+[26]	valid_0&#39;s multi_logloss: 0.210019
+[27]	valid_0&#39;s multi_logloss: 0.205789
+[28]	valid_0&#39;s multi_logloss: 0.201973
+[29]	valid_0&#39;s multi_logloss: 0.198476
+[30]	valid_0&#39;s multi_logloss: 0.195345
+[31]	valid_0&#39;s multi_logloss: 0.192493
+[32]	valid_0&#39;s multi_logloss: 0.189909
+[33]	valid_0&#39;s multi_logloss: 0.187561
+[34]	valid_0&#39;s multi_logloss: 0.185438
+[35]	valid_0&#39;s multi_logloss: 0.18355
+[36]	valid_0&#39;s multi_logloss: 0.181804
+[37]	valid_0&#39;s multi_logloss: 0.180169
+[38]	valid_0&#39;s multi_logloss: 0.17873
+[39]	valid_0&#39;s multi_logloss: 0.177354
+[40]	valid_0&#39;s multi_logloss: 0.176112
+[41]	valid_0&#39;s multi_logloss: 0.174967
+[42]	valid_0&#39;s multi_logloss: 0.173916
+[43]	valid_0&#39;s multi_logloss: 0.172939
+[44]	valid_0&#39;s multi_logloss: 0.172071
+[45]	valid_0&#39;s multi_logloss: 0.171285
+[46]	valid_0&#39;s multi_logloss: 0.170578
+[47]	valid_0&#39;s multi_logloss: 0.169946
+[48]	valid_0&#39;s multi_logloss: 0.169335
+[49]	valid_0&#39;s multi_logloss: 0.168798
+[50]	valid_0&#39;s multi_logloss: 0.168302
+[51]	valid_0&#39;s multi_logloss: 0.167796
+[52]	valid_0&#39;s multi_logloss: 0.167393
+[53]	valid_0&#39;s multi_logloss: 0.166924
+[54]	valid_0&#39;s multi_logloss: 0.166532
+[55]	valid_0&#39;s multi_logloss: 0.166144
+[56]	valid_0&#39;s multi_logloss: 0.165817
+[57]	valid_0&#39;s multi_logloss: 0.165534
+[58]	valid_0&#39;s multi_logloss: 0.165274
+[59]	valid_0&#39;s multi_logloss: 0.165049
+[60]	valid_0&#39;s multi_logloss: 0.164807
+[61]	valid_0&#39;s multi_logloss: 0.164894
+[62]	valid_0&#39;s multi_logloss: 0.164639
+[63]	valid_0&#39;s multi_logloss: 0.164447
+[64]	valid_0&#39;s multi_logloss: 0.164277
+[65]	valid_0&#39;s multi_logloss: 0.16499
+[66]	valid_0&#39;s multi_logloss: 0.163987
+[67]	valid_0&#39;s multi_logloss: 0.163847
+[68]	valid_0&#39;s multi_logloss: 0.166748
+[69]	valid_0&#39;s multi_logloss: 0.163951
+[70]	valid_0&#39;s multi_logloss: 0.165424
+[71]	valid_0&#39;s multi_logloss: 0.164133
+[72]	valid_0&#39;s multi_logloss: 0.170719
+[73]	valid_0&#39;s multi_logloss: 0.164874
+[74]	valid_0&#39;s multi_logloss: 0.167003
+[75]	valid_0&#39;s multi_logloss: 0.163835
+[76]	valid_0&#39;s multi_logloss: 0.163779
+[77]	valid_0&#39;s multi_logloss: 0.169687
+[78]	valid_0&#39;s multi_logloss: 0.16437
+[79]	valid_0&#39;s multi_logloss: 0.167214
+[80]	valid_0&#39;s multi_logloss: 0.165725
+[81]	valid_0&#39;s multi_logloss: 0.166933
+[82]	valid_0&#39;s multi_logloss: 0.165532
+[83]	valid_0&#39;s multi_logloss: 0.16543
+[84]	valid_0&#39;s multi_logloss: 0.169679
+[85]	valid_0&#39;s multi_logloss: 0.165332
+[86]	valid_0&#39;s multi_logloss: 0.165313
+Early stopping, best iteration is:
+[76]	valid_0&#39;s multi_logloss: 0.163779
+training model for CV #3
+[1]	valid_0&#39;s multi_logloss: 0.8728
+Training until validation scores don&#39;t improve for 10 rounds
+[2]	valid_0&#39;s multi_logloss: 0.78198
+[3]	valid_0&#39;s multi_logloss: 0.706436
+[4]	valid_0&#39;s multi_logloss: 0.642692
+[5]	valid_0&#39;s multi_logloss: 0.588198
+[6]	valid_0&#39;s multi_logloss: 0.541148
+[7]	valid_0&#39;s multi_logloss: 0.500206
+[8]	valid_0&#39;s multi_logloss: 0.464501
+[9]	valid_0&#39;s multi_logloss: 0.433164
+[10]	valid_0&#39;s multi_logloss: 0.405452
+[11]	valid_0&#39;s multi_logloss: 0.380965
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[12]	valid_0&#39;s multi_logloss: 0.359351
+[13]	valid_0&#39;s multi_logloss: 0.340064
+[14]	valid_0&#39;s multi_logloss: 0.322961
+[15]	valid_0&#39;s multi_logloss: 0.30769
+[16]	valid_0&#39;s multi_logloss: 0.294058
+[17]	valid_0&#39;s multi_logloss: 0.281866
+[18]	valid_0&#39;s multi_logloss: 0.270968
+[19]	valid_0&#39;s multi_logloss: 0.261074
+[20]	valid_0&#39;s multi_logloss: 0.252274
+[21]	valid_0&#39;s multi_logloss: 0.244306
+[22]	valid_0&#39;s multi_logloss: 0.237134
+[23]	valid_0&#39;s multi_logloss: 0.230648
+[24]	valid_0&#39;s multi_logloss: 0.224885
+[25]	valid_0&#39;s multi_logloss: 0.219671
+[26]	valid_0&#39;s multi_logloss: 0.214968
+[27]	valid_0&#39;s multi_logloss: 0.210653
+[28]	valid_0&#39;s multi_logloss: 0.206748
+[29]	valid_0&#39;s multi_logloss: 0.203192
+[30]	valid_0&#39;s multi_logloss: 0.199978
+[31]	valid_0&#39;s multi_logloss: 0.19708
+[32]	valid_0&#39;s multi_logloss: 0.194418
+[33]	valid_0&#39;s multi_logloss: 0.191981
+[34]	valid_0&#39;s multi_logloss: 0.1898
+[35]	valid_0&#39;s multi_logloss: 0.187818
+[36]	valid_0&#39;s multi_logloss: 0.186013
+[37]	valid_0&#39;s multi_logloss: 0.184354
+[38]	valid_0&#39;s multi_logloss: 0.182853
+[39]	valid_0&#39;s multi_logloss: 0.181494
+[40]	valid_0&#39;s multi_logloss: 0.18026
+[41]	valid_0&#39;s multi_logloss: 0.179135
+[42]	valid_0&#39;s multi_logloss: 0.178116
+[43]	valid_0&#39;s multi_logloss: 0.17709
+[44]	valid_0&#39;s multi_logloss: 0.176216
+[45]	valid_0&#39;s multi_logloss: 0.175425
+[46]	valid_0&#39;s multi_logloss: 0.174681
+[47]	valid_0&#39;s multi_logloss: 0.173971
+[48]	valid_0&#39;s multi_logloss: 0.173332
+[49]	valid_0&#39;s multi_logloss: 0.172694
+[50]	valid_0&#39;s multi_logloss: 0.172174
+[51]	valid_0&#39;s multi_logloss: 0.171638
+[52]	valid_0&#39;s multi_logloss: 0.171183
+[53]	valid_0&#39;s multi_logloss: 0.170741
+[54]	valid_0&#39;s multi_logloss: 0.170368
+[55]	valid_0&#39;s multi_logloss: 0.169994
+[56]	valid_0&#39;s multi_logloss: 0.169661
+[57]	valid_0&#39;s multi_logloss: 0.169316
+[58]	valid_0&#39;s multi_logloss: 0.169031
+[59]	valid_0&#39;s multi_logloss: 0.168771
+[60]	valid_0&#39;s multi_logloss: 0.168526
+[61]	valid_0&#39;s multi_logloss: 0.168334
+[62]	valid_0&#39;s multi_logloss: 0.168221
+[63]	valid_0&#39;s multi_logloss: 0.168015
+[64]	valid_0&#39;s multi_logloss: 0.167923
+[65]	valid_0&#39;s multi_logloss: 0.167733
+[66]	valid_0&#39;s multi_logloss: 0.167573
+[67]	valid_0&#39;s multi_logloss: 0.167399
+[68]	valid_0&#39;s multi_logloss: 0.167256
+[69]	valid_0&#39;s multi_logloss: 0.167135
+[70]	valid_0&#39;s multi_logloss: 0.166992
+[71]	valid_0&#39;s multi_logloss: 0.166866
+[72]	valid_0&#39;s multi_logloss: 0.16677
+[73]	valid_0&#39;s multi_logloss: 0.166671
+[74]	valid_0&#39;s multi_logloss: 0.166616
+[75]	valid_0&#39;s multi_logloss: 0.166545
+[76]	valid_0&#39;s multi_logloss: 0.166461
+[77]	valid_0&#39;s multi_logloss: 0.166428
+[78]	valid_0&#39;s multi_logloss: 0.166358
+[79]	valid_0&#39;s multi_logloss: 0.166254
+[80]	valid_0&#39;s multi_logloss: 0.166183
+[81]	valid_0&#39;s multi_logloss: 0.166151
+[82]	valid_0&#39;s multi_logloss: 0.166108
+[83]	valid_0&#39;s multi_logloss: 0.166125
+[84]	valid_0&#39;s multi_logloss: 0.166065
+[85]	valid_0&#39;s multi_logloss: 0.166014
+[86]	valid_0&#39;s multi_logloss: 0.166006
+[87]	valid_0&#39;s multi_logloss: 0.165961
+[88]	valid_0&#39;s multi_logloss: 0.165919
+[89]	valid_0&#39;s multi_logloss: 0.165903
+[90]	valid_0&#39;s multi_logloss: 0.165874
+[91]	valid_0&#39;s multi_logloss: 0.165838
+[92]	valid_0&#39;s multi_logloss: 0.165817
+[93]	valid_0&#39;s multi_logloss: 0.165794
+[94]	valid_0&#39;s multi_logloss: 0.165784
+[95]	valid_0&#39;s multi_logloss: 0.165881
+[96]	valid_0&#39;s multi_logloss: 0.165825
+[97]	valid_0&#39;s multi_logloss: 0.165803
+[98]	valid_0&#39;s multi_logloss: 0.165792
+[99]	valid_0&#39;s multi_logloss: 0.165782
+[100]	valid_0&#39;s multi_logloss: 0.165782
+[101]	valid_0&#39;s multi_logloss: 0.165764
+[102]	valid_0&#39;s multi_logloss: 0.165778
+[103]	valid_0&#39;s multi_logloss: 0.16577
+[104]	valid_0&#39;s multi_logloss: 0.165788
+[105]	valid_0&#39;s multi_logloss: 0.16578
+[106]	valid_0&#39;s multi_logloss: 0.165779
+[107]	valid_0&#39;s multi_logloss: 0.165797
+[108]	valid_0&#39;s multi_logloss: 0.165828
+[109]	valid_0&#39;s multi_logloss: 0.165822
+[110]	valid_0&#39;s multi_logloss: 0.165841
+[111]	valid_0&#39;s multi_logloss: 0.16584
+Early stopping, best iteration is:
+[101]	valid_0&#39;s multi_logloss: 0.165764
+training model for CV #4
+[1]	valid_0&#39;s multi_logloss: 0.871694
+Training until validation scores don&#39;t improve for 10 rounds
+[2]	valid_0&#39;s multi_logloss: 0.779868
+[3]	valid_0&#39;s multi_logloss: 0.703921
+[4]	valid_0&#39;s multi_logloss: 0.639731
+[5]	valid_0&#39;s multi_logloss: 0.584873
+[6]	valid_0&#39;s multi_logloss: 0.53759
+[7]	valid_0&#39;s multi_logloss: 0.496525
+[8]	valid_0&#39;s multi_logloss: 0.460625
+[9]	valid_0&#39;s multi_logloss: 0.42907
+[10]	valid_0&#39;s multi_logloss: 0.401367
+[11]	valid_0&#39;s multi_logloss: 0.376949
+[12]	valid_0&#39;s multi_logloss: 0.355235
+[13]	valid_0&#39;s multi_logloss: 0.336027
+[14]	valid_0&#39;s multi_logloss: 0.318942
+[15]	valid_0&#39;s multi_logloss: 0.303773
+[16]	valid_0&#39;s multi_logloss: 0.290198
+[17]	valid_0&#39;s multi_logloss: 0.278005
+[18]	valid_0&#39;s multi_logloss: 0.26714
+[19]	valid_0&#39;s multi_logloss: 0.257386
+[20]	valid_0&#39;s multi_logloss: 0.248613
+[21]	valid_0&#39;s multi_logloss: 0.240744
+[22]	valid_0&#39;s multi_logloss: 0.233663
+[23]	valid_0&#39;s multi_logloss: 0.227289
+[24]	valid_0&#39;s multi_logloss: 0.221605
+[25]	valid_0&#39;s multi_logloss: 0.216433
+[26]	valid_0&#39;s multi_logloss: 0.211709
+[27]	valid_0&#39;s multi_logloss: 0.207478
+[28]	valid_0&#39;s multi_logloss: 0.203661
+[29]	valid_0&#39;s multi_logloss: 0.200235
+[30]	valid_0&#39;s multi_logloss: 0.197127
+[31]	valid_0&#39;s multi_logloss: 0.194295
+[32]	valid_0&#39;s multi_logloss: 0.191721
+[33]	valid_0&#39;s multi_logloss: 0.189326
+[34]	valid_0&#39;s multi_logloss: 0.1872
+[35]	valid_0&#39;s multi_logloss: 0.185294
+[36]	valid_0&#39;s multi_logloss: 0.183495
+[37]	valid_0&#39;s multi_logloss: 0.181857
+[38]	valid_0&#39;s multi_logloss: 0.180362
+[39]	valid_0&#39;s multi_logloss: 0.17896
+[40]	valid_0&#39;s multi_logloss: 0.177727
+[41]	valid_0&#39;s multi_logloss: 0.176646
+[42]	valid_0&#39;s multi_logloss: 0.175597
+[43]	valid_0&#39;s multi_logloss: 0.174636
+[44]	valid_0&#39;s multi_logloss: 0.173761
+[45]	valid_0&#39;s multi_logloss: 0.172954
+[46]	valid_0&#39;s multi_logloss: 0.172263
+[47]	valid_0&#39;s multi_logloss: 0.171648
+[48]	valid_0&#39;s multi_logloss: 0.171068
+[49]	valid_0&#39;s multi_logloss: 0.170448
+[50]	valid_0&#39;s multi_logloss: 0.169945
+[51]	valid_0&#39;s multi_logloss: 0.169456
+[52]	valid_0&#39;s multi_logloss: 0.16904
+[53]	valid_0&#39;s multi_logloss: 0.168621
+[54]	valid_0&#39;s multi_logloss: 0.168233
+[55]	valid_0&#39;s multi_logloss: 0.167896
+[56]	valid_0&#39;s multi_logloss: 0.167586
+[57]	valid_0&#39;s multi_logloss: 0.167323
+[58]	valid_0&#39;s multi_logloss: 0.167104
+[59]	valid_0&#39;s multi_logloss: 0.166887
+[60]	valid_0&#39;s multi_logloss: 0.166663
+[61]	valid_0&#39;s multi_logloss: 0.166436
+[62]	valid_0&#39;s multi_logloss: 0.166233
+[63]	valid_0&#39;s multi_logloss: 0.166042
+[64]	valid_0&#39;s multi_logloss: 0.165909
+[65]	valid_0&#39;s multi_logloss: 0.165741
+[66]	valid_0&#39;s multi_logloss: 0.165598
+[67]	valid_0&#39;s multi_logloss: 0.165444
+[68]	valid_0&#39;s multi_logloss: 0.165349
+[69]	valid_0&#39;s multi_logloss: 0.16587
+[70]	valid_0&#39;s multi_logloss: 0.165065
+[71]	valid_0&#39;s multi_logloss: 0.166954
+[72]	valid_0&#39;s multi_logloss: 0.166051
+[73]	valid_0&#39;s multi_logloss: 0.165968
+[74]	valid_0&#39;s multi_logloss: 0.165892
+[75]	valid_0&#39;s multi_logloss: 0.165815
+[76]	valid_0&#39;s multi_logloss: 0.165763
+[77]	valid_0&#39;s multi_logloss: 0.164637
+[78]	valid_0&#39;s multi_logloss: 0.164582
+[79]	valid_0&#39;s multi_logloss: 0.164509
+[80]	valid_0&#39;s multi_logloss: 0.164451
+[81]	valid_0&#39;s multi_logloss: 0.164381
+[82]	valid_0&#39;s multi_logloss: 0.164346
+[83]	valid_0&#39;s multi_logloss: 0.16433
+[84]	valid_0&#39;s multi_logloss: 0.164325
+[85]	valid_0&#39;s multi_logloss: 0.165469
+[86]	valid_0&#39;s multi_logloss: 0.164241
+[87]	valid_0&#39;s multi_logloss: 0.169313
+[88]	valid_0&#39;s multi_logloss: 0.16509
+[89]	valid_0&#39;s multi_logloss: 0.164636
+[90]	valid_0&#39;s multi_logloss: 0.164581
+[91]	valid_0&#39;s multi_logloss: 0.16457
+[92]	valid_0&#39;s multi_logloss: 0.168354
+[93]	valid_0&#39;s multi_logloss: 0.168279
+[94]	valid_0&#39;s multi_logloss: 0.170919
+[95]	valid_0&#39;s multi_logloss: 0.169824
+[96]	valid_0&#39;s multi_logloss: 0.175127
+Early stopping, best iteration is:
+[86]	valid_0&#39;s multi_logloss: 0.164241
+training model for CV #5
+[1]	valid_0&#39;s multi_logloss: 0.871917
+Training until validation scores don&#39;t improve for 10 rounds
+[2]	valid_0&#39;s multi_logloss: 0.780226
+[3]	valid_0&#39;s multi_logloss: 0.704197
+[4]	valid_0&#39;s multi_logloss: 0.639978
+[5]	valid_0&#39;s multi_logloss: 0.585046
+[6]	valid_0&#39;s multi_logloss: 0.537799
+[7]	valid_0&#39;s multi_logloss: 0.496669
+[8]	valid_0&#39;s multi_logloss: 0.460732
+[9]	valid_0&#39;s multi_logloss: 0.429252
+[10]	valid_0&#39;s multi_logloss: 0.401499
+[11]	valid_0&#39;s multi_logloss: 0.376988
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[12]	valid_0&#39;s multi_logloss: 0.355251
+[13]	valid_0&#39;s multi_logloss: 0.335915
+[14]	valid_0&#39;s multi_logloss: 0.318731
+[15]	valid_0&#39;s multi_logloss: 0.303479
+[16]	valid_0&#39;s multi_logloss: 0.289859
+[17]	valid_0&#39;s multi_logloss: 0.27766
+[18]	valid_0&#39;s multi_logloss: 0.266741
+[19]	valid_0&#39;s multi_logloss: 0.256899
+[20]	valid_0&#39;s multi_logloss: 0.248123
+[21]	valid_0&#39;s multi_logloss: 0.240227
+[22]	valid_0&#39;s multi_logloss: 0.233112
+[23]	valid_0&#39;s multi_logloss: 0.22671
+[24]	valid_0&#39;s multi_logloss: 0.220957
+[25]	valid_0&#39;s multi_logloss: 0.215741
+[26]	valid_0&#39;s multi_logloss: 0.210974
+[27]	valid_0&#39;s multi_logloss: 0.206716
+[28]	valid_0&#39;s multi_logloss: 0.202885
+[29]	valid_0&#39;s multi_logloss: 0.199392
+[30]	valid_0&#39;s multi_logloss: 0.196203
+[31]	valid_0&#39;s multi_logloss: 0.193356
+[32]	valid_0&#39;s multi_logloss: 0.190782
+[33]	valid_0&#39;s multi_logloss: 0.188429
+[34]	valid_0&#39;s multi_logloss: 0.186254
+[35]	valid_0&#39;s multi_logloss: 0.184275
+[36]	valid_0&#39;s multi_logloss: 0.182449
+[37]	valid_0&#39;s multi_logloss: 0.180789
+[38]	valid_0&#39;s multi_logloss: 0.179286
+[39]	valid_0&#39;s multi_logloss: 0.177917
+[40]	valid_0&#39;s multi_logloss: 0.176665
+[41]	valid_0&#39;s multi_logloss: 0.175579
+[42]	valid_0&#39;s multi_logloss: 0.174546
+[43]	valid_0&#39;s multi_logloss: 0.173632
+[44]	valid_0&#39;s multi_logloss: 0.172763
+[45]	valid_0&#39;s multi_logloss: 0.171961
+[46]	valid_0&#39;s multi_logloss: 0.17123
+[47]	valid_0&#39;s multi_logloss: 0.170586
+[48]	valid_0&#39;s multi_logloss: 0.169966
+[49]	valid_0&#39;s multi_logloss: 0.169434
+[50]	valid_0&#39;s multi_logloss: 0.168887
+[51]	valid_0&#39;s multi_logloss: 0.168419
+[52]	valid_0&#39;s multi_logloss: 0.167972
+[53]	valid_0&#39;s multi_logloss: 0.167581
+[54]	valid_0&#39;s multi_logloss: 0.167191
+[55]	valid_0&#39;s multi_logloss: 0.166874
+[56]	valid_0&#39;s multi_logloss: 0.166523
+[57]	valid_0&#39;s multi_logloss: 0.166254
+[58]	valid_0&#39;s multi_logloss: 0.165973
+[59]	valid_0&#39;s multi_logloss: 0.165689
+[60]	valid_0&#39;s multi_logloss: 0.165602
+[61]	valid_0&#39;s multi_logloss: 0.165345
+[62]	valid_0&#39;s multi_logloss: 0.165138
+[63]	valid_0&#39;s multi_logloss: 0.16491
+[64]	valid_0&#39;s multi_logloss: 0.164738
+[65]	valid_0&#39;s multi_logloss: 0.164543
+[66]	valid_0&#39;s multi_logloss: 0.164355
+[67]	valid_0&#39;s multi_logloss: 0.164264
+[68]	valid_0&#39;s multi_logloss: 0.164142
+[69]	valid_0&#39;s multi_logloss: 0.164023
+[70]	valid_0&#39;s multi_logloss: 0.163922
+[71]	valid_0&#39;s multi_logloss: 0.16384
+[72]	valid_0&#39;s multi_logloss: 0.163753
+[73]	valid_0&#39;s multi_logloss: 0.163659
+[74]	valid_0&#39;s multi_logloss: 0.163542
+[75]	valid_0&#39;s multi_logloss: 0.163467
+[76]	valid_0&#39;s multi_logloss: 0.163388
+[77]	valid_0&#39;s multi_logloss: 0.163334
+[78]	valid_0&#39;s multi_logloss: 0.163245
+[79]	valid_0&#39;s multi_logloss: 0.163165
+[80]	valid_0&#39;s multi_logloss: 0.163083
+[81]	valid_0&#39;s multi_logloss: 0.163035
+[82]	valid_0&#39;s multi_logloss: 0.16299
+[83]	valid_0&#39;s multi_logloss: 0.162953
+[84]	valid_0&#39;s multi_logloss: 0.1629
+[85]	valid_0&#39;s multi_logloss: 0.162846
+[86]	valid_0&#39;s multi_logloss: 0.163054
+[87]	valid_0&#39;s multi_logloss: 0.163007
+[88]	valid_0&#39;s multi_logloss: 0.162984
+[89]	valid_0&#39;s multi_logloss: 0.162932
+[90]	valid_0&#39;s multi_logloss: 0.169905
+[91]	valid_0&#39;s multi_logloss: 0.166641
+[92]	valid_0&#39;s multi_logloss: 0.166626
+[93]	valid_0&#39;s multi_logloss: 0.166576
+[94]	valid_0&#39;s multi_logloss: 0.166539
+[95]	valid_0&#39;s multi_logloss: 0.166526
+Early stopping, best iteration is:
+[85]	valid_0&#39;s multi_logloss: 0.162846
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">p_val</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>93.1559%
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">p_val</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">p_tst</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(320000, 3) (80000, 3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="n">p_val_file</span><span class="p">,</span> <span class="n">p_val</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%.6f</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="n">p_tst_file</span><span class="p">,</span> <span class="n">p_tst</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%.6f</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>피처 중요도 시각화<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf</span><span class="o">.</span><span class="n">coef_</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">15</span><span class="o">-</span><span class="mi">742</span><span class="n">ca016ff99</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">clf</span><span class="o">.</span><span class="n">coef_</span><span class="o">.</span><span class="n">shape</span>
+
+<span class="ne">AttributeError</span>: &#39;LGBMClassifier&#39; object has no attribute &#39;coef_&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;feature&#39;</span><span class="p">:</span> <span class="n">feature_names</span><span class="p">,</span> <span class="s1">&#39;importance&#39;</span><span class="p">:</span> <span class="n">clf</span><span class="o">.</span><span class="n">feature_importances_</span><span class="p">})</span>
+<span class="n">imp</span> <span class="o">=</span> <span class="n">imp</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;importance&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;feature&#39;</span><span class="p">)</span>
+<span class="n">imp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;barh&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>제출 파일 생성<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">sample_file</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sub</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">sub</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="p">[</span><span class="n">target_col</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">p_tst</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">sub</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="p">[</span><span class="n">target_col</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">sub_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="08-rf-cv.html" title="previous page">데모</a>
+    <a class='right-next' id="next-link" href="08-stacking-lr.html" title="next page">데모</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Kaggler-TV<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

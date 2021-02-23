@@ -1,0 +1,1142 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>데모 &#8212; 단국대 2020 캐글 뽀개기</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="데모" href="15-bert.html" />
+    <link rel="prev" title="데모" href="14-cnn-emb.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">단국대 2020 캐글 뽀개기</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../main.html">
+   단국대 2020년 가을학기 캐글 뽀개기 강좌
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-pandas-eda.html">
+   3장. Pandas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-numpy-lr.html">
+   4장. Numpy, 선형회귀, 로지스틱회귀
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-numerical-features.html">
+   5장. 수치형변수 가공
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-decision-trees.html">
+   6장. Scikit-learn, 결정트리
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="07-lightgbm.html">
+   7장. Random Forest, GBM (1)
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="07-rf.html">
+     7장. Random Forest, GBM (2)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="08-lightgbm-cv.html">
+   8장. Cross-Validation, Stacking (1)
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-lr-cv.html">
+     8장. Cross-Validation, Stacking (2)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-rf-cv.html">
+     8장. Cross-Validation, Stacking (3)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-stacking-lgb.html">
+     8장. Cross-Validation, Stacking (4)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-stacking-lr.html">
+     8장. Cross-Validation, Stacking (5)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="09-lightgbm-hyperopt.html">
+   9장. 모델 튜닝, Hyperopt, Optuna (1)
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="09-lightgbm-optuna.html">
+     9장. 모델 튜닝, Hyperopt, Optuna (2)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11-categorical-features.html">
+   11장. 범주형변수
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12-nn-cv.html">
+   12장. 신경망, Keras
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13-lr-tfidf.html">
+   13장. 문자열변수 가공
+  </a>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="14-cnn-emb.html">
+   14장. Embedding, RNN (1)
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     14장. Embedding, RNN (2)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="15-bert.html">
+   15장. 선학습 임베딩, 전이학습 (1)
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="15-lstm-glove.html">
+     15장. 선학습 임베딩, 전이학습 (2)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-attention.html">
+   16장. Data Augmentation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lectures/14-lstm-emb.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/SDSTony/dku-kaggle-class"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/SDSTony/dku-kaggle-class/issues/new?title=Issue%20on%20page%20%2Flectures/14-lstm-emb.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/SDSTony/dku-kaggle-class/master?urlpath=tree/lectures/14-lstm-emb.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import">
+   라이브러리 import 및 설정
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   학습데이터 로드
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preprocessing">
+   Preprocessing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#training">
+   Training
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   시각화
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   제출 파일 생성
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="id1">
+<h1>데모<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="import">
+<h2>라이브러리 import 및 설정<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reload_ext</span> autoreload
+<span class="o">%</span><span class="k">autoreload</span> 2
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">log_loss</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">StratifiedKFold</span>
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras</span> <span class="kn">import</span> <span class="n">Sequential</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">Embedding</span><span class="p">,</span> <span class="n">LSTM</span><span class="p">,</span> <span class="n">GlobalMaxPooling1D</span><span class="p">,</span> <span class="n">Conv1D</span><span class="p">,</span> <span class="n">Dropout</span><span class="p">,</span> <span class="n">Bidirectional</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.preprocessing.sequence</span> <span class="kn">import</span> <span class="n">pad_sequences</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.preprocessing.text</span> <span class="kn">import</span> <span class="n">Tokenizer</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.callbacks</span> <span class="kn">import</span> <span class="n">EarlyStopping</span><span class="p">,</span> <span class="n">ReduceLROnPlateau</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.utils</span> <span class="kn">import</span> <span class="n">plot_model</span><span class="p">,</span> <span class="n">to_categorical</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.optimizers</span> <span class="kn">import</span> <span class="n">Adam</span>
+<span class="kn">import</span> <span class="nn">warnings</span> 
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gpus</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">experimental</span><span class="o">.</span><span class="n">list_physical_devices</span><span class="p">(</span><span class="s1">&#39;GPU&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">gpus</span><span class="p">:</span>
+    <span class="c1"># Restrict TensorFlow to only use the first GPU</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">tf</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">experimental</span><span class="o">.</span><span class="n">set_visible_devices</span><span class="p">(</span><span class="n">gpus</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;GPU&#39;</span><span class="p">)</span>
+        <span class="n">logical_gpus</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">experimental</span><span class="o">.</span><span class="n">list_logical_devices</span><span class="p">(</span><span class="s1">&#39;GPU&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">gpus</span><span class="p">),</span> <span class="s2">&quot;Physical GPUs,&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">logical_gpus</span><span class="p">),</span> <span class="s2">&quot;Logical GPU&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">RuntimeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="c1"># Visible devices must be set before GPUs have been initialized</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No GPU detected&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 Physical GPUs, 1 Logical GPU
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;max_columns&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.precision&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>학습데이터 로드<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../data/dacon-author-classification&#39;</span><span class="p">)</span>
+<span class="n">feature_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../build/feature&#39;</span><span class="p">)</span>
+<span class="n">val_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../build/val&#39;</span><span class="p">)</span>
+<span class="n">tst_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../build/tst&#39;</span><span class="p">)</span>
+<span class="n">sub_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../build/sub&#39;</span><span class="p">)</span>
+
+<span class="n">dirs</span> <span class="o">=</span> <span class="p">[</span><span class="n">feature_dir</span><span class="p">,</span> <span class="n">val_dir</span><span class="p">,</span> <span class="n">tst_dir</span><span class="p">,</span> <span class="n">sub_dir</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">dirs</span><span class="p">:</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">trn_file</span> <span class="o">=</span> <span class="n">data_dir</span> <span class="o">/</span> <span class="s1">&#39;train.csv&#39;</span>
+<span class="n">tst_file</span> <span class="o">=</span> <span class="n">data_dir</span> <span class="o">/</span> <span class="s1">&#39;test_x.csv&#39;</span>
+<span class="n">sample_file</span> <span class="o">=</span> <span class="n">data_dir</span> <span class="o">/</span> <span class="s1">&#39;sample_submission.csv&#39;</span>
+
+<span class="n">target_col</span> <span class="o">=</span> <span class="s1">&#39;author&#39;</span>
+<span class="n">n_fold</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">n_class</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">seed</span> <span class="o">=</span> <span class="mi">42</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">algo_name</span> <span class="o">=</span> <span class="s1">&#39;lstm&#39;</span>
+<span class="n">feature_name</span> <span class="o">=</span> <span class="s1">&#39;emb&#39;</span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">algo_name</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">feature_name</span><span class="si">}</span><span class="s1">&#39;</span>
+
+<span class="n">feature_file</span> <span class="o">=</span> <span class="n">feature_dir</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">feature_name</span><span class="si">}</span><span class="s1">.csv&#39;</span>
+<span class="n">p_val_file</span> <span class="o">=</span> <span class="n">val_dir</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s1">.val.csv&#39;</span>
+<span class="n">p_tst_file</span> <span class="o">=</span> <span class="n">tst_dir</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s1">.tst.csv&#39;</span>
+<span class="n">sub_file</span> <span class="o">=</span> <span class="n">sub_dir</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s1">.csv&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">trn_file</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">train</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>index</th>
+      <th>text</th>
+      <th>author</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>He was almost choking. There was so much, so m...</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>“Your sister asked for it, I suppose?”</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>She was engaged one day as she walked, in per...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>The captain was in the porch, keeping himself ...</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>“Have mercy, gentlemen!” odin flung up his han...</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">tst_file</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">test</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>index</th>
+      <th>text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>“Not at all. I think she is one of the most ch...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>"No," replied he, with sudden consciousness, "...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>As the lady had stated her intention of scream...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>“And then suddenly in the silence I heard a so...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>His conviction remained unchanged. So far as I...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="preprocessing">
+<h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">alpha_num</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^A-Za-z0-9 ]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">remove_stopwords</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">final_text</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">i</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stopwords</span><span class="p">:</span>
+            <span class="n">final_text</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="k">return</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">final_text</span><span class="p">)</span>
+
+
+<span class="n">stopwords</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;about&quot;</span><span class="p">,</span> <span class="s2">&quot;above&quot;</span><span class="p">,</span> <span class="s2">&quot;after&quot;</span><span class="p">,</span> <span class="s2">&quot;again&quot;</span><span class="p">,</span> <span class="s2">&quot;against&quot;</span><span class="p">,</span> <span class="s2">&quot;all&quot;</span><span class="p">,</span> <span class="s2">&quot;am&quot;</span><span class="p">,</span> <span class="s2">&quot;an&quot;</span><span class="p">,</span> <span class="s2">&quot;and&quot;</span><span class="p">,</span> <span class="s2">&quot;any&quot;</span><span class="p">,</span> <span class="s2">&quot;are&quot;</span><span class="p">,</span> <span class="s2">&quot;as&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;at&quot;</span><span class="p">,</span> <span class="s2">&quot;be&quot;</span><span class="p">,</span> <span class="s2">&quot;because&quot;</span><span class="p">,</span> <span class="s2">&quot;been&quot;</span><span class="p">,</span> <span class="s2">&quot;before&quot;</span><span class="p">,</span> <span class="s2">&quot;being&quot;</span><span class="p">,</span> <span class="s2">&quot;below&quot;</span><span class="p">,</span> <span class="s2">&quot;between&quot;</span><span class="p">,</span> <span class="s2">&quot;both&quot;</span><span class="p">,</span> <span class="s2">&quot;but&quot;</span><span class="p">,</span> <span class="s2">&quot;by&quot;</span><span class="p">,</span> <span class="s2">&quot;could&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;did&quot;</span><span class="p">,</span> <span class="s2">&quot;do&quot;</span><span class="p">,</span> <span class="s2">&quot;does&quot;</span><span class="p">,</span> <span class="s2">&quot;doing&quot;</span><span class="p">,</span> <span class="s2">&quot;down&quot;</span><span class="p">,</span> <span class="s2">&quot;during&quot;</span><span class="p">,</span> <span class="s2">&quot;each&quot;</span><span class="p">,</span> <span class="s2">&quot;few&quot;</span><span class="p">,</span> <span class="s2">&quot;for&quot;</span><span class="p">,</span> <span class="s2">&quot;from&quot;</span><span class="p">,</span> <span class="s2">&quot;further&quot;</span><span class="p">,</span> <span class="s2">&quot;had&quot;</span><span class="p">,</span> <span class="s2">&quot;has&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;have&quot;</span><span class="p">,</span> <span class="s2">&quot;having&quot;</span><span class="p">,</span> <span class="s2">&quot;he&quot;</span><span class="p">,</span> <span class="s2">&quot;he&#39;d&quot;</span><span class="p">,</span> <span class="s2">&quot;he&#39;ll&quot;</span><span class="p">,</span> <span class="s2">&quot;he&#39;s&quot;</span><span class="p">,</span> <span class="s2">&quot;her&quot;</span><span class="p">,</span> <span class="s2">&quot;here&quot;</span><span class="p">,</span> <span class="s2">&quot;here&#39;s&quot;</span><span class="p">,</span> <span class="s2">&quot;hers&quot;</span><span class="p">,</span> <span class="s2">&quot;herself&quot;</span><span class="p">,</span> <span class="s2">&quot;him&quot;</span><span class="p">,</span> <span class="s2">&quot;himself&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;his&quot;</span><span class="p">,</span> <span class="s2">&quot;how&quot;</span><span class="p">,</span> <span class="s2">&quot;how&#39;s&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="s2">&quot;i&#39;d&quot;</span><span class="p">,</span> <span class="s2">&quot;i&#39;ll&quot;</span><span class="p">,</span> <span class="s2">&quot;i&#39;m&quot;</span><span class="p">,</span> <span class="s2">&quot;i&#39;ve&quot;</span><span class="p">,</span> <span class="s2">&quot;if&quot;</span><span class="p">,</span> <span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="s2">&quot;into&quot;</span><span class="p">,</span> <span class="s2">&quot;is&quot;</span><span class="p">,</span> <span class="s2">&quot;it&quot;</span><span class="p">,</span> <span class="s2">&quot;it&#39;s&quot;</span><span class="p">,</span> <span class="s2">&quot;its&quot;</span><span class="p">,</span> <span class="s2">&quot;itself&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;let&#39;s&quot;</span><span class="p">,</span> <span class="s2">&quot;me&quot;</span><span class="p">,</span> <span class="s2">&quot;more&quot;</span><span class="p">,</span> <span class="s2">&quot;most&quot;</span><span class="p">,</span> <span class="s2">&quot;my&quot;</span><span class="p">,</span> <span class="s2">&quot;myself&quot;</span><span class="p">,</span> <span class="s2">&quot;nor&quot;</span><span class="p">,</span> <span class="s2">&quot;of&quot;</span><span class="p">,</span> <span class="s2">&quot;on&quot;</span><span class="p">,</span> <span class="s2">&quot;once&quot;</span><span class="p">,</span> <span class="s2">&quot;only&quot;</span><span class="p">,</span> <span class="s2">&quot;or&quot;</span><span class="p">,</span> <span class="s2">&quot;other&quot;</span><span class="p">,</span> <span class="s2">&quot;ought&quot;</span><span class="p">,</span> <span class="s2">&quot;our&quot;</span><span class="p">,</span> <span class="s2">&quot;ours&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;ourselves&quot;</span><span class="p">,</span> <span class="s2">&quot;out&quot;</span><span class="p">,</span> <span class="s2">&quot;over&quot;</span><span class="p">,</span> <span class="s2">&quot;own&quot;</span><span class="p">,</span> <span class="s2">&quot;same&quot;</span><span class="p">,</span> <span class="s2">&quot;she&quot;</span><span class="p">,</span> <span class="s2">&quot;she&#39;d&quot;</span><span class="p">,</span> <span class="s2">&quot;she&#39;ll&quot;</span><span class="p">,</span> <span class="s2">&quot;she&#39;s&quot;</span><span class="p">,</span> <span class="s2">&quot;should&quot;</span><span class="p">,</span> <span class="s2">&quot;so&quot;</span><span class="p">,</span> <span class="s2">&quot;some&quot;</span><span class="p">,</span> <span class="s2">&quot;such&quot;</span><span class="p">,</span> <span class="s2">&quot;than&quot;</span><span class="p">,</span> <span class="s2">&quot;that&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;that&#39;s&quot;</span><span class="p">,</span> <span class="s2">&quot;the&quot;</span><span class="p">,</span> <span class="s2">&quot;their&quot;</span><span class="p">,</span> <span class="s2">&quot;theirs&quot;</span><span class="p">,</span> <span class="s2">&quot;them&quot;</span><span class="p">,</span> <span class="s2">&quot;themselves&quot;</span><span class="p">,</span> <span class="s2">&quot;then&quot;</span><span class="p">,</span> <span class="s2">&quot;there&quot;</span><span class="p">,</span> <span class="s2">&quot;there&#39;s&quot;</span><span class="p">,</span> <span class="s2">&quot;these&quot;</span><span class="p">,</span> <span class="s2">&quot;they&quot;</span><span class="p">,</span> <span class="s2">&quot;they&#39;d&quot;</span><span class="p">,</span> <span class="s2">&quot;they&#39;ll&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;they&#39;re&quot;</span><span class="p">,</span> <span class="s2">&quot;they&#39;ve&quot;</span><span class="p">,</span> <span class="s2">&quot;this&quot;</span><span class="p">,</span> <span class="s2">&quot;those&quot;</span><span class="p">,</span> <span class="s2">&quot;through&quot;</span><span class="p">,</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="s2">&quot;too&quot;</span><span class="p">,</span> <span class="s2">&quot;under&quot;</span><span class="p">,</span> <span class="s2">&quot;until&quot;</span><span class="p">,</span> <span class="s2">&quot;up&quot;</span><span class="p">,</span> <span class="s2">&quot;very&quot;</span><span class="p">,</span> <span class="s2">&quot;was&quot;</span><span class="p">,</span> <span class="s2">&quot;we&quot;</span><span class="p">,</span> <span class="s2">&quot;we&#39;d&quot;</span><span class="p">,</span> <span class="s2">&quot;we&#39;ll&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;we&#39;re&quot;</span><span class="p">,</span> <span class="s2">&quot;we&#39;ve&quot;</span><span class="p">,</span> <span class="s2">&quot;were&quot;</span><span class="p">,</span> <span class="s2">&quot;what&quot;</span><span class="p">,</span> <span class="s2">&quot;what&#39;s&quot;</span><span class="p">,</span> <span class="s2">&quot;when&quot;</span><span class="p">,</span> <span class="s2">&quot;when&#39;s&quot;</span><span class="p">,</span> <span class="s2">&quot;where&quot;</span><span class="p">,</span> <span class="s2">&quot;where&#39;s&quot;</span><span class="p">,</span> <span class="s2">&quot;which&quot;</span><span class="p">,</span> <span class="s2">&quot;while&quot;</span><span class="p">,</span> <span class="s2">&quot;who&quot;</span><span class="p">,</span> <span class="s2">&quot;who&#39;s&quot;</span><span class="p">,</span> <span class="s2">&quot;whom&quot;</span><span class="p">,</span> 
+             <span class="s2">&quot;why&quot;</span><span class="p">,</span> <span class="s2">&quot;why&#39;s&quot;</span><span class="p">,</span> <span class="s2">&quot;with&quot;</span><span class="p">,</span> <span class="s2">&quot;would&quot;</span><span class="p">,</span> <span class="s2">&quot;you&quot;</span><span class="p">,</span> <span class="s2">&quot;you&#39;d&quot;</span><span class="p">,</span> <span class="s2">&quot;you&#39;ll&quot;</span><span class="p">,</span> <span class="s2">&quot;you&#39;re&quot;</span><span class="p">,</span> <span class="s2">&quot;you&#39;ve&quot;</span><span class="p">,</span> <span class="s2">&quot;your&quot;</span><span class="p">,</span> <span class="s2">&quot;yours&quot;</span><span class="p">,</span> <span class="s2">&quot;yourself&quot;</span><span class="p">,</span> <span class="s2">&quot;yourselves&quot;</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">alpha_num</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_stopwords</span><span class="p">)</span>
+<span class="n">test</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">test</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">alpha_num</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_stopwords</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">test</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="s1">&#39;author&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(54879,) (19617,) (54879,)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;almost choking much much wanted say strange exclamations came lips pole gazed fixedly bundle notes hand looked odin evident perplexity&#39;,
+       &#39;sister asked suppose&#39;,
+       &#39;engaged one day walked perusing janes last letter dwelling passages proved jane not written spirits instead surprised mr odin saw looking odin meeting putting away letter immediately forcing smile said&#39;],
+      dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="training">
+<h2>Training<a class="headerlink" href="#training" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vocab_size</span> <span class="o">=</span> <span class="mi">20000</span>
+<span class="n">embedding_dim</span> <span class="o">=</span> <span class="mi">64</span>
+<span class="n">max_length</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="n">padding_type</span><span class="o">=</span><span class="s1">&#39;post&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tokenizer</span> <span class="o">=</span> <span class="n">Tokenizer</span><span class="p">(</span><span class="n">num_words</span> <span class="o">=</span> <span class="n">vocab_size</span><span class="p">)</span>
+<span class="n">tokenizer</span><span class="o">.</span><span class="n">fit_on_texts</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">word_index</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">word_index</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_sequences</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">texts_to_sequences</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">test_sequences</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">texts_to_sequences</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trn</span> <span class="o">=</span> <span class="n">pad_sequences</span><span class="p">(</span><span class="n">train_sequences</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="n">padding_type</span><span class="p">,</span> <span class="n">maxlen</span><span class="o">=</span><span class="n">max_length</span><span class="p">)</span>
+<span class="n">tst</span> <span class="o">=</span> <span class="n">pad_sequences</span><span class="p">(</span><span class="n">test_sequences</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="n">padding_type</span><span class="p">,</span> <span class="n">maxlen</span><span class="o">=</span><span class="n">max_length</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">trn</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">tst</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(54879, 500) (19617, 500)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cv</span> <span class="o">=</span> <span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="n">n_fold</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_model</span><span class="p">():</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">([</span>
+        <span class="n">Embedding</span><span class="p">(</span><span class="n">vocab_size</span><span class="p">,</span> <span class="n">embedding_dim</span><span class="p">,</span> <span class="n">input_length</span><span class="o">=</span><span class="n">max_length</span><span class="p">),</span>
+        <span class="n">Bidirectional</span><span class="p">(</span><span class="n">LSTM</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">return_sequences</span><span class="o">=</span><span class="kc">True</span><span class="p">)),</span>
+        <span class="n">Bidirectional</span><span class="p">(</span><span class="n">LSTM</span><span class="p">(</span><span class="mi">64</span><span class="p">)),</span>
+        <span class="n">Dense</span><span class="p">(</span><span class="n">n_class</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">)</span>
+    <span class="p">])</span>
+    
+    <span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="n">Adam</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=.</span><span class="mi">01</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">model</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">trn</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">n_class</span><span class="p">))</span>
+<span class="n">p_tst</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">tst</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">n_class</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">i_trn</span><span class="p">,</span> <span class="n">i_val</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cv</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">trn</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;training model for CV #</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">clf</span> <span class="o">=</span> <span class="n">get_model</span><span class="p">()</span>
+    
+    <span class="n">es</span> <span class="o">=</span> <span class="n">EarlyStopping</span><span class="p">(</span><span class="n">monitor</span><span class="o">=</span><span class="s1">&#39;val_loss&#39;</span><span class="p">,</span> <span class="n">min_delta</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span> <span class="n">patience</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                       <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;min&#39;</span><span class="p">,</span> <span class="n">baseline</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">restore_best_weights</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">trn</span><span class="p">[</span><span class="n">i_trn</span><span class="p">],</span> 
+            <span class="n">to_categorical</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">i_trn</span><span class="p">]),</span>
+            <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">trn</span><span class="p">[</span><span class="n">i_val</span><span class="p">],</span> <span class="n">to_categorical</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">i_val</span><span class="p">])),</span>
+            <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+            <span class="n">batch_size</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span>
+            <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">es</span><span class="p">])</span>
+    <span class="n">p_val</span><span class="p">[</span><span class="n">i_val</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">trn</span><span class="p">[</span><span class="n">i_val</span><span class="p">])</span>
+    <span class="n">p_tst</span> <span class="o">+=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">tst</span><span class="p">)</span> <span class="o">/</span> <span class="n">n_fold</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>training model for CV #1
+Epoch 1/10
+86/86 [==============================] - 96s 1s/step - loss: 1.0807 - val_loss: 0.7758
+Epoch 2/10
+86/86 [==============================] - 95s 1s/step - loss: 0.5712 - val_loss: 0.7249
+Epoch 3/10
+86/86 [==============================] - 95s 1s/step - loss: 0.4084 - val_loss: 0.8263
+Epoch 4/10
+86/86 [==============================] - 95s 1s/step - loss: 0.3189 - val_loss: 0.9040
+Epoch 5/10
+86/86 [==============================] - ETA: 0s - loss: 0.2599Restoring model weights from the end of the best epoch.
+86/86 [==============================] - 94s 1s/step - loss: 0.2599 - val_loss: 1.0049
+Epoch 00005: early stopping
+training model for CV #2
+Epoch 1/10
+86/86 [==============================] - 79s 923ms/step - loss: 1.0285 - val_loss: 0.7780
+Epoch 2/10
+86/86 [==============================] - 79s 915ms/step - loss: 0.5652 - val_loss: 0.7544
+Epoch 3/10
+86/86 [==============================] - 77s 896ms/step - loss: 0.4114 - val_loss: 0.8300
+Epoch 4/10
+86/86 [==============================] - 78s 903ms/step - loss: 0.3315 - val_loss: 0.8787
+Epoch 5/10
+86/86 [==============================] - ETA: 0s - loss: 0.2759Restoring model weights from the end of the best epoch.
+86/86 [==============================] - 77s 896ms/step - loss: 0.2759 - val_loss: 1.0170
+Epoch 00005: early stopping
+training model for CV #3
+Epoch 1/10
+86/86 [==============================] - 80s 931ms/step - loss: 1.0486 - val_loss: 0.7671
+Epoch 2/10
+86/86 [==============================] - 82s 957ms/step - loss: 0.5703 - val_loss: 0.7311
+Epoch 3/10
+86/86 [==============================] - 82s 957ms/step - loss: 0.4204 - val_loss: 0.7837
+Epoch 4/10
+86/86 [==============================] - 83s 965ms/step - loss: 0.3361 - val_loss: 0.8628
+Epoch 5/10
+86/86 [==============================] - ETA: 0s - loss: 0.2770Restoring model weights from the end of the best epoch.
+86/86 [==============================] - 85s 984ms/step - loss: 0.2770 - val_loss: 0.9301
+Epoch 00005: early stopping
+training model for CV #4
+Epoch 1/10
+86/86 [==============================] - 79s 915ms/step - loss: 1.0594 - val_loss: 0.7829
+Epoch 2/10
+86/86 [==============================] - 83s 966ms/step - loss: 0.5818 - val_loss: 0.7291
+Epoch 3/10
+86/86 [==============================] - 80s 932ms/step - loss: 0.4190 - val_loss: 0.7921
+Epoch 4/10
+86/86 [==============================] - 79s 920ms/step - loss: 0.3295 - val_loss: 0.8403
+Epoch 5/10
+86/86 [==============================] - ETA: 0s - loss: 0.2773Restoring model weights from the end of the best epoch.
+86/86 [==============================] - 80s 930ms/step - loss: 0.2773 - val_loss: 0.9488
+Epoch 00005: early stopping
+training model for CV #5
+Epoch 1/10
+86/86 [==============================] - 77s 893ms/step - loss: 1.0697 - val_loss: 0.7714
+Epoch 2/10
+86/86 [==============================] - 75s 871ms/step - loss: 0.5829 - val_loss: 0.7165
+Epoch 3/10
+86/86 [==============================] - 76s 882ms/step - loss: 0.4133 - val_loss: 0.7774
+Epoch 4/10
+86/86 [==============================] - 75s 877ms/step - loss: 0.3237 - val_loss: 0.8679
+Epoch 5/10
+86/86 [==============================] - ETA: 0s - loss: 0.2701Restoring model weights from the end of the best epoch.
+86/86 [==============================] - 75s 874ms/step - loss: 0.2701 - val_loss: 1.0399
+Epoch 00005: early stopping
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Accuracy (CV): </span><span class="si">{</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">p_val</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span><span class="si">:</span><span class="s1">8.4f</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Log Loss (CV): </span><span class="si">{</span><span class="n">log_loss</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">p_val</span><span class="p">)</span><span class="si">:</span><span class="s1">8.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy (CV):  73.1846%
+Log Loss (CV):   0.7312
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="n">p_val_file</span><span class="p">,</span> <span class="n">p_val</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%.6f</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="n">p_tst_file</span><span class="p">,</span> <span class="n">p_tst</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%.6f</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>시각화<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model: &quot;sequential_4&quot;
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+embedding_4 (Embedding)      (None, 500, 64)           1280000   
+_________________________________________________________________
+bidirectional_8 (Bidirection (None, 500, 128)          66048     
+_________________________________________________________________
+bidirectional_9 (Bidirection (None, 128)               98816     
+_________________________________________________________________
+dense_4 (Dense)              (None, 5)                 645       
+=================================================================
+Total params: 1,445,509
+Trainable params: 1,445,509
+Non-trainable params: 0
+_________________________________________________________________
+None
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_model</span><span class="p">(</span><span class="n">clf</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;Failed to import pydot. You must `pip install pydot` and install graphviz (https://graphviz.gitlab.io/download/), &#39;, &#39;for `pydotprint` to work.&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>제출 파일 생성<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">sample_file</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sub</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">sub</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(19617, 5)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+    </tr>
+    <tr>
+      <th>index</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="p">[</span><span class="n">sub</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span> <span class="o">=</span> <span class="n">p_tst</span>
+<span class="n">sub</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+    </tr>
+    <tr>
+      <th>index</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0407</td>
+      <td>0.5616</td>
+      <td>0.3168</td>
+      <td>0.0673</td>
+      <td>0.0136</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.0780</td>
+      <td>0.6488</td>
+      <td>0.0074</td>
+      <td>0.0058</td>
+      <td>0.2600</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.9714</td>
+      <td>0.0211</td>
+      <td>0.0024</td>
+      <td>0.0025</td>
+      <td>0.0026</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.0349</td>
+      <td>0.0148</td>
+      <td>0.8122</td>
+      <td>0.0199</td>
+      <td>0.1181</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.6979</td>
+      <td>0.0773</td>
+      <td>0.0068</td>
+      <td>0.1799</td>
+      <td>0.0381</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">sub_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="14-cnn-emb.html" title="previous page">데모</a>
+    <a class='right-next' id="next-link" href="15-bert.html" title="next page">데모</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Kaggler-TV<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
