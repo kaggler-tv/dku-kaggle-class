@@ -1,4 +1,4 @@
-# Course-Webiste for dku-kaggle-class
+# Course-Website for dku-kaggle-class
 
 This course website has been built with [Jupyter-book](https://jupyterbook.org/intro.html).
 
