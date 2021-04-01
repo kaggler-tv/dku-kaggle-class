@@ -1,5 +1,7 @@
 file: main
 sections:
+  - file: lectures/01-intro
+    title: 1장. Intro
   - file: lectures/03-pandas-eda
     title: 3장. Pandas
   - file: lectures/04-numpy-lr
