@@ -1,0 +1,602 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>단국대 2020년 가을학기 캐글 뽀개기 강좌 &#8212; 단국대 2020 캐글 뽀개기</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/logo.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1. Intro" href="lectures/01-intro.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">단국대 2020 캐글 뽀개기</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="#">
+   단국대 2020년 가을학기 캐글 뽀개기 강좌
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lectures/01-intro.html">
+   1장. Intro
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lectures/03-pandas-eda.html">
+   3장. Pandas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lectures/04-numpy-lr.html">
+   4장. Numpy, 선형회귀, 로지스틱회귀
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lectures/05-numerical-features.html">
+   5장. 수치형변수 가공
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lectures/06-decision-trees.html">
+   6장. Scikit-learn, 결정트리
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="lectures/07-lightgbm.html">
+   7장. Random Forest, GBM (1)
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="lectures/07-rf.html">
+     7장. Random Forest, GBM (2)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="lectures/08-lightgbm-cv.html">
+   8장. Cross-Validation, Stacking (1)
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="lectures/08-lr-cv.html">
+     8장. Cross-Validation, Stacking (2)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lectures/08-rf-cv.html">
+     8장. Cross-Validation, Stacking (3)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lectures/08-stacking-lgb.html">
+     8장. Cross-Validation, Stacking (4)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lectures/08-stacking-lr.html">
+     8장. Cross-Validation, Stacking (5)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="lectures/09-lightgbm-hyperopt.html">
+   9장. 모델 튜닝, Hyperopt, Optuna (1)
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="lectures/09-lightgbm-optuna.html">
+     9장. 모델 튜닝, Hyperopt, Optuna (2)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lectures/11-categorical-features.html">
+   11장. 범주형변수
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lectures/12-nn-cv.html">
+   12장. 신경망, Keras
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lectures/13-lr-tfidf.html">
+   13장. 문자열변수 가공
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="lectures/14-cnn-emb.html">
+   14장. Embedding, RNN (1)
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="lectures/14-lstm-emb.html">
+     14장. Embedding, RNN (2)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="lectures/15-bert.html">
+   15장. 선학습 임베딩, 전이학습 (1)
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="lectures/15-lstm-glove.html">
+     15장. 선학습 임베딩, 전이학습 (2)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lectures/16-attention.html">
+   16장. Data Augmentation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/main.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/SDSTony/dku-kaggle-class"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/SDSTony/dku-kaggle-class/issues/new?title=Issue%20on%20page%20%2Fmain.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   수업일정
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="id1">
+<h1>단국대 2020년 가을학기 캐글 뽀개기 강좌<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Course-website 구축 중 (~2021.03.31)</p>
+</div>
+<div class="section" id="id2">
+<h2>수업일정<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>날짜</p></th>
+<th class="head"><p>주제</p></th>
+<th class="head"><p>강의자료</p></th>
+<th class="head"><p>강의영상</p></th>
+<th class="head"><p>과제</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2020-09-01</p></td>
+<td><p>강사/과목 소개</p></td>
+<td><p><a class="reference external" href="https://docs.google.com/presentation/d/1JY3LBjrSNqaQqJTe1FkR0Q7s_4viji7z11CepfLWFNw/edit?usp=sharing">슬라이드</a></p></td>
+<td><p><a class="reference external" href="https://youtu.be/JjkoII5otj4">동영상</a></p></td>
+<td><p>GitHub 가입. 과목 GitHub 팀 등록. 자기소개. Dacon 가입</p></td>
+</tr>
+<tr class="row-odd"><td><p>2020-09-03</p></td>
+<td><p>개발 환경 설정</p></td>
+<td><p><a class="reference external" href="https://docs.google.com/presentation/d/1GyEc1zvn-4NsSliYf-pidnFT-9MBwePl4Gq1qn2saT4/edit?usp=sharing">슬라이드</a></p></td>
+<td><p><a class="reference external" href="https://youtu.be/_jhmJQfRkpQ">동영상</a></p></td>
+<td><p>GitHub 리포 생성. 가상환경 설정. 라이브러리 설치. 대회 데이터 다운로드</p></td>
+</tr>
+<tr class="row-even"><td><p>2020-09-08</p></td>
+<td><p>Pandas</p></td>
+<td><p><a class="reference external" href="https://docs.google.com/presentation/d/1MhnsZAV8SfLK9ob9gSMXN2Jil7ZjH-8mngH-Qec7bk8/edit?usp=sharing">슬라이드</a></p></td>
+<td><p><a class="reference external" href="https://youtu.be/k_Thh59euVk">동영상</a></p></td>
+<td><p>Pandas를 활용한 단국대 대회 데이터 EDA</p></td>
+</tr>
+<tr class="row-odd"><td><p>2020-09-10</p></td>
+<td><p>Numpy, 선형회귀</p></td>
+<td><p><a class="reference external" href="https://docs.google.com/presentation/d/1emLd1bVorVh9gfjJBd7ZNCbTxs3SZZOnaXx6aPwZNPQ/edit?usp=sharing">슬라이드</a></p></td>
+<td><p><a class="reference external" href="https://youtu.be/texh_aWdaKY">동영상</a></p></td>
+<td><p>scikit-learn의 LinearRegression/LogisticRegression 모델링</p></td>
+</tr>
+<tr class="row-even"><td><p>2020-09-15</p></td>
+<td><p>수치형변수 가공</p></td>
+<td><p><a class="reference external" href="https://docs.google.com/presentation/d/1-1xdhujxVu-2Q_sVEa6AZKqxij3PiBL3ZPm4H_MTaMs/edit?usp=sharing">슬라이드</a></p></td>
+<td><p><a class="reference external" href="https://youtu.be/Zy56b9K9ogI">동영상</a></p></td>
+<td><p>수치형변수 가공</p></td>
+</tr>
+<tr class="row-odd"><td><p>2020-09-17</p></td>
+<td><p>라이브 질의응답</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2020-09-22</p></td>
+<td><p>Scikit-Learn, 결정트리</p></td>
+<td><p><a class="reference external" href="https://docs.google.com/presentation/d/1c4mg_b1zYxvZw4UrodwmgJXNZw9nv0u9Mjy_oZ6Lmds/edit?usp=sharing">슬라이드</a></p></td>
+<td><p><a class="reference external" href="https://youtu.be/Mh1T9wP5pfQ">동영상</a></p></td>
+<td><p>결정트리 모델 예측 값 대회에 제출</p></td>
+</tr>
+<tr class="row-odd"><td><p>2020-09-24</p></td>
+<td><p>Random Forests, LightGBM</p></td>
+<td><p><a class="reference external" href="https://docs.google.com/presentation/d/1IInmro1RSGs0nsfMxDCct_DBGRmrvzUPW4r4qRLp24U/edit?usp=sharing">슬라이드</a></p></td>
+<td><p><a class="reference external" href="https://youtu.be/ztLNNfB0n1c">동영상</a></p></td>
+<td><p>RF/LightGBM 모델 예측값 대회에 제출</p></td>
+</tr>
+<tr class="row-even"><td><p>2020-09-29</p></td>
+<td><p>교차검증 (CV), Stacking</p></td>
+<td><p><a class="reference external" href="https://docs.google.com/presentation/d/160j7GQEoMPFkKn0mjculI0TpkDRJIsNkggUuwlG_ouY/edit?usp=sharing">슬라이드</a></p></td>
+<td><p><a class="reference external" href="https://youtu.be/lKIrSj8DQfA">동영상</a></p></td>
+<td><p>CV/Stacking 사용한 모델 예측값 대회에 제출</p></td>
+</tr>
+<tr class="row-odd"><td><p>2020-10-01</p></td>
+<td><p>추석연휴 - 휴강</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2020-10-06</p></td>
+<td><p>모델튜닝, Hyperopt, Optuna</p></td>
+<td><p><a class="reference external" href="https://docs.google.com/presentation/d/1Yy3s4nbwJPiZwSa73WRpWGQkhgnnEwfffhwJUYs2Ozk/edit?usp=sharing">슬라이드</a></p></td>
+<td><p><a class="reference external" href="https://youtu.be/6cUlsqYFZEE">동영상</a></p></td>
+<td><p>대회 참여</p></td>
+</tr>
+<tr class="row-odd"><td><p>2020-10-08</p></td>
+<td><p>라이브 질의응답</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2020-10-13</p></td>
+<td><p>파이프라인, Make</p></td>
+<td><p><a class="reference external" href="https://docs.google.com/presentation/d/1aQztmEeidVqLjnGhu6LKcWo_VeOGacpRaaY3_gQ9CcA/edit?usp=sharing">슬라이드</a></p></td>
+<td><p><a class="reference external" href="https://youtu.be/5dBnsQJAkAw">동영상</a></p></td>
+<td><p>코드공유 및 발표준비</p></td>
+</tr>
+<tr class="row-odd"><td><p>2020-10-15</p></td>
+<td><p>범주형변수 가공 1</p></td>
+<td><p><a class="reference external" href="https://docs.google.com/presentation/d/1uLmoJfuMCQk0hEBqwXTEyV0QKsmWe6sYOu6qiaCDheo/edit?usp=sharing">슬라이드</a></p></td>
+<td><p><a class="reference external" href="https://youtu.be/TE2DFWlbO7M">동영상</a></p></td>
+<td><p>코드공유 및 발표준비</p></td>
+</tr>
+<tr class="row-even"><td><p>2020-10-20</p></td>
+<td><p>중간고사 주 - 팀 발표</p></td>
+<td><p></p></td>
+<td><p>코드 제출</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2020-10-22</p></td>
+<td><p>중간고사 주 - 팀 발표</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2020-10-27</p></td>
+<td><p>라이브 질의응답</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2020-10-29</p></td>
+<td><p>신경망, Keras</p></td>
+<td><p><a class="reference external" href="https://docs.google.com/presentation/d/1D7_8FNJjpzStB-T63vv2aY17YyJJr4k5iqStfZJ2m3k/edit?usp=sharing">슬라이드</a></p></td>
+<td><p><a class="reference external" href="https://youtu.be/WkA-bVLxT_E">동영상</a></p></td>
+<td><p>신경망 모델 학습</p></td>
+</tr>
+<tr class="row-even"><td><p>2020-11-03</p></td>
+<td><p>개교기념일 - 휴강</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2020-11-05</p></td>
+<td><p>문자열변수 가공</p></td>
+<td><p><a class="reference external" href="https://docs.google.com/presentation/d/11TsWSRQxvTdrKdHKQN1CKkLPEO_ijsIWcqcp1Dva08M/edit?usp=sharing">슬라이드</a></p></td>
+<td><p><a class="reference external" href="https://youtu.be/HZA9Xqh11WQ">동영상</a></p></td>
+<td><p>Tfidf 피처를 이용한 모델 학습</p></td>
+</tr>
+<tr class="row-even"><td><p>2020-11-10</p></td>
+<td><p>Embeddings, RNN</p></td>
+<td><p><a class="reference external" href="https://docs.google.com/presentation/d/1ultSXr-_wihsh4Cu-6y5TQIoFIorV5-LyxCP6fBbR6w/edit?usp=sharing">슬라이드</a></p></td>
+<td><p><a class="reference external" href="https://youtu.be/rRsqTdrlWjk">동영상</a></p></td>
+<td><p>Embedding + RNN 모델 학습</p></td>
+</tr>
+<tr class="row-odd"><td><p>2020-11-12</p></td>
+<td><p>선학습 임베딩, 전이학습</p></td>
+<td><p><a class="reference external" href="https://docs.google.com/presentation/d/10iXh7a15zEU2Zuvs-od3rdc688CKSQfjP11-9on7RM4/edit?usp=sharing">슬라이드</a></p></td>
+<td><p><a class="reference external" href="https://youtu.be/kZBl5MOhvM4">동영상</a></p></td>
+<td><p>선학습 임베딩</p></td>
+</tr>
+<tr class="row-even"><td><p>2020-11-17</p></td>
+<td><p>Data Augmentation</p></td>
+<td><p><a class="reference external" href="https://docs.google.com/presentation/d/1QnuQjWiF_1q7XFLMzie3RPE0Hq9DCwtoQ8kc1ohZw_4/edit?usp=sharing">슬라이드</a></p></td>
+<td><p><a class="reference external" href="https://youtu.be/Nm0l58nG4cY">동영상</a></p></td>
+<td><p>Text Augmentation 적용</p></td>
+</tr>
+<tr class="row-odd"><td><p>2020-11-19</p></td>
+<td><p>라이브 질의응답</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2020-11-24</p></td>
+<td><p>CNN</p></td>
+<td><p><a class="reference external" href="https://docs.google.com/presentation/d/1bCAmWlS0SMoqybtzZJHBOtpYIjIEN3J3UKwgxHfoaio/edit?usp=sharing">슬라이드</a></p></td>
+<td><p><a class="reference external" href="https://youtu.be/vdg203Ddtgo">동영상</a></p></td>
+<td><p>대회 참여</p></td>
+</tr>
+<tr class="row-odd"><td><p>2020-11-26</p></td>
+<td><p>이미지 분류 학습</p></td>
+<td><p><a class="reference external" href="https://docs.google.com/presentation/d/1dmCmkv0mWeuf-rHkrOYBXPKaPIwW4B6gSsVPzerOGLc/edit?usp=sharing">슬라이드</a></p></td>
+<td><p><a class="reference external" href="https://youtu.be/DGWNRXPjbPM">동영상</a></p></td>
+<td><p>대회 참여</p></td>
+</tr>
+<tr class="row-even"><td><p>2020-12-01</p></td>
+<td><p>후처리, 기타 팁</p></td>
+<td><p><a class="reference external" href="https://docs.google.com/presentation/d/1EvWzPwNWKbsOnx_22k1LCz5xe_MG861YBljpQjIYyd4/edit?usp=sharing">슬라이드</a></p></td>
+<td><p><a class="reference external" href="https://youtu.be/ZDVV-iMjuRY">동영상</a></p></td>
+<td><p>대회 참여</p></td>
+</tr>
+<tr class="row-odd"><td><p>2020-12-03</p></td>
+<td><p>라이브 질의응답</p></td>
+<td><p></p></td>
+<td><p>코드공유 및 발표준비</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2020-12-08</p></td>
+<td><p>기말고사 주 - 팀 발표</p></td>
+<td><p>코드 제출</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2020-12-10</p></td>
+<td><p>기말고사 주 - 팀 발표</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2020-12-16</p></td>
+<td><p>보강 #1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2020-12-21</p></td>
+<td><p>보강 #2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>세부 일정은 변경 가능</p></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='right-next' id="next-link" href="lectures/01-intro.html" title="next page">1. Intro</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Kaggler-TV<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
