@@ -64,7 +64,7 @@ Stacking은 1992년에 Los Alamos National Laboratory의 David H. Wolpert가 Sta
 동계 스포츠인 쇼트트랙에서 결승선에 들어올 때 앞다리를 내밀어 조금이나마 기록을 향상시키는데, stacking도 이와 같다고 볼 수 있습니다. 성능을 극단적으로 향상시키기 위해 사용되기 보다는 마지막 단계에서 최종 순위를 다툴 때 사용하는 방법입니다. 
 ```
 
-Stacking 실습 파일은 총 2개가 있으며 하나는 lightgbm을 활용한 예제이고 하나는 logistic regression을 활용한 예제입니다. 3개의 N-Fold CV 실습 파일에서 생성한 예측값을 불러와서 stacking을 진행하도록 설계돼 있습니다. 
+Stacking 실습 파일은 총 2개가 있으며 하나는 lightgbm을 활용한 예제이고 하나는 logistic regression을 활용한 예제입니다. 8.1에서 실습한 3개의 N-Fold CV 실습 파일에서 생성한 예측값을 불러와서 stacking을 진행하도록 설계돼 있습니다. 실습을 통해 stacking 개념을 익혀보시길 바랍니다. 
 
 ## 8.3 참고자료
 
