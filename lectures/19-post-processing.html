@@ -1,0 +1,674 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>19. 후처리 및 기타 팁 &#8212; 단국대 2020 캐글 뽀개기</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="18. Image Classification" href="18-image-classification.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">단국대 2020 캐글 뽀개기</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../main.html">
+   단국대 2020년 가을학기 캐글 뽀개기 강좌
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-intro.html">
+   1장. Intro
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-setup.html">
+   2장. Setup
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="03-pandas-intro.html">
+   3장. Pandas
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="03-pandas.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03-pandas-eda.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="04-numpy-intro.html">
+   4장. Numpy, 선형회귀, 로지스틱회귀
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="04-numpy.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04-numpy-lr.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="05-numerical-features-intro.html">
+   5장. 수치형변수 가공
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="05-numerical-features.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="06-scikit-learn-intro.html">
+   6장. Scikit-learn, 결정트리
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="06-scikit-learn.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="06-decision-trees.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="07-rf-lgb-intro.html">
+   7장. Random Forest, GBM
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="07-rf-lgb.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07-rf.html">
+     Random Forest 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07-lightgbm.html">
+     LightGBM 실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="08-cv-stacking-intro.html">
+   8장. Cross-Validation, Stacking
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-cv-stacking.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-lr-cv.html">
+     로지스틱 회귀 CV 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-rf-cv.html">
+     Random Forest CV 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-lightgbm-cv.html">
+     LightGBM CV 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-stacking-lr.html">
+     로지스틱 회귀 스태킹 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-stacking-lgb.html">
+     LightGBM 스태킹 실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="09-tuning-intro.html">
+   9장. 모델 튜닝, Hyperopt, Optuna
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="09-tuning.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="09-lightgbm-hyperopt.html">
+     Hyperopt 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="09-lightgbm-optuna.html">
+     Optuna 실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="10-pipeline-make-intro.html">
+   10장. Pipeline, Make
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="10-pipeline-make.html">
+     이론
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="11-categorical-features-intro.html">
+   11장. 범주형변수 가공
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="11-categorical-features.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="12-nn-intro.html">
+   12장. 신경망, Keras
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="12-nn-keras.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="12-nn-cv.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="13-text-features-intro.html">
+   13장. 문자열변수 가공
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="13-text-features.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="13-lr-tfidf.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="14-embeddings-intro.html">
+   14장. Embedding, RNN
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-embeddings.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-cnn-emb.html">
+     CNN - Embeddings 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-lstm-emb.html">
+     LSTM - Embeddings 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-lstm-glove.html">
+     LSTM - GloVe 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-attention.html">
+     Attention 실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="15-transfer-learning-intro.html">
+   15장. 선학습 임베딩, 전이학습
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="15-transfer-learning.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="15-bert.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-data-augmentation.html">
+   16장. Data Augmentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17-cnn.html">
+   17장. CNN
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="18-image-classification.html">
+   18장. Image Classification
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   19장. 후처리, 기타팁
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lectures/19-post-processing.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/SDSTony/dku-kaggle-class"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/SDSTony/dku-kaggle-class/issues/new?title=Issue%20on%20page%20%2Flectures/19-post-processing.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   19.1 후처리
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   19.2 기타 팁
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   19.3 참고자료
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="id1">
+<h1>19. 후처리 및 기타 팁<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>19장에서는 후처리(post-processing) 방법 및 데이터과학 대회 참여시 사용가능한 기타 팁들에 대해 살펴보겠습니다.</p>
+<div class="section" id="id2">
+<h2>19.1 후처리<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>후처리는 모델이 예측한 값을 변경해서 시험 데이터셋에서의 성능을 향상시키는 단계입니다. 아래 표는 후처리 방법의 다양한 예시와 더불어 사용된 사례를 정리한 표입니다.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>후처리 방법</p></th>
+<th class="head"><p>적용 사례</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>예측값의 분포를 시험셋의 종속변수 분포에 가깝게 변경</p></td>
+<td><p><a class="reference external" href="https://www.kaggle.com/c/LANL-Earthquake-Prediction/discussion/94466">LANL Earthquake 10th</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>예측값이 확률인 경우, 0과 1에 근사한 값을 0이나 1로 반올림</p></td>
+<td><p><a class="reference external" href="https://www.kaggle.com/c/google-quest-challenge/discussion/129839">Google QUEST 11th</a></p></td>
+</tr>
+<tr class="row-even"><td><p>예측값이 확률이고 메트릭이 logloss인 경우, 0과 1에 근사한 값을 clip</p></td>
+<td><p><a class="reference external" href="https://www.kaggle.com/c/google-quest-challenge/discussion/129839">Google QUEST 11th</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>리더보드 점수가 향상되는 방향으로 예측값을 push</p></td>
+<td><p><a class="reference external" href="https://www.kaggle.com/c/jigsaw-multilingual-toxic-comment-classification/discussion/160986">Jigsaw 1st</a></p></td>
+</tr>
+<tr class="row-even"><td><p>하나의 샘플에서 여러 예측값이 발생한 경우, 하나의 값으로 결합</p></td>
+<td><p><a class="reference external" href="https://www.kaggle.com/c/ieee-fraud-detection/discussion/111247">IEEE-CIS 6th</a></p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>표 19-1 후처리 방법과 적용 사례</p></li>
+</ul>
+<p>첫번째 방법은 예측값의 분포를 시험셋의 종속변수 분포에 가깝게 변경하는 방법입니다. 시험셋의 종속변수는 주어지지 않기 때문이 일반적으로 알 수가 없습니다. 그래서 제출 파일에 하나의 상수 값을 입력 후 제출을 해서 리더보드에 반환되는 점수를 바탕으로 시험셋의 분포를 유추를 한 뒤 분포 변환을 적용합니다. Public 리더보드와 Private 리더보드의 분포가 다른 경우 Public 리더보드에 과적합되는 위험이 존재하지만 두 개의 리더보드의 분포가 유사한 경우 좋은 성능을 기대할 수 있습니다.</p>
+<p>두번째 방법은 예측값이 확률인 경우 0과 1에 근사한 값을 0과 1로 반올림하는 방법입니다.</p>
+<p>하지만 평가 지표가 logloss인 경우 두번째 방법은 오히려 안 좋은 성능을 보일 수 있습니다. 이런 경우 0과 1에 근사한 값을 특정 값으로 clip을 할 수 있습니다.</p>
+<p>네번째 방법은 리더보드 점수가 향상되는 방향으로 예측값을 push하는 방법입니다. 첫번째 제출값, 두번째 제출값, 그리고 세번째 제출값을 제출할 때 마다 리더보드 점수가 상승했다면 각 제출값 사이의 차이를 구해서 어느 방향으로 예측값이 움직여야 점수가 상승하는지 파악할 수 있습니다. 이렇게 알게된 방향으로 예측값을 조정할 수 있습니다.</p>
+<p>다섯번째 방법은 하나의 샘플에서 여러 예측값이 발생한 경우 하나의 값으로 결합하는 방법입니다. 이 방법은 IEEE-CIS 대회 데이터에 특화된 방법으로 소개가 됐었습니다.</p>
+</div>
+<div class="section" id="id3">
+<h2>19.2 기타 팁<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>아래는 데이터과학 대회 참여 시 적용가능한 추가 팁들을 정리한 표입니다.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>팁</p></th>
+<th class="head"><p>설명</p></th>
+<th class="head"><p>적용 사례</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Pseudo-labeling</p></td>
+<td><p>시험셋 샘플 중 확실한 샘플을 학습셋에 추가</p></td>
+<td><p><a class="reference external" href="https://www.kaggle.com/cdeotte/pseudo-labeling-qda-0-969">Instant Gratification - cdeotte</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Adversarial Validation</p></td>
+<td><p>시험셋과 비슷한 피쳐분포를 가지는 샘플을 검증셋으로 선택</p></td>
+<td><p><a class="reference external" href="https://www.kaggle.com/tunguz/m5-adversarial-validation">M5 - tunguz</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Unsupervised Learning</p></td>
+<td><p>Autoencoder를 사용하여 latent 피쳐를 추출하여 사용</p></td>
+<td><p><a class="reference external" href="https://www.kaggle.com/shivamb/semi-supervised-classification-using-autoencoders">shivamb’s tutorial</a>, <a class="reference external" href="https://www.kaggle.com/c/porto-seguro-safe-driver-prediction/discussion/44629">Porto Seguro 1st</a></p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>표 19-2 기타 팁과 적용 사례</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>19.3 참고자료<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>데이터과핟 대회 수상자들의 솔루션을 살펴보면 다양한 팁들을 얻을 수 있습니다. 아래에는 각 분야별 주요 대회 우승 솔루션이 정리돼있습니다.</p>
+<ul class="simple">
+<li><p>Computer Vision:</p>
+<ul>
+<li><p>SIIM-ISIC Melanoma Classification (<a class="reference external" href="https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/175412">1st</a>, <a class="reference external" href="https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/175324">2nd</a>, <a class="reference external" href="https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/175633">3rd</a>)</p></li>
+<li><p>Google Landmark Recognition 2020 (<a class="reference external" href="https://www.kaggle.com/c/landmark-recognition-2020/discussion/187821">1st</a>, <a class="reference external" href="https://www.kaggle.com/c/landmark-recognition-2020/discussion/188299">2nd</a>, <a class="reference external" href="https://www.kaggle.com/c/landmark-recognition-2020/discussion/187757">3rd</a>)</p></li>
+<li><p>Google Landmark Retrieval 2020 (<a class="reference external" href="https://www.kaggle.com/c/landmark-retrieval-2020/discussion/176037">1st</a>, <a class="reference external" href="https://www.kaggle.com/c/landmark-retrieval-2020/discussion/177078">2nd</a>)</p></li>
+</ul>
+</li>
+<li><p>NLP:</p>
+<ul>
+<li><p>Tweet Sentiment Extraction (<a class="reference external" href="https://www.kaggle.com/c/tweet-sentiment-extraction/discussion/159477">1st</a>, <a class="reference external" href="https://www.kaggle.com/c/tweet-sentiment-extraction/discussion/159310">2nd</a>, <a class="reference external" href="https://www.kaggle.com/c/tweet-sentiment-extraction/discussion/159910">3rd)</a></p></li>
+<li><p>Jigsaw Multilingual Toxic Comment Classification (<a class="reference external" href="https://www.kaggle.com/c/jigsaw-multilingual-toxic-comment-classification/discussion/160862">1st</a>, <a class="reference external" href="https://www.kaggle.com/c/jigsaw-multilingual-toxic-comment-classification/discussion/160964">3rd</a>, <a class="reference external" href="https://www.kaggle.com/c/jigsaw-multilingual-toxic-comment-classification/discussion/160980">4th</a>)</p></li>
+</ul>
+</li>
+<li><p>Tabular:</p>
+<ul>
+<li><p>IEEE-CIS Fraud Detection (1st <a class="reference external" href="https://www.kaggle.com/c/ieee-fraud-detection/discussion/111284">#1</a>/<a class="reference external" href="https://www.kaggle.com/c/ieee-fraud-detection/discussion/111308">#2</a>, 2nd <a class="reference external" href="https://www.kaggle.com/c/ieee-fraud-detection/discussion/111321">#1</a>/<a class="reference external" href="https://www.kaggle.com/c/ieee-fraud-detection/discussion/111554">#2</a>)</p></li>
+<li><p>Santander Customer Transaction Prediction (<a class="reference external" href="https://www.kaggle.com/c/santander-customer-transaction-prediction/discussion/89003">1st</a>, <a class="reference external" href="https://www.kaggle.com/c/santander-customer-transaction-prediction/discussion/88939">2nd</a>)</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://anchor.fm/chaitimedatascience">Chai Time Data Science Podcast</a></p>
+<ul>
+<li><p>유명한 데이터 사이언티스트들을 초대해서 그들의 팁을 공유하는 팟캐스트입니다.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://twitter.com/heads0rtai1s">Heads or Tails - Kaggle Hidden Gems on Twitter</a></p>
+<ul>
+<li><p>heads0rtails라는 캐글 사용자가 선별해서 공개하는 노트북 시리즈 입니다. heads0rtails은 EDA 노트북을 잘 만드는 것으로 유명한 캐글 사용자입니다.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="18-image-classification.html" title="previous page">18. Image Classification</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Kaggler-TV<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

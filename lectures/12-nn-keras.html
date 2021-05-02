@@ -1,0 +1,743 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12. 신경망, Keras &#8212; 단국대 2020 캐글 뽀개기</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="데모" href="12-nn-cv.html" />
+    <link rel="prev" title="12. 신경망, Keras" href="12-nn-intro.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">단국대 2020 캐글 뽀개기</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../main.html">
+   단국대 2020년 가을학기 캐글 뽀개기 강좌
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-intro.html">
+   1장. Intro
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-setup.html">
+   2장. Setup
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="03-pandas-intro.html">
+   3장. Pandas
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="03-pandas.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03-pandas-eda.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="04-numpy-intro.html">
+   4장. Numpy, 선형회귀, 로지스틱회귀
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="04-numpy.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04-numpy-lr.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="05-numerical-features-intro.html">
+   5장. 수치형변수 가공
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="05-numerical-features.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="06-scikit-learn-intro.html">
+   6장. Scikit-learn, 결정트리
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="06-scikit-learn.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="06-decision-trees.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="07-rf-lgb-intro.html">
+   7장. Random Forest, GBM
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="07-rf-lgb.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07-rf.html">
+     Random Forest 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07-lightgbm.html">
+     LightGBM 실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="08-cv-stacking-intro.html">
+   8장. Cross-Validation, Stacking
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-cv-stacking.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-lr-cv.html">
+     로지스틱 회귀 CV 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-rf-cv.html">
+     Random Forest CV 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-lightgbm-cv.html">
+     LightGBM CV 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-stacking-lr.html">
+     로지스틱 회귀 스태킹 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-stacking-lgb.html">
+     LightGBM 스태킹 실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="09-tuning-intro.html">
+   9장. 모델 튜닝, Hyperopt, Optuna
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="09-tuning.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="09-lightgbm-hyperopt.html">
+     Hyperopt 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="09-lightgbm-optuna.html">
+     Optuna 실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="10-pipeline-make-intro.html">
+   10장. Pipeline, Make
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="10-pipeline-make.html">
+     이론
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="11-categorical-features-intro.html">
+   11장. 범주형변수 가공
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="11-categorical-features.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="12-nn-intro.html">
+   12장. 신경망, Keras
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="12-nn-cv.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="13-text-features-intro.html">
+   13장. 문자열변수 가공
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="13-text-features.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="13-lr-tfidf.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="14-embeddings-intro.html">
+   14장. Embedding, RNN
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-embeddings.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-cnn-emb.html">
+     CNN - Embeddings 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-lstm-emb.html">
+     LSTM - Embeddings 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-lstm-glove.html">
+     LSTM - GloVe 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-attention.html">
+     Attention 실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="15-transfer-learning-intro.html">
+   15장. 선학습 임베딩, 전이학습
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="15-transfer-learning.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="15-bert.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-data-augmentation.html">
+   16장. Data Augmentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17-cnn.html">
+   17장. CNN
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="18-image-classification.html">
+   18장. Image Classification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="19-post-processing.html">
+   19장. 후처리, 기타팁
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lectures/12-nn-keras.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/SDSTony/dku-kaggle-class"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/SDSTony/dku-kaggle-class/issues/new?title=Issue%20on%20page%20%2Flectures/12-nn-keras.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   12.1 로지스틱회귀
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   12.2 신경망
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   12.3 신경망 - 특수 레이어
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   12.4 Keras
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#keras-sequential-api">
+     12.4.1 Keras - Sequential API
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#keras-functional-api">
+     12.4.2 Keras - Functional API
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#keras-callbacks">
+     12.4.3 Keras - Callbacks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   12.5 Keras
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="keras">
+<h1>12. 신경망, Keras<a class="headerlink" href="#keras" title="Permalink to this headline">¶</a></h1>
+<p>이번 장에서는 신경망(neural network) 모델과 신경망 모델 구축시 사용하는 Keras 프레임워크에 대해 살펴보겠습니다.</p>
+<div class="section" id="id1">
+<h2>12.1 로지스틱회귀<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>신경망 모델에 대해 설명하기 전에 4장에서 배운 로지스틱회귀에 대해 다시 살펴보겠습니다. 로지스틱회귀는 종속변수가 범주형변수일 때 사용하는 알고리즘입니다. 종속변수와 독립변수의 관계를 선형 수식으로 나타낸 뒤 로지스틱 함수를 적용해서 0과 1 사이의 값으로 변환합니다. 이를 도식화 하면 아래 그림 처럼 나타낼 수 있습니다.</p>
+<ul class="simple">
+<li><p>그림 12-1</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">x1</span></code>, <code class="docutils literal notranslate"><span class="pre">x2</span></code>, <code class="docutils literal notranslate"><span class="pre">x3</span></code> 값을 각각 <code class="docutils literal notranslate"><span class="pre">theta1</span></code>, <code class="docutils literal notranslate"><span class="pre">theta2</span></code>, <code class="docutils literal notranslate"><span class="pre">theta3</span></code>에 곱한 후 모두 더한 뒤 <code class="docutils literal notranslate"><span class="pre">g</span></code>함수에 입력하는 것으로 도식화 할 수 있습니다.</p>
+</div>
+<div class="section" id="id2">
+<h2>12.2 신경망<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>신경망은 그림 12-1에 있는 입력충(input layer)과 출력층(output layer) 사이에 은닉층(hidden layer)이 추가된 것입니다. 그래서 은닉층이 하나도 없으면 선형회귀모델 또는 로지스틱회귀 모델이 되는 것이며 은닉층이 1개라도 존재한다면 신경망 모델이 됩니다.</p>
+<ul class="simple">
+<li><p>그림 12-2</p></li>
+</ul>
+<p>은닉층에는 여러개의 뉴런이 포함됩니다. 또한 은닉층 별로 다른 개수의 뉴런을 가질 수 있습니다. 각 뉴런에서는 출력 값에 특정 함수를 적용해서 다음 층으로 보내는데 이를 활성화 함수(activation function)라고 합니다. 주로 사용되는 활성화 함수로는 sigmoind, tanh, relu가 있습니다.</p>
+<p>신경망 모델이 예측하는 방식은 먼저 입력층에 입력값이 들어오면 각각의 입력값에 가중치(weight)를 곱해서 다음 은닉층에 보냅니다. 그리고 은닉층은 입력 받은 값에 활성화 함수를 적용한 값을 산출합니다. 이 과정을 출력층에 이르기 까지 반복을 해서 최종 출력값을 산출합니다.</p>
+<p>신경망 모델이 학습하는 방법은 경사하강법과 chain rule을 적용한 backpropagation을 통해 가중치를 학습합니다.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>이번 장에서는 신경망 모델을 사용하기 위한 기본적인 개념만 살펴봤습니다.</p>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>12.3 신경망 - 특수 레이어<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>앞서 설명 드린 은닉층 외에도 특수한 레이어들이 존재합니다. 아래 표에 정리돼있습니다.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>레이어</p></th>
+<th class="head"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Dropout</p></td>
+<td><p>학습시 랜덤하게 일정 비율의 뉴런을 drop</p></td>
+</tr>
+<tr class="row-odd"><td><p>Batch/Layer Normalization</p></td>
+<td><p>레이어의 입력값을 표준화</p></td>
+</tr>
+<tr class="row-even"><td><p>Max/Average Pooling</p></td>
+<td><p>입력값 중 Max/Average만 선택</p></td>
+</tr>
+<tr class="row-odd"><td><p>Embedding</p></td>
+<td><p>Label/Ordinal 인코딩 된 정수를 실수 벡터로 변화나</p></td>
+</tr>
+<tr class="row-even"><td><p>Convolution</p></td>
+<td><p>1D/2D Convolution</p></td>
+</tr>
+<tr class="row-odd"><td><p>Recurrent</p></td>
+<td><p>LSTM, GRU</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>표 12-1</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>12.4 Keras<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>Keras는 주요 오픈소스 신경망 프레임워크 중 하나입니다. 구글의 Francois Chollet이 2015년에 발표했습니다. Keras는 Tensorflow/Theano/CNTK/PlaidML의 high-level API를 제공하지만 Tensorflow를 backend로 가장 많이 사용합니다. Keras 외의 주요 프레임워크는 아래 그림에 나와 있습니다.</p>
+<ul class="simple">
+<li><p>그림 12-3</p></li>
+</ul>
+<p>PyTorch와 Tensorflow는 각각 Facebook과 Google에서 개발을 주도하는 프레임워크 이며 PyTorch Lightning과 Keras는 각각 PyTorch와 Tensorflow를 더 사용하기 쉽게 만들어준 프레임워크입니다. <a class="reference external" href="http://Fast.ai">Fast.ai</a> 또한 PyTorch를 쉽게 사용할 수 있게 만들어준 라이브러리입니다. Mxnet은 XGBoost를 개발한 Tianqi Chen이 개발했으며 지금은 Amazon에서 후원을 하고 있는 프로젝트입니다.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>이미지, 음성, 자연어 등의 비정형 데이터를 사용한 데이터과학 대회에서는 신경망 알고리즘이 성능의 우세를 보이며 정형데이터를 사용한 대회에서는 트리 기반의 lightgbm 또는 xgboost가 우세를 부입니다.</p>
+</div>
+<div class="section" id="keras-sequential-api">
+<h3>12.4.1 Keras - Sequential API<a class="headerlink" href="#keras-sequential-api" title="Permalink to this headline">¶</a></h3>
+<p>Keras는 sequential API와 functional API를 제공합니다. Sequential API는 쉽게 사용할 수 있으며 복잡한 모델 구축을 하고자 할 때는 functional api를 주로 사용합니다.</p>
+<p>Sequential API의 특징은 입력층에서 출력층까지 차례로 레이어를 추가합니다. 아래 예시 코드 처럼 <code class="docutils literal notranslate"><span class="pre">add()</span></code>를 통해 하나씩 레이어를 쌓아갑니다.</p>
+<ul class="simple">
+<li><p>그림 12-</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">compile()</span></code>단계에서는 손실함수와 학습시 사용할 <code class="docutils literal notranslate"><span class="pre">optimizer</span></code>를 사용합니다.</p>
+<ul class="simple">
+<li><p>그림 12-</p></li>
+</ul>
+<p>위 예시는 모델 학습시 사용하는 코드입니다. <code class="docutils literal notranslate"><span class="pre">fit()</span></code>함수를 통해 모델을 학습합니다. 이 때 종속변수가 multi-class일 경우 one-hot encoding을 한 후에 <code class="docutils literal notranslate"><span class="pre">fit()</span></code>에 입력합니다. Keras에서 제공하는 <code class="docutils literal notranslate"><span class="pre">to_categorical()</span></code>함수를 통해 종속변수에 one-hot encoding 적용이 가능합니다.</p>
+<p>자세한 코드는 실습 파일에서 확인할 수 있습니다.</p>
+</div>
+<div class="section" id="keras-functional-api">
+<h3>12.4.2 Keras - Functional API<a class="headerlink" href="#keras-functional-api" title="Permalink to this headline">¶</a></h3>
+<p>앞서 sequential API는 순차적으로만 레이어 추가가 가능합니다. 하지만 때에 따라선 아래와 같이 레이어를 복잡하고 다양하게 구성할 수도 있습니다.</p>
+<ul class="simple">
+<li><p>그림 12-</p></li>
+</ul>
+<p>위와 같은 복잡한 신경망 모델 구축을 위해선 functional API를 통해 구현 가능합니다. 이번 예시에서는 12.4.1절에서 구축한 신경망 모델을 functional API에서는 어떻게 구축하는지 살펴보겠습니다.</p>
+<ul class="simple">
+<li><p>그림 12-</p></li>
+</ul>
+<p>Functional API에서는 Input레이어를 직접 명시를 해줘야 합니다. 그리고 나서 은닉층 <code class="docutils literal notranslate"><span class="pre">x</span></code>는 입력층인 <code class="docutils literal notranslate"><span class="pre">inputs</span></code>를 입력 받도록 설계합니다. 마찬가지로 출력층 <code class="docutils literal notranslate"><span class="pre">outputs</span></code>도 <code class="docutils literal notranslate"><span class="pre">x</span></code>를 입력 받도록 정의합니다. 그리고 나서 <code class="docutils literal notranslate"><span class="pre">compile()</span></code>을 적용하고 <code class="docutils literal notranslate"><span class="pre">fit()</span></code>을 통해 학습하는 것은 sequential API와 같습니다.</p>
+<p>자세한 코드는 실습 파일에서 확인할 수 있습니다.</p>
+</div>
+<div class="section" id="keras-callbacks">
+<h3>12.4.3 Keras - Callbacks<a class="headerlink" href="#keras-callbacks" title="Permalink to this headline">¶</a></h3>
+<p>Callbacks은 <code class="docutils literal notranslate"><span class="pre">fit()</span></code>함수에 추가할 수 있는 기능입니다. Keras 사용시 유용한 callbacks은 아래와 같습니다.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>레이어</p></th>
+<th class="head"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>EarlyStopping</p></td>
+<td><p>검증셋 성능이 향상되지 않으면 학습 중단</p></td>
+</tr>
+<tr class="row-odd"><td><p>ReduceLROnPlateau</p></td>
+<td><p>검증셋 성능이 향상되지 않으면 learning rate 감서</p></td>
+</tr>
+<tr class="row-even"><td><p>LearningRateScheduler</p></td>
+<td><p>Learning rate을 커스텀하게 변경</p></td>
+</tr>
+<tr class="row-odd"><td><p>ModelCheckpoint</p></td>
+<td><p>모델 저장</p></td>
+</tr>
+<tr class="row-even"><td><p>TensorBoard</p></td>
+<td><p>학습 과정 시각화</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>표 12-1</p></li>
+<li><p>그림</p></li>
+</ul>
+<p>위 예시와 같이 <code class="docutils literal notranslate"><span class="pre">es</span></code>와 <code class="docutils literal notranslate"><span class="pre">rlr</span></code>에 각각 EarlyStopping과 ReduceLROnPlateau callback은 저장하고 <code class="docutils literal notranslate"><span class="pre">fit()</span></code>의 <code class="docutils literal notranslate"><span class="pre">callbacks</span></code> 파라미터에 전달함으로써 구현 가능합니다.</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>12.5 Keras<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://cs229.stanford.edu/notes2020fall/notes2020fall/deep_learning_notes.pdf">Stanford CS229 Lecture 8: Neural Networks</a></p></li>
+<li><p><a class="reference external" href="https://amzn.to/2TJcmz3">Deep Learning with Python</a></p>
+<ul>
+<li><p>Keras 창시자가 집필한 책</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://keras.io/ko/">Keras 공식 홈페이지 문서 (한글)</a></p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="12-nn-intro.html" title="previous page">12. 신경망, Keras</a>
+    <a class='right-next' id="next-link" href="12-nn-cv.html" title="next page">데모</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Kaggler-TV<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

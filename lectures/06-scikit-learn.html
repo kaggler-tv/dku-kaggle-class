@@ -1,0 +1,767 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6. Scikit-learn (sklearn) &#8212; 단국대 2020 캐글 뽀개기</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="결정트리 데모" href="06-decision-trees.html" />
+    <link rel="prev" title="6. Scikit-learn" href="06-scikit-learn-intro.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">단국대 2020 캐글 뽀개기</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../main.html">
+   단국대 2020년 가을학기 캐글 뽀개기 강좌
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-intro.html">
+   1장. Intro
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-setup.html">
+   2장. Setup
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="03-pandas-intro.html">
+   3장. Pandas
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="03-pandas.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03-pandas-eda.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="04-numpy-intro.html">
+   4장. Numpy, 선형회귀, 로지스틱회귀
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="04-numpy.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04-numpy-lr.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="05-numerical-features-intro.html">
+   5장. 수치형변수 가공
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="05-numerical-features.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="06-scikit-learn-intro.html">
+   6장. Scikit-learn, 결정트리
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="06-decision-trees.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="07-rf-lgb-intro.html">
+   7장. Random Forest, GBM
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="07-rf-lgb.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07-rf.html">
+     Random Forest 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07-lightgbm.html">
+     LightGBM 실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="08-cv-stacking-intro.html">
+   8장. Cross-Validation, Stacking
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-cv-stacking.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-lr-cv.html">
+     로지스틱 회귀 CV 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-rf-cv.html">
+     Random Forest CV 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-lightgbm-cv.html">
+     LightGBM CV 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-stacking-lr.html">
+     로지스틱 회귀 스태킹 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-stacking-lgb.html">
+     LightGBM 스태킹 실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="09-tuning-intro.html">
+   9장. 모델 튜닝, Hyperopt, Optuna
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="09-tuning.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="09-lightgbm-hyperopt.html">
+     Hyperopt 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="09-lightgbm-optuna.html">
+     Optuna 실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="10-pipeline-make-intro.html">
+   10장. Pipeline, Make
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="10-pipeline-make.html">
+     이론
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="11-categorical-features-intro.html">
+   11장. 범주형변수 가공
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="11-categorical-features.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="12-nn-intro.html">
+   12장. 신경망, Keras
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="12-nn-keras.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="12-nn-cv.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="13-text-features-intro.html">
+   13장. 문자열변수 가공
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="13-text-features.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="13-lr-tfidf.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="14-embeddings-intro.html">
+   14장. Embedding, RNN
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-embeddings.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-cnn-emb.html">
+     CNN - Embeddings 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-lstm-emb.html">
+     LSTM - Embeddings 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-lstm-glove.html">
+     LSTM - GloVe 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-attention.html">
+     Attention 실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="15-transfer-learning-intro.html">
+   15장. 선학습 임베딩, 전이학습
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="15-transfer-learning.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="15-bert.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-data-augmentation.html">
+   16장. Data Augmentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17-cnn.html">
+   17장. CNN
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="18-image-classification.html">
+   18장. Image Classification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="19-post-processing.html">
+   19장. 후처리, 기타팁
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lectures/06-scikit-learn.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/SDSTony/dku-kaggle-class"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/SDSTony/dku-kaggle-class/issues/new?title=Issue%20on%20page%20%2Flectures/06-scikit-learn.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ml">
+   6.1 ML 알고리즘
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   6.2 변수 변환
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#metric">
+   6.3 평가 지표 (Metric)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#validation">
+   6.4 검증 (Validation)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   6.5 결정트리
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   6.6 참고자료
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="scikit-learn-sklearn">
+<h1>6. Scikit-learn (sklearn)<a class="headerlink" href="#scikit-learn-sklearn" title="Permalink to this headline">¶</a></h1>
+<p>Scikit-learn 라이브러리는 파이썬의 대표적인 머신러닝 라이브러리 입니다. 2007년에 교토 대학에서 박사과정을 하고 있던 David Cournapeau가 Google Summer of Code 프로젝트로 시작하게 됐습니다.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Google Summer of Code: <a class="reference external" href="https://summerofcode.withgoogle.com/">https://summerofcode.withgoogle.com/</a></p>
+</div>
+<p>그 당시에는 머신러닝 연구를 하거나 개발을 해야 되면 Matlab같은 유료 프로그램을 사용했야 했습니다. 그래서 파이썬으로 무료로 사용할 수 있는 머신러닝 라이브러리를 만드는 것을 2007년에 David이 개인 프로젝트로 시작했습니다.</p>
+<p>2010년에는 프랑스의 국가연구소인 <a class="reference external" href="https://www.inria.fr/en">INRIA</a>에서 운영권을 넘겨 받아 v0.1을 공개했습니다. 그 이후로는 매 분기마다 새로운 버전을 공개해 2020년 8월에는 v0.23.2를 공개했습니다.</p>
+<p>Scikit-learn에는 다양한 머신러닝 알고리즘과 데이터 전처리 기능, 모델 평가 지표 등 머신러닝 알고리즘을 사용하는데 필요한 다양한 기능을 모두 구현해 놓은 라이브러리 입니다. 또한 앞서 배운 pandas, numpy, 그리고 matplotlib 라이브러리들과 호환이 잘 됩니다. 그래서 파이썬으로 머신러닝 프로젝트를 하게 된다면 pandas와 numpy와 더불어 가장 많이 사용되는 라이브러리 입니다.</p>
+<div class="section" id="ml">
+<h2>6.1 ML 알고리즘<a class="headerlink" href="#ml" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>그림</p></li>
+</ul>
+<p>그림 6.X는 Scikit-learn 공식 홈페이지에서 제공하는 머신러닝 알고리즘 사용 가이드입니다. 가장 처음에 샘플의 개수를 확인 후 50개 이하면 데이터를 더 수집하고 50개 이상이면은 다음 단계로 진행 합니다. 그리고 나서 종속변수가 범주형인지 아닌지를 확인 하고, 라벨링이 되어 있는지 아닌지 등을 확인하면서 각 상황별 적합한 알고리즘을 추천해주는 가이드라인입니다.</p>
+<p>해당 그림을 참고해 Scikit-learn에서 제공하는 알고리즘을 정리하자면 분류 할 때 사용하는 classification 알고리즘, 연속형 변수를 예측하는 regression 알고리즘, 비지도학습의 일종인 clustering 알고리즘, 그리고 변수 변환을 지원하는 dimensionality reduction 알고리즘이 이습니다.</p>
+<p>앞서 4장에서 단국대 소/중 데이터를 활용해 regression 알고리즘인 선형회귀와 classification 알고리즘인 로지스틱회귀를 적용해봤습니다. 아래 그림을 통해 알고리즘 사용 방법을 다시 복습해보겠습니다.</p>
+<ul class="simple">
+<li><p>그림</p></li>
+</ul>
+<p>Regression 알고리즘을 학습할 때는 <code class="docutils literal notranslate"><span class="pre">fit()</span></code>함수를 사용하고, 독립변수와 종속변수를 입력 값으로 주어 학습을 진행합니다. 예측할 때는 <code class="docutils literal notranslate"><span class="pre">predict()</span></code>함수를 사용해 주어진 입력값에 대한 예측을 진행합니다.</p>
+<ul class="simple">
+<li><p>그림</p></li>
+</ul>
+<p>Classification 알고리즘을 학습할 때도 <code class="docutils literal notranslate"><span class="pre">fit()</span></code>함수를 사용합니다. 예측할 때는 <code class="docutils literal notranslate"><span class="pre">predict()</span></code>을 사용해 범주를 곧바로 예측할 수도 있으며 <code class="docutils literal notranslate"><span class="pre">predict_proba()</span></code>를 사용해 각 범주에 속할 확률을 예측할 수도 있습니다. N개의 샘플에 대해 2개의 범주에 속할 확률을 각각 예측하게 되면 <code class="docutils literal notranslate"><span class="pre">predict_proba()</span></code>의 결과물은 N행 2열의 행렬이 반환됩니다. 그래서 특정 범주 하나에만 속할 확률을 알고 싶을 때는 인덱싱을 통해 특정 열을 선택해줘야 합니다. 그림 6.X에서는 <code class="docutils literal notranslate"><span class="pre">[:,</span> <span class="pre">1]</span></code> 인덱싱을 통해 범주 1에 속할 확률을 추출했습니다.</p>
+<ul class="simple">
+<li><p>그림</p></li>
+</ul>
+<p>그림 6.X은 clustering 알고리즘을 사용하는 예제입니다. 비지도학습 알고리즘이기 때문에 종속변수인 <code class="docutils literal notranslate"><span class="pre">y</span></code>는 없습니다. 그래서 <code class="docutils literal notranslate"><span class="pre">X</span></code>만 <code class="docutils literal notranslate"><span class="pre">fit()</span></code>함수에 입력값으로 주어 학습을 진행합니다. 마찬가지로 예측을 할 때는 <code class="docutils literal notranslate"><span class="pre">predict()</span></code>함수를 사용합니다.</p>
+<ul class="simple">
+<li><p>그림</p></li>
+</ul>
+<p>그림 6.X에는 scikit-learn에서 주로 사용하는 알고리즘을 나타냅니다. 선형 모델로는 LinearRegression이나 LogisticRegression 알고리즘을 주요 사용합니다. 트리 기반 모델로는 DecisionTreeRegressor과 DecisionTreeClassifier를 사용합니다. 데이터과학 대회에서 주로 사용되는 알고리즘은 <code class="docutils literal notranslate"><span class="pre">sklearn.ensemble</span></code>모듈에서 제공하는 RandomForestRegressor, RandomForestClassifier, GradientBoostingRegressor, 그리고 GradientBoostingClassifier가 되겠습니다.</p>
+</div>
+<div class="section" id="id1">
+<h2>6.2 변수 변환<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Scikit-learn에서 제공하는 주요 변수 변환 기능을 확인해보겠습니다.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>함수</p></th>
+<th class="head"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>MinMaxScaler</p></td>
+<td><p>최댓값과 최솟값을 1과 0으로 변환</p></td>
+</tr>
+<tr class="row-odd"><td><p>StandardScaler</p></td>
+<td><p>정규분포로 변환</p></td>
+</tr>
+<tr class="row-even"><td><p>RobustScaler</p></td>
+<td><p>이상치의 영향을 덜 받는 변환 방법</p></td>
+</tr>
+<tr class="row-odd"><td><p>QuantileTransformer</p></td>
+<td><p>백분위수 정보를 활용해 변환</p></td>
+</tr>
+<tr class="row-even"><td><p>PowerTransformer</p></td>
+<td><p>yeo-johnson 또는 box-cox 방법으로 정규분포화 하는 방법</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>표 6. X 수치형 변수에 적용 가능한 변환 방법</p></li>
+</ul>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>함수</p></th>
+<th class="head"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>LabelEncoder</p></td>
+<td><p>0 부터 N까지의 숫자로 각 범주를 변환, 종속변수에 사용</p></td>
+</tr>
+<tr class="row-odd"><td><p>OneHotEncoder</p></td>
+<td><p>각 범주를 이진 변수로 변환해 0과 1로만 범주를 표현</p></td>
+</tr>
+<tr class="row-even"><td><p>OrdinalEncoder</p></td>
+<td><p>0 부터 N까지의 숫자로 각 범주를 변환, 독립변수에 사용</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>표 6. X 범주형 변수에 적용 가능한 변환 방법</p></li>
+</ul>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>함수</p></th>
+<th class="head"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PCA</p></td>
+<td><p>차원 축소 알고리즘</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>표 6.X</p></li>
+<li><p>그림</p></li>
+</ul>
+<p>ML 알고리즘 함수는 <code class="docutils literal notranslate"><span class="pre">fit()</span></code>과 <code class="docutils literal notranslate"><span class="pre">predict()</span></code>명령어를 사용한 반면 변수 변환 함수는 <code class="docutils literal notranslate"><span class="pre">fit()</span></code>과 <code class="docutils literal notranslate"><span class="pre">transform()</span></code>함수를 사용합니다. <code class="docutils literal notranslate"><span class="pre">fit_transform()</span></code>처럼 두 개의 기능을 합친 함수도 지원합니다.</p>
+<p>Scikit-learn에서는 텍스트 데이터를 숫자로 변환하는 함수도 제공합니다. 대표적으로 <code class="docutils literal notranslate"><span class="pre">CountVectorizer</span></code>와 <code class="docutils literal notranslate"><span class="pre">TfidfVectorizer</span></code>가 존재합니다.</p>
+<p><code class="docutils literal notranslate"><span class="pre">CountVectorizer</span></code>는 입력 텍스트에 있는 모든 단어들을 개별 변수로 보고 각 단어의 등장 횟수를 세어 수치화합니다. 아래 그림과 같습니다.</p>
+<ul class="simple">
+<li><p>그림</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">corpus</span></code>에 등장한 모든 단어를 변수로 확인한 뒤 <code class="docutils literal notranslate"><span class="pre">['and',</span> <span class="pre">'document',</span> <span class="pre">'first',</span> <span class="pre">'is',</span> <span class="pre">'one',</span> <span class="pre">'second',</span> <span class="pre">'the',</span> <span class="pre">'third',</span> <span class="pre">'this']</span></code>의 변수 리스트를 생성합니다. <code class="docutils literal notranslate"><span class="pre">corpus</span></code>의 첫번째 문장인 <code class="docutils literal notranslate"><span class="pre">This</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">first</span> <span class="pre">document.</span></code>에 있는 단어들의 개수를 세어 <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">1]</span></code>로 수치화 된것을 확인할 수 있습니다.</p>
+<p><code class="docutils literal notranslate"><span class="pre">TfidfVectorizer</span></code>는 term frequency와 inverse document frequency 값을 곱해서 수치화 하는 방법입니다. Term frequency는 해당 문서내 특정 단어가 출몰한 빈도수를 뜻하며 앞서 <code class="docutils literal notranslate"><span class="pre">CountVectorizer</span></code>가 계산한 값을 뜻합니다. Inverse document frequency는 한 단어가 전체 문서에서 등장한 횟수를 역수 취한 값입니다. Inverse document frequency를 term frequency에 곱해주는 이유는 전체 문서에 자주 등장하는 단어인 경우 단어의 중요도를 낮추고, 특정 문서에만 자주 등장하는 단어인 경우 중요도를 높이기 위함입니다. 아래와 같이 <code class="docutils literal notranslate"><span class="pre">sklearn.feature_extraction.text</span></code>모듈에서 불러올 수 있습니다.</p>
+<ul class="simple">
+<li><p>그림</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">TfidfVectorizer</span></code>는 자연어처리에서 기본이 되는 변수 변환 방법입니다. 최근에는 딥러닝 방법의 강세로 인해 자주 사용되지는 않지만 기본적인 분석이나 모델링을 할 때 종종 사용됩니다.</p>
+</div>
+<div class="section" id="metric">
+<h2>6.3 평가 지표 (Metric)<a class="headerlink" href="#metric" title="Permalink to this headline">¶</a></h2>
+<p>Scikit-learn에서는 모델 평가를 위한 다양한 평가 지표를 제공합니다. 분류 문제에서 자주 사용되는 <code class="docutils literal notranslate"><span class="pre">log_loss</span></code>, <code class="docutils literal notranslate"><span class="pre">roc_auc_score</span></code>, <code class="docutils literal notranslate"><span class="pre">accuracy_score</span></code>, <code class="docutils literal notranslate"><span class="pre">confusion_matrix</span></code>가 사용됩니다. 아래는 <code class="docutils literal notranslate"><span class="pre">confusion_matrix</span></code>를 사용한 예시입니다.</p>
+<ul class="simple">
+<li><p>그림</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">confusion_matrix</span></code>에서 우하향하는 대각선에 있는 숫자는 모델이 정답을 맞춘 개수를 뜻합니다. 예를 들어 1행 1열에 있는 원소값은 실제값이 0인 샘플 중 모델이 0으로 맞춘 개수를 뜻합니다.</p>
+<p>그 외의 위치에 있는 숫자들은 예측 모델이 틀린 개수를 뜻하며, 어떻게 예측을 해서 틀린 것인지 확인할 수 있습니다. 예를 들어 2행 3열에 있는 13,333은 실제값이 1인 샘플 13,333개를 모델이 2로 예측해서 틀렸다는 것을 알 수 있습니다. Confusion matrix 확인을 통해 모델이 1과 2인 클래스를 헷갈려 하는 것을 확인할 수 있습니다.</p>
+<p>회긔 문제에서 자주 사용되는 평가 지표는 <code class="docutils literal notranslate"><span class="pre">mean_squared_error</span></code>, <code class="docutils literal notranslate"><span class="pre">mean_absolute_error</span></code>, 그리고 <code class="docutils literal notranslate"><span class="pre">r2_score</span></code>이며 각각 <code class="docutils literal notranslate"><span class="pre">sklearn.metrics</span></code>모듈에서 불러올 수 있습니다.</p>
+</div>
+<div class="section" id="validation">
+<h2>6.4 검증 (Validation)<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h2>
+<p>Scikit-learn에서는 모델 검증을 진행할 때도 유용한 함수들을 제공합니다. 가장 많이 사용되는 함수들은 <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code>, <code class="docutils literal notranslate"><span class="pre">KFold</span></code>, 그리고 <code class="docutils literal notranslate"><span class="pre">StratifiedKFold</span></code>입니다.</p>
+<p><code class="docutils literal notranslate"><span class="pre">train_test_split</span></code>은 학습 데이터셋의 일부를 나누어, 예를 들어 60%는 학습시 사용하고 40%는 검증시 사용하고자 할 때 사용합니다. 아래와 같이 코드로 구현 가능합니다.</p>
+<ul class="simple">
+<li><p>그림</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">train_test_split</span></code>함수의 <code class="docutils literal notranslate"><span class="pre">test_size</span></code>인자에는 검증 데이터로 사용하고자 하는 비율을 입력하고 <code class="docutils literal notranslate"><span class="pre">random_state</span></code>인자에는 임의의 정수를 입력해 데이터를 분리하기전 셔플링하는 과정이 재현될 수 있도록 합니다.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>데이터과학 대회에 팀 단위로 참여시 팀원 간의 실험 재현이 될 수 있도록 random_state를 고정해두는 것이 필요합니다.</p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">KFold</span></code>는 학습 데이터를 K개로 분리해서 교차검증을 할 때 사용합니다. 그림 6.X 처럼 5개의 fold로 나눌 시 각 fold에서 사용하는 test
+교차 검증은 전체 학습 데이터에 대한 모델 성능 검증이 가능합니다.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>KFold는 모든 데이터셋을 활용해 검증을 하기 때문에 train_test_split보다 과적합을 방지하는데 효과적입니다.</p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">KFold</span></code>사용 예제는 아래와 같습니다.</p>
+<ul class="simple">
+<li><p>그림</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">shuffle</span></code>과 <code class="docutils literal notranslate"><span class="pre">random_state</span></code>인자를 설정합니다. <code class="docutils literal notranslate"><span class="pre">KFold</span></code> 실습은 7장에서 진행해보겠습니다.</p>
+</div>
+<div class="section" id="id2">
+<h2>6.5 결정트리<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Scikit-learn에서 제공하는 알고리즘 중 결정트리 (Decision Trees)에 대해 알아보겠습니다. 결정트리는 7장에서 학습할 Random Forest와 LightGBM의 기반에 되기 때문에 먼저 학습해보겠습니다.</p>
+<p>결정트리는 일련의 결정 규칙에 기반한 예측모델입니다. 위 그림에서 나오는 것 처럼 처음에는 <code class="docutils literal notranslate"><span class="pre">redshift</span></code>가 0.0004보다 작거나 같은지 확인을 하고 그 다음 단계에서 또 각각의 규칙을 적용합니다. 가장 아래에 있는 단말 노드에 도달하게 되면 하나의 범주를 예측하게 됩니다.</p>
+<p>결정트리의 특징으로는 분류 문제와 회귀 문제 모두 적용가능하며 모델 해석에 용이합니다. 그림 6.X 처럼 시각화를 통해 어떤 규칙을 사용했는지 확인할 수 있습니다. 또한 스케일에 영향을 받지 않습니다. 스케일이 달라도 동일한 결과가 나오므로 데이터 전처리시 스케일링을 적용하지 않아도 무관합니다. 또한 범주형변수를 수치형변수로 변환하지 않아도 학습이 가능한 알고리즘입니다.</p>
+<p>결정트리를 분류 모델로 학습하는 방법과 회귀 모델로 학습하는 방법이 있는데, 두 가지의 학습 방법 모두 특정 노드에서 손실함수를 최소화 하는 변수와 기준값을 탐색합니다. 그리고 선정된 변수와 기준값으로 자식 노드를 생성하고 특정 조건이 만족할 때 까지 이 과정을 반복합니다. 분류 모델에서는 Gini 또는 Entropy로 손실함수를 정의하며 회귀 모델에서는 MSE 또는 MAE를 손실함수를 정합니다.</p>
+<p>Scikit-learn에서 결정트리를 학습하는 예시는 아래와 같습니다.</p>
+<ul class="simple">
+<li><p>그림</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">graphvis</span></code> 라이브러리를 활용해 결정트리를 시각화 할 수 있으며 예시 코드는 아래와 같습니다.</p>
+<ul class="simple">
+<li><p>그림</p></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>6.6 참고자료<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://scikit-learn.org/stable/tutorial/">Scikit-learn 튜토리얼 페이지</a></p>
+<ul>
+<li><p><a class="reference external" href="https://scikit-learn.org/stable/tutorial/machine_learning_map/">Choosing the right estimator</a></p></li>
+<li><p><a class="reference external" href="https://scikit-learn.org/stable/data_transforms.html">Data Transformation</a></p></li>
+<li><p><a class="reference external" href="https://scikit-learn.org/stable/modules/cross_validation.html">Cross-Validation</a></p></li>
+<li><p><a class="reference external" href="https://scikit-learn.org/stable/modules/tree.html">Decision Trees</a></p></li>
+</ul>
+</li>
+<li><p>핸즈온 머신러닝 2판</p></li>
+</ul>
+<p>Scikit-learn에서 제공하는 공식 튜토리얼을 통해 추가 내용을 확인할 수 있습니다.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="06-scikit-learn-intro.html" title="previous page">6. Scikit-learn</a>
+    <a class='right-next' id="next-link" href="06-decision-trees.html" title="next page">결정트리 데모</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Kaggler-TV<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

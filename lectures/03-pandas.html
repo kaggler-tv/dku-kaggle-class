@@ -1,0 +1,741 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3. Pandas &#8212; 단국대 2020 캐글 뽀개기</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Pandas 데모 - Exploratory Data Analysis" href="03-pandas-eda.html" />
+    <link rel="prev" title="3. Pandas" href="03-pandas-intro.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">단국대 2020 캐글 뽀개기</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../main.html">
+   단국대 2020년 가을학기 캐글 뽀개기 강좌
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-intro.html">
+   1장. Intro
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-setup.html">
+   2장. Setup
+  </a>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="03-pandas-intro.html">
+   3장. Pandas
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03-pandas-eda.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="04-numpy-intro.html">
+   4장. Numpy, 선형회귀, 로지스틱회귀
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="04-numpy.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04-numpy-lr.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="05-numerical-features-intro.html">
+   5장. 수치형변수 가공
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="05-numerical-features.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="06-scikit-learn-intro.html">
+   6장. Scikit-learn, 결정트리
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="06-scikit-learn.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="06-decision-trees.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="07-rf-lgb-intro.html">
+   7장. Random Forest, GBM
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="07-rf-lgb.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07-rf.html">
+     Random Forest 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07-lightgbm.html">
+     LightGBM 실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="08-cv-stacking-intro.html">
+   8장. Cross-Validation, Stacking
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-cv-stacking.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-lr-cv.html">
+     로지스틱 회귀 CV 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-rf-cv.html">
+     Random Forest CV 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-lightgbm-cv.html">
+     LightGBM CV 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-stacking-lr.html">
+     로지스틱 회귀 스태킹 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-stacking-lgb.html">
+     LightGBM 스태킹 실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="09-tuning-intro.html">
+   9장. 모델 튜닝, Hyperopt, Optuna
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="09-tuning.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="09-lightgbm-hyperopt.html">
+     Hyperopt 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="09-lightgbm-optuna.html">
+     Optuna 실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="10-pipeline-make-intro.html">
+   10장. Pipeline, Make
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="10-pipeline-make.html">
+     이론
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="11-categorical-features-intro.html">
+   11장. 범주형변수 가공
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="11-categorical-features.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="12-nn-intro.html">
+   12장. 신경망, Keras
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="12-nn-keras.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="12-nn-cv.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="13-text-features-intro.html">
+   13장. 문자열변수 가공
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="13-text-features.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="13-lr-tfidf.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="14-embeddings-intro.html">
+   14장. Embedding, RNN
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-embeddings.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-cnn-emb.html">
+     CNN - Embeddings 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-lstm-emb.html">
+     LSTM - Embeddings 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-lstm-glove.html">
+     LSTM - GloVe 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-attention.html">
+     Attention 실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="15-transfer-learning-intro.html">
+   15장. 선학습 임베딩, 전이학습
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="15-transfer-learning.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="15-bert.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-data-augmentation.html">
+   16장. Data Augmentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17-cnn.html">
+   17장. CNN
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="18-image-classification.html">
+   18장. Image Classification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="19-post-processing.html">
+   19장. 후처리, 기타팁
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lectures/03-pandas.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/SDSTony/dku-kaggle-class"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/SDSTony/dku-kaggle-class/issues/new?title=Issue%20on%20page%20%2Flectures/03-pandas.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   3.1 Pandas 설치
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   3.2 Pandas 객체
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   3.3 Pandas 데이터 타입
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   3.4 Pandas 함수
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyter-notebook">
+   3.5 Jupyter Notebook 실행 및 확장팩 설치
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   3.6 참고자료
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="pandas">
+<h1>3. Pandas<a class="headerlink" href="#pandas" title="Permalink to this headline">¶</a></h1>
+<p>데이터과학을 할 때 가장 많이 사용하는 언어가 파이썬과 R입니다. 2010년도 쯤에 데이터과학이 유명해지기 시작할 때만 해도 R에서 제공하던 함수 및 라이브러리가 파이썬보다 더 많았습니다. R에서 사용하던 여러가지 기능들을 파이썬에서 제공하기 시작한게 Pandas 라이브러리 부터라고 볼 수 있습니다. 그래서 파이썬에서 데이터과학을 하는데 Pandas는 필수적인 라이브러리입니다.</p>
+<p>Pandas는 2008년에 Wes McKinney의 개인 프로젝트로 시작했습니다. Wes는 미국 동부에서 금융업에 종사하면서 파이썬을 활용해 금융 데이터 분석을 하고 있었습니다. R에서는 그 당시 여러가지 기능들을 제공 했지만 느리다는 단점이 있었고, 파이썬은 R보다는 빠르지만 다양한 기능을 제공하는 오픈 소스 라이브러리가 없었습니다. 그래서 본인이 사용하기 위해서 개인 프로젝트로 Pandas를 만들기 시작했습니다. Pandas에 기능이 하나 둘씩 추가되면서 다른 사람들도 많이 사용하기 시작했으며 본인 회사 내에서 먼저 유명하게 됐습니다. 그리고 나서 회사를 설득해서 Pandas를 오픈 소스로 출시하게 됩니다. 지금은 Pandas를 쓰지 않는 데이터 과학자가 없다고 해도 무방할 정도로 많은 사람이 사용하는 라이브러리가 됐습니다.</p>
+<p>금융쪽에서는 테이블 형태의 정형데이터를 패널 데이터(panel data)라고 칭합니다. Panel data를 줄여서 Pandas로 이름을 지었다고 하다가, 후일담으로 판다가 귀엽기 때문에 그냥 Pandas라고 했다라는 얘기를 하기도 했습니다. Pandas가 지원하는 기능으로는 데이터 입출력, 변환, 선택, 결합, 전처리, 그룹핑 등이 있습니다.</p>
+<div class="section" id="id1">
+<h2>3.1 Pandas 설치<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Pandas는 Anaconda Navigator 또는 터미널을 통해 설치할 수 있습니다. Anaconda Navigator로 설치하는 방법은 Environments 탭에 가서 설치를 원하는 가상환경을 선택 후 Pandas 라이브러리 옆에 체크 박스를 선택하면 설치가 됩니다. 터미널을 통해서 설치하는 방법은 먼저 터미널에서 Pandas를 설치할려고 하는 가상환경을 <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">[가상환경</span> <span class="pre">이름]</span></code> 명령어를 통해 실행 후 <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandas</span></code>를 통해 설치 가능합니다. 라이브러리를 사용하다가 새 버전이 나와서 업그레이드를 해야 한다면 터미널에서 <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">pandas</span></code>명령어를 통해 업그레이드 할 수 있습니다. 해당 명령어는 기존에 pandas가 없는 경우 pandas를 최신 버전으로 설치해주며 pandas가 있는 경우에는 최신 버전으로 업그레이드 해줍니다.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>pip은 파이썬에서 사용하는 패키지 관리 프로그램입니다. pip을 통해 다양한 라이브러리를 다운로드 받고 관리할 수 있습니다.</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>3.2 Pandas 객체<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Pandas에서는 데이터프레임과 시리즈라는 객체를 지원합니다. 데이터프레임은 R에서 넘어온 개념이며 테이블 형식으로 된 데이터를 뜻합니다. 반면 시리즈는 1차원적인 벡터 형식으로 된 데이터를 뜻합니다. 예를 들어 표 3.X는 인덱스가 있고 두 개의 열이 있습니다. 첫번째 열은 u라는 열이고 두번째 열은 g라는 열입니다. 또한 첫번째 행은 count라는 행이며 두번째 행은 mean이라는 행입니다. 이처럼 2차원적인 데이터를 저장할 때 Pandas에서는 데이터프레임이라는 객체를 사용합니다.</p>
+<p>데이터프레임에서 하나의 컬럼만 뽑아낸다면 그것은 1차원 데이터가 될 것이며 이것을 시리즈라고 합니다. 시리즈는 인덱스 값이 원소 값과 같이 저장됩니다. 인덱스는 별도로 명시하지 않으면 0부터 시작을 합니다. 그림 3.X에 dtype이라고 하는 것은 데이터 타입을 뜻합니다. 데이터 타입은 정수형, 실수형, 시간형, 문자열 등이 있는데 3.3절에서 자세히 다뤄보도록 하겠습니다.</p>
+<p>Pandas 객체는 여러개의 member function을 보유하고 있습니다. 예를 들어 df라는 데이터프레임이 존재할 때 df.head() 함수를 사용하면 데이터프레임의 상위 5개의 행을 출력해줍니다. 각 함수들에 대한 설명은 아래와 같으며 실습 단계에서 자세히 다뤄 보겠습니다.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">head()</span></code>, <code class="docutils literal notranslate"><span class="pre">tail()</span></code>: 데이터프레임 또는 시리즈의 상위, 하위 5개의 행을 출력합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[]</span></code>, <code class="docutils literal notranslate"><span class="pre">iloc[]</span></code>, <code class="docutils literal notranslate"><span class="pre">loc[]</span></code>: 행 또는 열을 선택할 때 사용합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">apply()</span></code>: 행/열에 특정 함수를 적용할 때 사용합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupby()</span></code>: 특정 열로 그룹핑을 할 때 사용합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sort_values()</span></code>, <code class="docutils literal notranslate"><span class="pre">sort_index()</span></code>: 특정 열 또는 인덱스의 값으로 정렬할 때 사용합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">drop()</span></code>, <code class="docutils literal notranslate"><span class="pre">drop_duplicates()</span></code>: 행/열을 삭제할 때 사용합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shape</span></code>: 행과 열의 크기를 반환합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count()</span></code>: 특정 행/열에 몇 개의 값이 존재하는지 계산합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sum()</span></code>: 특정 행/열의 총 합을 반환합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cumsum()</span></code>: 누적 합을 반환합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mean()</span></code>: 평균값을 반환합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">median()</span></code>: 중앙값을 반환합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min()</span></code>: 최솟값을 반환합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max()</span></code>: 최댓값을 반환합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std()</span></code>: 표준편차를 반환합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">var()</span></code>: 분산을 반환합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sample()</span></code>: 특정 개수 또는 퍼센트 만큼의 표본을 추출해서 반환합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unique()</span></code>: 해당 열에 존재하는 고유값을 반환합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nunique()</span></code>: 해당 열에 존재하는 고유값의 개수를 반환합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value_counts()</span></code>: 각 고유값별 개수를 반환합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">set_index()</span></code>: 인덱스를 새로 지정할 때 사용합니다.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reset_index()</span></code>: 인덱스를 초기화 시키고 기존 인덱스를 컬럼으로 변환하고자 할 때 사용합니다.</p></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>3.3 Pandas 데이터 타입<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Pandas에서 제공하는 주요 데이터 타입은 아래와 같습니다.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>데이터 타입</p></th>
+<th class="head"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Int64, float64</p></td>
+<td><p>64비트 정수/실수</p></td>
+</tr>
+<tr class="row-odd"><td><p>bool</p></td>
+<td><p>True/False</p></td>
+</tr>
+<tr class="row-even"><td><p>object</p></td>
+<td><p>문자열 포함 임의의 데이터 타입</p></td>
+</tr>
+<tr class="row-odd"><td><p>datetime64[ns]</p></td>
+<td><p>날짜/시간</p></td>
+</tr>
+<tr class="row-even"><td><p>timedelta64[ns]</p></td>
+<td><p>날짜/시간 차이</p></td>
+</tr>
+<tr class="row-odd"><td><p>astype()</p></td>
+<td><p>데이터 타입 변환 시 사용</p></td>
+</tr>
+<tr class="row-even"><td><p>pandas.to_datetime()</p></td>
+<td><p>문자를 날짜/시간으로 변환</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>표 3.X</p></li>
+</ul>
+<p>또한 pandas에는 NaN 데이터 타입이 존재하는데 Not a Number의 약자로써 결측값을 뜻합니다. NaN을 처리하는 주요 함수는 아래와 같습니다.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>함수</p></th>
+<th class="head"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>isnull()</p></td>
+<td><p>NaN이 있는지 여부 확인 (T/F)</p></td>
+</tr>
+<tr class="row-odd"><td><p>dropna()</p></td>
+<td><p>NaN이 있는 행/열 삭제</p></td>
+</tr>
+<tr class="row-even"><td><p>fillna()</p></td>
+<td><p>NaN이 있는 행/열 대치</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>표 3.X</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>3.4 Pandas 함수<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>이 외에도 주로 사용 되는 함수는 아래와 같습니다.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>함수</p></th>
+<th class="head"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>read_csv(), to_csv()</p></td>
+<td><p>CSV 파일 입출력</p></td>
+</tr>
+<tr class="row-odd"><td><p>merge(), concat()</p></td>
+<td><p>서로 다른 DataFrame 결합</p></td>
+</tr>
+<tr class="row-even"><td><p>hist(), plot()</p></td>
+<td><p>데이터 히스토그램/시각화</p></td>
+</tr>
+<tr class="row-odd"><td><p>dt.day/weekday/month/year/weekofyear</p></td>
+<td><p>Datetime[ns] 타입 데이터의 일/요일/월/년/주</p></td>
+</tr>
+<tr class="row-even"><td><p>resample()</p></td>
+<td><p>Datetime[ns] 타입 데이터 리샘플링</p></td>
+</tr>
+<tr class="row-odd"><td><p>pivot_table()</p></td>
+<td><p>피봇테이블 생성</p></td>
+</tr>
+<tr class="row-even"><td><p>corr()</p></td>
+<td><p>상관관계 계산</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="jupyter-notebook">
+<h2>3.5 Jupyter Notebook 실행 및 확장팩 설치<a class="headerlink" href="#jupyter-notebook" title="Permalink to this headline">¶</a></h2>
+<p>Pandas 실습을 하기 위해 Jupyter Notebook을 먼저 실행하겠습니다. Jupyter Notebook을 실행하는 방법은 2.2.4절을 참고 바랍니다.</p>
+<p>Jupyter Notebook에는 다양한 확장팩을 지원하는데, 확장팩을 설치하는 방법은 터미널에서 <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">jupyter_contrib_nbextensions</span></code>를 입력하면 됩니다.</p>
+<p>확장팩 설치가 완료되면 Jupyter Notebook 메인 화면에 Nbextensions 탭이 추가됩니다. 해당 탭에 들어가서 사용하고자 하는 확장팩을 설정할 수 있습니다.</p>
+<p>여러 개의 확장팩 중에서 주로 사용하게 되는 확장팩은 ExecuteTime과 Table of Contents입니다. ExecuteTime은 각 셀별로 실행 시간을 표출해주며 Table of Contents는 마크다운 문법에 기반해서 목차를 생성해줍니다.</p>
+<p>지금까지 Pandas에 대한 이론적인 배경과 Jupyter Notebook 확장팩에 대해 배워봤습니다. 다음 장에서는 Pandas 실습을 진행해보도록 하겠습니다.</p>
+</div>
+<div class="section" id="id5">
+<h2>3.6 참고자료<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pandas.pydata.org/docs/user_guide/index.html#user-guide">Pandas 공식 홈페이지 문서</a></p></li>
+<li><p><a class="reference external" href="https://www.kaggle.com/learn/pandas">캐글 Pandas 강좌</a></p></li>
+<li><p><a class="reference external" href="https://m.hanbit.co.kr/store/books/book_view.html?p_code=B6417848794">파이썬 라이브러리를 활용한 데이터 분석 2판</a></p></li>
+</ul>
+<p>파이썬 라이브러리를 활용한 데이터 분석 2판은 Pandas 창시자인 Wes McKinney가 집필한 책이므로 Pandas에 활용법에 대해 자세히 나와 있습니다. 그 외에도 캐글에서 제공하는 Pandas 강좌나 Pandas 공식 홈페이지 문서를 필요 시 참고하시길 바랍니다.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="03-pandas-intro.html" title="previous page">3. Pandas</a>
+    <a class='right-next' id="next-link" href="03-pandas-eda.html" title="next page">Pandas 데모 - Exploratory Data Analysis</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Kaggler-TV<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

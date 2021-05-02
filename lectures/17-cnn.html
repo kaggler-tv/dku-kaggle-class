@@ -1,0 +1,690 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>17. CNN &#8212; 단국대 2020 캐글 뽀개기</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="18. Image Classification" href="18-image-classification.html" />
+    <link rel="prev" title="16. Data Augmentation" href="16-data-augmentation.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">단국대 2020 캐글 뽀개기</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../main.html">
+   단국대 2020년 가을학기 캐글 뽀개기 강좌
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-intro.html">
+   1장. Intro
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-setup.html">
+   2장. Setup
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="03-pandas-intro.html">
+   3장. Pandas
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="03-pandas.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03-pandas-eda.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="04-numpy-intro.html">
+   4장. Numpy, 선형회귀, 로지스틱회귀
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="04-numpy.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04-numpy-lr.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="05-numerical-features-intro.html">
+   5장. 수치형변수 가공
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="05-numerical-features.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="06-scikit-learn-intro.html">
+   6장. Scikit-learn, 결정트리
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="06-scikit-learn.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="06-decision-trees.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="07-rf-lgb-intro.html">
+   7장. Random Forest, GBM
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="07-rf-lgb.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07-rf.html">
+     Random Forest 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07-lightgbm.html">
+     LightGBM 실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="08-cv-stacking-intro.html">
+   8장. Cross-Validation, Stacking
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-cv-stacking.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-lr-cv.html">
+     로지스틱 회귀 CV 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-rf-cv.html">
+     Random Forest CV 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-lightgbm-cv.html">
+     LightGBM CV 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-stacking-lr.html">
+     로지스틱 회귀 스태킹 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-stacking-lgb.html">
+     LightGBM 스태킹 실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="09-tuning-intro.html">
+   9장. 모델 튜닝, Hyperopt, Optuna
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="09-tuning.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="09-lightgbm-hyperopt.html">
+     Hyperopt 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="09-lightgbm-optuna.html">
+     Optuna 실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="10-pipeline-make-intro.html">
+   10장. Pipeline, Make
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="10-pipeline-make.html">
+     이론
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="11-categorical-features-intro.html">
+   11장. 범주형변수 가공
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="11-categorical-features.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="12-nn-intro.html">
+   12장. 신경망, Keras
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="12-nn-keras.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="12-nn-cv.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="13-text-features-intro.html">
+   13장. 문자열변수 가공
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="13-text-features.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="13-lr-tfidf.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="14-embeddings-intro.html">
+   14장. Embedding, RNN
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-embeddings.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-cnn-emb.html">
+     CNN - Embeddings 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-lstm-emb.html">
+     LSTM - Embeddings 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-lstm-glove.html">
+     LSTM - GloVe 실습
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14-attention.html">
+     Attention 실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="15-transfer-learning-intro.html">
+   15장. 선학습 임베딩, 전이학습
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="15-transfer-learning.html">
+     이론
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="15-bert.html">
+     실습
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16-data-augmentation.html">
+   16장. Data Augmentation
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   17장. CNN
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="18-image-classification.html">
+   18장. Image Classification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="19-post-processing.html">
+   19장. 후처리, 기타팁
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lectures/17-cnn.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/SDSTony/dku-kaggle-class"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/SDSTony/dku-kaggle-class/issues/new?title=Issue%20on%20page%20%2Flectures/17-cnn.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#convolution">
+   17.1 Convolution
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cnn-classification">
+   17.2 유명한 CNN - Classification
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cnn-segmentation-detection">
+   17.3 유명한 CNN - Segmentation / Detection
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   17.4 참고자료
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="cnn">
+<h1>17. CNN<a class="headerlink" href="#cnn" title="Permalink to this headline">¶</a></h1>
+<p>Convolutional Neural Networks(CNN)은 convolution 레이어를 사용하는 신경망 구조입니다. 컴퓨터 비전에서 이미지 데이터에 일반적으로 사용합니다. CNN은 이미지를 분류하는 image classification, 객체의 위치를 탐지하는 object detection, 이미지 내 각 픽셀이 나타내는 객체를  탐지하는 segmentation, 그리고 이미지를 생성하는 image generation에서 주로 사용되는 모델입니다.</p>
+<ul class="simple">
+<li><p>그림 17-1 Image classification 예시</p></li>
+<li><p>그림 17-2 Object deetection 예시</p></li>
+<li><p>그림 17-3 Segmentation 예시</p></li>
+<li><p>그림 17-4 Image generation 예시</p></li>
+</ul>
+<div class="section" id="convolution">
+<h2>17.1 Convolution<a class="headerlink" href="#convolution" title="Permalink to this headline">¶</a></h2>
+<p>Convolution 연산은 두 개의 함수를 조합하는 연산입니다. 그림 17-5에는 1차원 convolution 연산을 보여주고 있습니다. 파란색 선은 <code class="docutils literal notranslate"><span class="pre">f</span></code>함수를 나타내며 빨간색 선은 <code class="docutils literal notranslate"><span class="pre">g</span></code>함수를 나타냅니다. 그리고 빨간색 선이 파란색 선을 지날 때 두 개의 함수간 연산이 진행되며 이 과정에서 convolution 연산의 결과물인 검은색 선이 생성됩니다.</p>
+<ul class="simple">
+<li><p>그림 17-5</p></li>
+</ul>
+<p>그림 17-6에서는 2차원 convolution 연산을 보여주고 있습니다. 초록색 사각형이 <code class="docutils literal notranslate"><span class="pre">f</span></code>함수이며 주황색 사각형이 <code class="docutils literal notranslate"><span class="pre">g</span></code>함수라고 볼 수 있습니다. 주황색 사각형을 필터라고도 하는데 필터가 지나갈 때 마다 내적 연산이 이뤄져서 분홍색 사각형의 결과물이 산출됩니다.</p>
+<ul class="simple">
+<li><p>그림 17-6</p></li>
+</ul>
+<p>신경망 모델의 1차원 Fully Connected(FC) 레이어와 비교했을 때 2차원 convolution 레이어는 이미지의 위치 정보를 보존하는 장점이 있습니다. 1차원 레이어에 이미지를 입력값으로 주기 위해선 이미지를 1차원으로 펼치는 과정이 필요합니다. 이 과정에서 위치 정보 손실이 일어납니다. 하지만 2차원 convolution 레이어에는 이미지 데이터를 변환 없이 입력할 수 있기 때문에 위치 정보가 보존됩니다.</p>
+<p>또한 2차원 convolution 레이어를 사용하면 FC 레이어 보다 학습해야 하는 가중치의 개수가 적습니다. FC 레이어를 사용하면 그림 17-6 예시에서 5 x 5 x 3 x 3 = 225개의 가중치를 학습해야 합니다. 하지만 2차원 convolution 레이어를 사용하면 필터에 있는 9개의 가중치만 학습을 해주면 됩니다.</p>
+<p>Convolution 레이어를 사용할 때 추가적으로 적용가능한 여러 옵션들이 존재합니다. Padding은 입력 가장자리에 0을 추가해서 원본 이미지의 가장자리 정보가 여러번 연산에 활용될 수 있도록 합니다. Striding은 필터가 건너뛰는 단위를 뜻합니다. 1보다 큰 숫자를 설정하면 출력되는 차원이 축소되는 효과를 지닙니다. Pooling은 일정 영역의 평균값/최댓값을 선택해서 반환하는 연산이며 차원 축소 효과를 지닙니다. Convolution 연산이 끝난 후에는 Flattening을 통해 1차원으로 변경해서 이미지 분류나 기타 작업을 진행합니다.</p>
+<p><a class="reference external" href="https://poloclub.github.io/cnn-explainer/">CNN Explainer</a>에서 CNN 연산이 적용되는 과정을 상세하게 확인해 볼 수 있습니다. 또한 <a class="reference external" href="https://www.cs.ryerson.ca/~aharley/vis/conv/">3D Visualization of a Convolutional Neural Network</a> 웹사이트에서 CNN이 적용되는 과정을 3D 그래픽으로 확인할 수 있습니다.</p>
+</div>
+<div class="section" id="cnn-classification">
+<h2>17.2 유명한 CNN - Classification<a class="headerlink" href="#cnn-classification" title="Permalink to this headline">¶</a></h2>
+<p>아래 표에는 이미지 분류에 적용되는 주요 CNN 구조들이 요약돼 있습니다.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>신경망 구조</p></th>
+<th class="head"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf">LeNet</a> (Yann LeCun, 1998)</p></td>
+<td><p>7 레이어. ATM 손글씨 인식에 사용. CNN의 첫 번째 성공사례</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://papers.nips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf">AlexNet</a> (Alex Krizhevsky, 2012)</p></td>
+<td><p>8 레이어. 60MM 변수. ImageNet 대회 우승 (ER: 16.4%). GPU를 사용한 첫 사례.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43022.pdf">GoogleNet</a> (aka Inception v1, 2014)</p></td>
+<td><p>22 레이어. 6.8MM 변수. ImageNet 1위 (ER: 6.7%).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://arxiv.org/pdf/1409.1556.pdf">VGGNet</a> (K. Simonyan &amp; A. Zisserman, 2014)</p></td>
+<td><p>16 레이어. 138MM 변수. ImageNet 2위 (ER: 7.3%).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://arxiv.org/abs/1512.03385">ResNet</a> (Kaiming He et al., 2015)</p></td>
+<td><p>152 레이어. 23MM 변수. ImageNet 1위 (ER: 3.57%)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://arxiv.org/abs/1611.05431">ResNeXt</a> (Kaiming He, 2016)</p></td>
+<td><p>ImageNet 2위. ER: 3.03%</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://arxiv.org/abs/1709.01507">SENets</a> (Jie Hu et al., 2017)</p></td>
+<td><p>ImageNet 1위. ER: 2.25%</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://arxiv.org/abs/1704.04861">MobileNet</a> (Google, 2017)</p></td>
+<td><p>0.5~4.2MM 변수. ER: 7.9%</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://arxiv.org/pdf/1905.11946.pdf">EfficientNet</a> (Google, 2020)</p></td>
+<td><p>ER: 2.9%</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>표 17-1 주요 CNN 구조 - Classification</p></li>
+</ul>
+</div>
+<div class="section" id="cnn-segmentation-detection">
+<h2>17.3 유명한 CNN - Segmentation / Detection<a class="headerlink" href="#cnn-segmentation-detection" title="Permalink to this headline">¶</a></h2>
+<p>아래 표에는 Segmentation / Detection에 적용되는 주요 CNN 구조들이 요약돼 있습니다.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>신경망 구조</p></th>
+<th class="head"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://arxiv.org/abs/1505.04597">U-Net</a> (U of Freiburg, 2015)</p></td>
+<td><p>Segmentation</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://arxiv.org/abs/1506.01497">Faster R-CNN</a> (Kaiming He, et al., 2016)</p></td>
+<td><p>Detection</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://arxiv.org/abs/1703.06870">Mask R-CNN</a> (Kaiming He, et al., 2017)</p></td>
+<td><p>Faster R-CNN (detection) + FCN (segmentation)</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>표 17-2 주요 CNN 구조 - Segmentation / Detection</p></li>
+<li><p>그림 17- U-Net 구조</p></li>
+<li><p>그림 17- Mask R-CNN 결과물 예시</p></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h2>17.4 참고자료<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://cs231n.stanford.edu/slides/2018/cs231n_2018_lecture05.pdf">Lecture 5: Convolutional Neural Networks</a> at Stanford CS231n 2018</p>
+<ul>
+<li><p>Stanford의 CS231n은 컴퓨터 비전을 다루는 한 학기 분량의 강의입니다.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://poloclub.github.io/cnn-explainer/">CNN Explainer</a></p></li>
+<li><p><a class="reference external" href="https://www.cs.ryerson.ca/~aharley/vis/conv/">3D Visualization of a Convolutional Neural Network</a></p></li>
+</ul>
+<p>아래 캐글 대회는 주요 컴퓨터 비전 대회입니다.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.kaggle.com/c/siim-isic-melanoma-classification">SIIM-ISIC Melanoma Classification | Kaggle</a></p></li>
+<li><p><a class="reference external" href="https://www.kaggle.com/c/tgs-salt-identification-challenge">TGS Salt Identification Challenge | Kaggle</a></p></li>
+<li><p><a class="reference external" href="https://www.kaggle.com/c/open-images-2019-object-detection">Open Images 2019 - Object Detection | Kaggle</a></p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="16-data-augmentation.html" title="previous page">16. Data Augmentation</a>
+    <a class='right-next' id="next-link" href="18-image-classification.html" title="next page">18. Image Classification</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Kaggler-TV<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
