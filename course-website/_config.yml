@@ -42,6 +42,9 @@ html:
     <div class="row_footer">
     Website organized by <a href="https://github.com/SDSTony">Sungjin Ahn</a> 
     </div>
+  comments:
+    utterances:
+      repo: "kaggler-tv/dku-kaggle-class"
   
 sphinx:
   config:
