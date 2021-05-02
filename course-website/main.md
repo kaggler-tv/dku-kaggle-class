@@ -48,5 +48,5 @@ Course-website 구축 중 (~2021.04.30)
 ## People
 | 역할 | 사진 | 성함 | 소개 |
 |:-----|:-----:|:--------|:------|
-|Instructor<br>교강사|<img src="imgs/Jeong-Yoon.PNG" width="100" height="100">|[Jeong-Yoon Lee](https://www.linkedin.com/in/jeongyoonlee/)<br>이정윤|Sr. Research Scientist<br>Recommendation and Search Algorithm at Netflix|
-|Webmaster<br>웹사이트 구축|<img src="imgs/Sungjin.PNG" width="100" height="100">|[Sungjin Ahn](https://www.linkedin.com/in/sungjin-ahn/)<br>안성진|AI Enthusiast|
+|Instructor<br>교강사|<img src="https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/Jeong-Yoon.png?raw=true" width="100" height="100">|[Jeong-Yoon Lee](https://www.linkedin.com/in/jeongyoonlee/)<br>이정윤|Sr. Research Scientist<br>Recommendation and Search Algorithm at Netflix|
+|Webmaster<br>웹사이트 구축|<img src="https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/Sungjin.png?raw=true" width="100" height="100">|[Sungjin Ahn](https://www.linkedin.com/in/sungjin-ahn/)<br>안성진|AI Enthusiast|
