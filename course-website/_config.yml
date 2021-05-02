@@ -3,7 +3,7 @@
 title : 단국대 2020 캐글 뽀개기
 author: Kaggler-TV
 logo: 'imgs/logo.png'
-copyright: "2020-2021"
+copyright: "2020-"
 
 # Short description about the book
 description: >-
@@ -26,7 +26,7 @@ notebook_interface            : "notebook"
 #######################################################################################
 # Launch button settings
 repository:
-  url                         : https://github.com/SDSTony/dku-kaggle-class
+  url                         : https://github.com/kaggler-tv/dku-kaggle-class
   path_to_book                : ""
 
 latex:
@@ -38,6 +38,10 @@ html:
   favicon: 'imgs/logo.png'
   use_issues_button: true
   use_repository_button: true
+  extra_footer: 
+    <div class="row_footer">
+    Website organized by <a href="https://github.com/SDSTony">Sungjin Ahn</a> 
+    </div>
   
 sphinx:
   config:
