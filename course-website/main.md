@@ -4,7 +4,7 @@
 Course-website 구축 중 (~2021.04.30)
 ```
 
-## 수업일정
+## Curriculum
 
 | 날짜 | 주제 | 강의자료 | 강의영상 |
 |-----|-----|--------|-----|
@@ -50,3 +50,20 @@ Course-website 구축 중 (~2021.04.30)
 |:-----|:-----:|:--------|:------|
 |Instructor<br>교강사|<img src="https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/Jeong-Yoon.png?raw=true" width="100" height="100">|[Jeong-Yoon Lee](https://www.linkedin.com/in/jeongyoonlee/)<br>이정윤|Sr. Research Scientist<br>Recommendation and Search Algorithm at Netflix|
 |Webmaster<br>웹사이트 구축|<img src="https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/Sungjin.png?raw=true" width="100" height="100">|[Sungjin Ahn](https://www.linkedin.com/in/sungjin-ahn/)<br>안성진|AI Enthusiast|
+
+## Tip/Note
+각 장별로 Tip와 Note가 존재합니다. 
+
+```{tip}
+여기에는 데이터과학 경진대회 참여시 직접적으로 도움 되는 노하우가 언급됩니다. 
+```
+
+```{note}
+여기에는 본문 내용을 이해하기 위한 보조자료가 언급됩니다. 
+```
+
+## Contribution
+Github을 통해 내용 오류 및 오탈자 등에 대해 Issue를 생성해주시거나 PR을 생성해주시면 확인 후 조치/반영 하도록 하겠습니다. 세부 사항은 contribution.md를 확인 부탁드립니다. 
+
+## Comment
+각 장별로 Utterance 기능이 활성화 되어 있습니다. Github 아이디로 로그인 후 댓글을 달 수 있습니다. 
