@@ -113,7 +113,7 @@ Jupyter Notebook에는 다양한 확장팩을 지원하는데, 확장팩을 설�
 
 확장팩 설치가 완료되면 Jupyter Notebook 메인 화면에 Nbextensions 탭이 추가됩니다. 해당 탭에 들어가서 사용하고자 하는 확장팩을 설정할 수 있습니다. 
 
-![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch03-img06.jpg?raw=true)
+![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch03-img06.JPG?raw=true)
 - 그림 3-6 Nbextensions
 
 여러 개의 확장팩 중에서 주로 사용하게 되는 확장팩은 ExecuteTime과 Table of Contents입니다. ExecuteTime은 각 셀별로 실행 시간을 표출해주며 Table of Contents는 마크다운 문법에 기반해서 목차를 생성해줍니다. 
