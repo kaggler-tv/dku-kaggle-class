@@ -2,7 +2,7 @@
 데이터과학 전반적으로 여러 가지 환경 설정 하는 것이 필요하며, 대회 참가시에는 더군다나 빨리 데이터를 분석해 인사이트를 뽑아내고 모델을 구축하는 것이 중요하므로 어떤 컴퓨터에서나 빠르게 본인의 환경 구축을 하는 것이 상당히 중요합니다. 그래서 2장에서는 데이터과학 대회 참여를 위한 환경 설정에 대해 알아보겠습니다. Github 설정 방법, 파이썬 환경 설정 방법, 그리고 터미널 사용 방법을 배워보겠습니다. 
 
 ```{note}
-터미널 사용에는 호불호가 존재합니다. 허나 터미널 에 익숙해지면 개발 과정을 빠르게 해준다는 장점이 있기 때문에 이번 장에서 같이 소개해 볼 예정입니다. 
+터미널 사용에는 호불호가 존재합니다. 허나 터미널에 익숙해지면 개발 과정을 빠르게 해준다는 장점이 있기 때문에 이번 장에서 같이 소개해 볼 예정입니다. 
 ```
 
 ## 2.1 Github 소개
@@ -19,13 +19,13 @@ Github은 전 세계적으로 가장 많이 사용되는 코드 버전 관리 �
 ### 2.1.1 Github 용어
 이번 절에서는 Github에서 사용하는 용어들에 대해 배워보겠습니다. 가장 먼저 배울 용어는 **Git**입니다. Git은 코드 버전 관리 프로그램의 한 종류입니다. 예전에는 [Subversion](https://ko.wikipedia.org/wiki/%EC%84%9C%EB%B8%8C%EB%B2%84%EC%A0%84)과 [CVS](https://ko.wikipedia.org/wiki/CVS)등의 다른 종류의 버전 관리 프로그램들도 사용했으나 지금은 Git이 가장 널리 사용되는 프로그램입니다. 
 
-여러 사람이 팀으로 협업을 할 때 코드 관리가 상당히 어려울 수 있습니다. 예를 들어 팀 리포트를 작성할 때 `A조_리포트_Final.docx`라고 저장하고 다음 사람이 수정을 하면 `A조_리포트_Final2.docx` 또는 `A조_리포트_Final_Final.docx`과 같은 방식으로 파일명을 수정해가면서 작업하신 경험이 있으실거라고 생각됩니다. 소프트웨어나 코드 작성시 이렇게 한다면 관리가 안되기 때문에 **Git**과 같은 버전 관리 프로그램을 사용하는게 일반적입니다. 다른 기업이나 단체에서도 Github 플랫폼을 쓰지 않더라도 **Git**은 사용하는 경우가 대부분이기 때문에 반드시 짚고 넘어가야할 프로그램입니다. 
+여러 사람이 팀으로 협업을 할 때 코드 관리가 상당히 어려울 수 있습니다. 예를 들어 팀 리포트를 작성할 때 `A조_리포트_Final.docx`라고 저장하고 다음 사람이 수정을 하면 `A조_리포트_Final2.docx` 또는 `A조_리포트_Final_Final.docx`과 같은 방식으로 파일명을 수정하면서 작업하신 경험이 있으실거라고 생각됩니다. 소프트웨어나 코드 작성시 이렇게 한다면 관리가 안되기 때문에 **Git**과 같은 버전 관리 프로그램을 사용하는게 일반적입니다. 다른 기업이나 단체에서도 Github 플랫폼을 쓰지 않더라도 **Git**은 사용하는 경우가 대부분이기 때문에 반드시 짚고 넘어가야할 프로그램입니다. 
 
-그 다음 용어는 **리포지토리**(repository)입니다. 이것은 코드 저장소를 뜻합니다. 그리고 **브랜치**(branch)는 각각 다른 코드 버전의 이름을 나타내는 용어입니다. 그리고 마스터/메인(master/main)은 가장 기본이 되는 디폴트 브랜치 이름을 뜻합니다. 과거에는 마스터라고 불렸는데, Github에서는 최근에 메인으로 이름을 변경했습니다. Github외에 다른 환경에 가면 마스터라고도 칭합니다.
+그 다음 용어는 **리포지토리**(repository)입니다. 이것은 코드 저장소를 뜻합니다. 그리고 **브랜치**(branch)는 각각 다른 코드 버전의 이름을 나타내는 용어입니다. 그리고 **마스터/메인**(master/main)은 가장 기본이 되는 디폴트 브랜치 이름을 뜻합니다. 과거에는 마스터라고 불렸는데, Github에서는 최근에 메인으로 이름을 변경했습니다. Github외에 다른 환경에 가면 마스터라고도 칭합니다.
 
 **커밋**(commit)은 코드를 수정 후, 수정본을 제출하는 과정을 칭합니다. 커밋한 코드를 다른 사람에게 검토를 신청하는 과정을 **Pull Request** 또는 줄여서 **PR**이라고 부릅니다. Pull Request한 코드 변경 사항이 검토자로 부터 승인이 난 후 메인 브랜치에 반영을 하는 과정을 **머지**(merge)라고 합니다. 
 
-앞서 언급한 7개의 용어만 아셔도 Github에서 코드를 관리하고 공유하는데 큰 어려움은 없을 겁니다. 이외에도 세부적으로 들어가면 더 많은 용어가 있는데, 직접 Github을 사용하시면서 하나씩 알아가는 것을 권장드립니다. 2.1.2절 부터 2.1.6절까지는 새로운 리포를 생성하고 코드 변경사항을 커밋하고, PR을 보내고, PR이 승인 난 후 머지하는 과정을 설명드릴 예정입니다. 책을 통해 전체 과정을 숙지한 후에 직접 실습해보시길 권장드립니다. 
+앞서 언급한 7개의 용어만 아셔도 Github에서 코드를 관리하고 공유하는데 큰 어려움은 없을 겁니다. 이외에도 세부적으로 들어가면 더 많은 용어가 있는데, 직접 Github을 사용하시면서 하나씩 알아가는 것을 권장드립니다. 2.1.2절 부터 2.1.6절까지는 새로운 리포를 생성하고 코드 변경사항을 커밋하고, PR을 보내고, PR이 승인 난 후 머지하는 과정을 설명드릴 예정입니다. 학습자료를 통해 전체 과정을 숙지한 후에는 직접 실습해보시길 권장드립니다. 
 
 ### 2.1.2 새 리포지토리 생성
 먼저 새로운 리포지토리를 생성하는 과정을 알아보겠습니다. Github에 로그인 하시면 우상단에 `+`모양의 버튼이 있습니다(그림 2-2). 해당 버튼을 누른 뒤 `New Repository`버튼을 누르면 그림 2-3과 같은 화면이 나옵니다. 그리고 나서 가장 먼저 리포지토리 이름을 입력해줍니다. 본 예시에서는 `hello-world`라고 입력했습니다. 
@@ -40,14 +40,12 @@ Github은 전 세계적으로 가장 많이 사용되는 코드 버전 관리 �
 
 공개/비공개 여부를 선정한 후에는 `README`라는 텍스트 파일을 생성할 지 여부를 결정해줍니다. 마찬가지로 `.gitignore`파일과 `license`파일을 생성할 지 여부도 결정 한 후 녹색 `Create repository`버튼을 누르면 새로운 리포지토리가 생성됩니다. 
 
-```{admonition} README, .gitignore, license 파일의 역할
-:class: note
-
-README - 리포지토리를 탐색하기전 알아두어야 할 주요사항 명시
+```{note}
+README - 리포지토리에 관한 주요사항 명시
 
 .gitignore - git 추적을 하지 않을 파일 명시
 
-license - 리포지토리(코드) 사용에 대한 라이센스
+license - 리포지토리 사용에 대한 라이센스
 ```
 
 ### 2.1.3 새 브랜치 생성
@@ -73,7 +71,7 @@ license - 리포지토리(코드) 사용에 대한 라이센스
 ![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch02-img07.gif?raw=true)
 - 그림 2-7 PR 생성 버튼
 
-`New pull request`를 선택하면 어떤 브랜치로 PR을 생성할 지 선택할 수가 있습니다. 2.1.3절에서 생성한 `readme-edits`라는 브랜치를 선택하면, 어느 파일의 어느 부분이 변경 됐는지 확인할 수 있습니다. 그리고 나서 `Create pull request` 버튼을 클릭하면 PR이 생성됩니다(그림 2-8). 
+`New pull request`를 선택하면 어떤 브랜치로 PR을 생성할 지 선택할 수가 있습니다. 2.1.3절에서 생성한 `readme-edits`라는 브랜치를 선택하면, 어느 파일의 어느 부분이 변경 됐는지 확인할 수 있습니다. 그리고 나서 녹색 `Create pull request` 버튼을 클릭하면 PR이 생성됩니다(그림 2-8). 
 
 ![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch02-img08.JPG?raw=true)
 - 그림 2-8 PR 생성 과정
@@ -91,7 +89,7 @@ PR이 생성 되면 리뷰어(검토자)를 선정할 수 있습니다. 혼자�
 ![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch02-img10.JPG?raw=true)
 - 그림 2-10 Delete branch 버튼
 
-지금까지 다룬 내용을 정리하자면 메인 브랜치가 존재하고, 메인 브랜치의 코드는 직접 수정하는 것이 아니고 새로운 브랜치를 통해서 수정을 해줍니다. 새로운 브랜치를 생성해서 변경하고자 하는 파일들을 변경하고, 변경사항을 커밋한 후, 제출된 변경사항을 PR을 통해 검토하고, 이상이 없으면은 메인 브랜치로 머지합니다. 변경사항이 메인 브랜치에 반영된 후에는 새로 생성해둔 브랜치를 삭제함으로써 전체 코드 변경 과정이 완료됩니다. 
+지금까지 다룬 내용을 정리하자면 메인 브랜치가 존재하고, 메인 브랜치의 코드는 직접 수정하는 것이 아니며 새로운 브랜치를 통해서 수정을 해줍니다. 새로운 브랜치를 생성해서 변경하고자 하는 파일들을 변경하고, 변경사항을 커밋한 후, 커밋된 변경사항을 PR을 통해 검토하고, 문제가 없으면은 메인 브랜치로 머지합니다. 변경사항이 메인 브랜치에 반영된 후에는 새로 생성해둔 브랜치를 삭제함으로써 전체 코드 변경 과정이 완료됩니다. 
 
 위 과정을 직접 실습해보는 것을 권장드립니다. 
 
@@ -110,7 +108,7 @@ PR이 생성 되면 리뷰어(검토자)를 선정할 수 있습니다. 혼자�
 ```{note}
 아나콘다 설치 가이드
 - 영문/공식 홈페이지: https://docs.anaconda.com/anaconda/install/
--  한글/윈도우즈: https://gracefulprograming.tistory.com/124
+- 한글/윈도우즈: https://gracefulprograming.tistory.com/124
 ```
 ### 2.2.2 Anaconda/Conda 실행
 
@@ -184,14 +182,14 @@ conda activate py37
 ![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch02-img16.JPG?raw=true)
 - 그림 2-16 캐글 노트북 화면([출처](https://docs.google.com/presentation/d/1GyEc1zvn-4NsSliYf-pidnFT-9MBwePl4Gq1qn2saT4/edit#slide=id.p))
 
-Google Colab ([https://colab.research.google.com/](https://colab.research.google.com/))은 구글에서 제공하는 주피터 노트북 환경이며 Github과 Google Drive와 연동이 가능합니다. Github에 있는 코드를 가지고 오거나 또는 Google Drive에 있는 파일을 가지고 오는 등의 유용한 기능들을 제공하기 때문에 Google Colab을 사용하는 것 또한 온라인 상에서 개발 할 수 있는 방법 중 하나입니다.  
+Google Colab([https://colab.research.google.com/](https://colab.research.google.com/))은 구글에서 제공하는 주피터 노트북 환경이며 Github과 Google Drive와 연동이 가능합니다. Github에 있는 코드를 가지고 오거나 또는 Google Drive에 있는 파일을 가지고 오는 등의 유용한 기능들을 제공하기 때문에 Google Colab을 사용하는 것 또한 온라인 상에서 개발 할 수 있는 방법 중 하나입니다.  
 
 ![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch02-img17.JPG?raw=true)
 - 그림 2-17 Google Colab 화면
 
 ## 2.3 터미널
 
-터미널은 개인 취향에 따라 선호도가 갈리는 프로그램입니다. 그럼에도 불구하고 익숙해지면 개발 속도를 향상시켜준다는 장점이 있기 때문에 사용하게 됩니다. [유튜브](https://youtu.be/861NAO5-XJo)에 접속하셔서 터미널을 사용하는 demo 영상을 확인할 수 있습니다. 본 강의에서는 터미널 관련 내용들을 간략하게 소개하도록 하겠습니다. 
+터미널은 개인 취향에 따라 선호도가 갈리는 프로그램입니다. 그럼에도 불구하고 익숙해지면 개발 속도를 향상시켜준다는 장점이 있기 때문에 사용하게 됩니다. [demo 영상](https://youtu.be/861NAO5-XJo)을 통해 터미널 사용 예시를 확인할 수 있습니다. 본 강의에서는 터미널 관련 내용을 간략하게 소개하도록 하겠습니다. 
 
 맥OS와 리눅스에서는 Terminal 프로그램을 활용해 사용하면 됩니다. 윈도우즈 10이상에서는 Windows Subsystem for Linux(WSL) 설정을 통해 터미널을 사용하시길 권장드립니다. WSL을 사용하면 리눅스에서 사용하는 모든 프로그램을 윈도우즈에서 사용이 가능합니다. 만약 WSL 사용이 제한된다면, [Cygwin](https://www.cygwin.com/)처럼 윈도우즈에서 지원하는 Bash 프로그램을 사용하시길 바랍니다. 
 
@@ -216,7 +214,9 @@ Google Colab ([https://colab.research.google.com/](https://colab.research.google
 ![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch02-img18.JPG?raw=true)
 - 그림 2-18 파이프 예제([출처](https://docs.google.com/presentation/d/1GyEc1zvn-4NsSliYf-pidnFT-9MBwePl4Gq1qn2saT4/edit#slide=id.p))
 
-리다이렉션(Redirection)은 각종 명령어들의 출력물을 파일로 저장 하거나 다른 프로그램의 입력으로 제공할 수 있게 해주는 기능입니다. 예를 들어 앞 예시에서 확인한 `ls | grep mse`명령어의 결과물을 파일로 저장하고 싶을 때 `> list.txt`를 명령어 뒤에 추가해주면 `list.txt`파일에 `ls | grep mse`의 결과물인 `mse231`이 저장됩니다. 그림 2.X는 redirection을 활용해 현재 경로 내에 있는 모든 폴더명과 파일명을 `list.txt`파일에 저장하는 예시입니다. `ls > list.txt`를 통해 구현 가능합니다. 
+리다이렉션(Redirection)은 각종 명령어들의 출력물을 파일로 저장 하거나 다른 프로그램의 입력으로 제공할 수 있게 해주는 기능입니다. 예를 들어 앞 예시에서 확인한 `ls | grep mse`명령어의 결과물을 파일로 저장하고 싶을 때 `> list.txt`를 명령어 뒤에 추가해주면 `list.txt`파일에 `ls | grep mse`의 결과물인 `mse231`이 저장됩니다. 그림 2-19는 redirection을 활용해 현재 경로 내에 있는 모든 폴더명과 파일명을 `list.txt`파일에 저장하는 예시입니다. `ls > list.txt`를 통해 구현 가능합니다. 
+
+![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch02-img19.JPG?raw=true)
 
 ### 2.3.3 유용한 프로그램 
 
@@ -249,4 +249,4 @@ Google Colab ([https://colab.research.google.com/](https://colab.research.google
     - [Data Wrangling](https://missing.csail.mit.edu/2020/data-wrangling/)
     - [Version Control (Git)](https://missing.csail.mit.edu/2020/version-control/)
 
-3번은 MIT에서 2020년도에 진행한 수업이며 일반적으로 컴퓨터 공학 수업에서 빠진 내용들을 다루는 수업입니다. 예를 들어 Git과 Vim사용 방법들을 다룹니다. 첨부한 링크에 들어가시면 2장에서 소개한 내용들과 더불어 보다 깊이있는 내용들을 학습할 수 있습니다.
+3번 자료는 MIT에서 2020년도에 진행한 수업이며 대부분의 컴퓨터 공학 수업에서 빠진 내용들을 다루는 수업입니다. 예를 들어 Git과 Vim사용 방법들을 다룹니다. 첨부한 링크에 들어가시면 2장에서 소개한 내용들과 더불어 보다 깊이있는 내용들을 학습할 수 있습니다.
