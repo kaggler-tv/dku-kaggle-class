@@ -15,7 +15,7 @@
 가장 먼저 파이썬의 문자열 데이터 형태가 자체적으로 제공하는 함수를 사용할 수 있습니다. 
 
 ![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch13-img01.jpg?raw=true)
-- 그림 13-1 빌트인 함수 예제([출처](https://docs.google.com/presentation/d/1D7_8FNJjpzStB-T63vv2aY17YyJJr4k5iqStfZJ2m3k/edit?usp=sharing))
+- 그림 13-1 빌트인 함수 예제([출처](https://docs.google.com/presentation/d/11TsWSRQxvTdrKdHKQN1CKkLPEO_ijsIWcqcp1Dva08M/edit?usp=sharing))
 
 그림 13-1에 있는 빨간색 박스 내의 함수가 파이썬의 빌트인 함수입니다. `split()`은 공백 기준으로 문자열을 나눠주며 `strip()`은 양 옆의 공백을 제거해줍니다. `lower()`은 모든 문자를 소문자로 변환하는 함수이며 `join()`은 분할된 단어들을 하나의 문자열로 결합하는 함수입니다. 
 
@@ -24,7 +24,7 @@
 파이썬에서 제공하는 정규식(regular expression) 라이브러리인 `re`를 활용해서 문자열 처리도 가능합니다. 
 
 ![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch13-img02.jpg?raw=true)
-- 그림 13-2 re 사용 예제([출처](https://docs.google.com/presentation/d/1D7_8FNJjpzStB-T63vv2aY17YyJJr4k5iqStfZJ2m3k/edit?usp=sharing))
+- 그림 13-2 re 사용 예제([출처](https://docs.google.com/presentation/d/11TsWSRQxvTdrKdHKQN1CKkLPEO_ijsIWcqcp1Dva08M/edit?usp=sharing))
 
 위 예시에서 `[^A-Za-z0-9]`식은 영어와 숫자를 제외한 모든 문자를 뜻합니다. 그래서 `re`에서 제공하는 `sub()`함수를 통해 영어와 숫자가 아닌 모든 문자를 `''`로 변환하는 식입니다. 정규식에 대한 세부 설명은 [파이썬 공식 문서](https://docs.python.org/3/howto/regex.html)에서 확인 가능합니다. 
 
@@ -33,7 +33,7 @@
 Pandas의 데이터프레임 내에 특정 열이 문자열로만 이뤄져있다면 Pandas의 `str` 문법을 통해 문자열 처리가 가능합니다. 
 
 ![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch13-img03.jpg?raw=true)
-- 그림 13-3 Pandas str 사용 예제([출처](https://docs.google.com/presentation/d/1D7_8FNJjpzStB-T63vv2aY17YyJJr4k5iqStfZJ2m3k/edit?usp=sharing))
+- 그림 13-3 Pandas str 사용 예제([출처](https://docs.google.com/presentation/d/11TsWSRQxvTdrKdHKQN1CKkLPEO_ijsIWcqcp1Dva08M/edit?usp=sharing))
 
 그림 13-3처럼 `s2`에 문자열인 `series`가 저장돼있을 시 `str.split('_')`함수를 통해 `_`기준으로 문자열을 나눌 수 있습니다. 나눈 결과에서 특정 위치에 있는 원소를 추출할 때는 `str.get()`을 사용할 수 있습니다. 위 예시에서는 리스트에서 1번째 위치에 있는 문자를 추출했습니다. 
 
@@ -44,25 +44,25 @@ Pandas의 데이터프레임 내에 특정 열이 문자열로만 이뤄져있�
 NLTK의 유용한 기능으로 언어별 불용어 사전을 제공합니다. 불용어는 a, the 처럼 빈번히 등장하는 단어를 뜻하며 제거를 하면 자연어 처리시 더 좋은 성능을 보일 수 있습니다. 
 
 ![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch13-img04.jpg?raw=true)
-- 그림 13-4 NLTK에서 제공하는 영어 불용어 사전([출처](https://docs.google.com/presentation/d/1D7_8FNJjpzStB-T63vv2aY17YyJJr4k5iqStfZJ2m3k/edit?usp=sharing))
+- 그림 13-4 NLTK에서 제공하는 영어 불용어 사전([출처](https://docs.google.com/presentation/d/11TsWSRQxvTdrKdHKQN1CKkLPEO_ijsIWcqcp1Dva08M/edit?usp=sharing))
 
 이 외에도 NLTK에서 유용하게 사용되는 기능으로 Tokenizer, Stemming, 그리고 Lemmatization이 있습니다. Tokenizer은 하나의 문장을 단어와 문장부호로 나눠주는 역할을 합니다. 
 
 ![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch13-img05.jpg?raw=true)
-- 그림 13-5 Tokenizer, Stemming, Lemmatization([출처](https://docs.google.com/presentation/d/1D7_8FNJjpzStB-T63vv2aY17YyJJr4k5iqStfZJ2m3k/edit?usp=sharing))
+- 그림 13-5 Tokenizer, Stemming, Lemmatization([출처](https://docs.google.com/presentation/d/11TsWSRQxvTdrKdHKQN1CKkLPEO_ijsIWcqcp1Dva08M/edit?usp=sharing))
 
 ![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch13-img06.jpg?raw=true)
-- 그림 13-6 Tokenizer 사용 예제([출처](https://docs.google.com/presentation/d/1D7_8FNJjpzStB-T63vv2aY17YyJJr4k5iqStfZJ2m3k/edit?usp=sharing))
+- 그림 13-6 Tokenizer 사용 예제([출처](https://docs.google.com/presentation/d/11TsWSRQxvTdrKdHKQN1CKkLPEO_ijsIWcqcp1Dva08M/edit?usp=sharing))
 
 Lemmatization은 단어의 기본형을 찾아주는 과정입니다. 영어는 특정 단어가 상황에 따라 여러 형태를 지닐 수 있습니다. 예를 들어 `gentleman`이 복수 형태로 쓰일 때는 `gentlemen`으로 사용됩니다. 이처럼 다양한 형태의 단어를 기본형으로 바꿔주는 작업을 lemmatization이라고 합니다. 
 
 ![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch13-img07.jpg?raw=true)
-- 그림 13-7 Lemmatization 사용 예제([출처](https://docs.google.com/presentation/d/1D7_8FNJjpzStB-T63vv2aY17YyJJr4k5iqStfZJ2m3k/edit?usp=sharing))
+- 그림 13-7 Lemmatization 사용 예제([출처](https://docs.google.com/presentation/d/11TsWSRQxvTdrKdHKQN1CKkLPEO_ijsIWcqcp1Dva08M/edit?usp=sharing))
 
 Lemmatization은 언어학적인 관점으로 기본형을 찾는다면 stemming은 기본적인 규칙 몇가지 만으로 단어를 통일하는 과정입니다. 
 
 ![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch13-img08.jpg?raw=true)
-- 그림 13-8 Stemming 사용 예제([출처](https://docs.google.com/presentation/d/1D7_8FNJjpzStB-T63vv2aY17YyJJr4k5iqStfZJ2m3k/edit?usp=sharing))
+- 그림 13-8 Stemming 사용 예제([출처](https://docs.google.com/presentation/d/11TsWSRQxvTdrKdHKQN1CKkLPEO_ijsIWcqcp1Dva08M/edit?usp=sharing))
 
 ```{tip}
 일반적으로 lemmatization은 언어학적인 관점으로 다양한 규칙을 적용하기 때문에 처리 시 stemming보다 시간이 오래 걸립니다. Lemmatization과 stemming를 사용했을 때 최종 모델 성능은 일반적으로 비슷하게 나오므로 속도가 빠른 stemming을 데이터과학 대회에서는 선호하는 편입니다. 
@@ -81,14 +81,14 @@ Bag-of-Words 방식은 크게 CountVectorizer와 TfidfVectorizer 방법으로 �
 CountVectorizer는 각 단어의 빈도를 피쳐로 사용하는 방법입니다. 예를 들어 한 문장을 피쳐로 변환할 때 해당 문장 내 `have`가 2번 등장하면 `have`범주에 해당하는 위치에 2를 적어주는 방식입니다. 
 
 ![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch13-img09.jpg?raw=true)
-- 그림 13-9 CountVectorizer 사용 예제([출처](https://docs.google.com/presentation/d/1D7_8FNJjpzStB-T63vv2aY17YyJJr4k5iqStfZJ2m3k/edit?usp=sharing))
+- 그림 13-9 CountVectorizer 사용 예제([출처](https://docs.google.com/presentation/d/11TsWSRQxvTdrKdHKQN1CKkLPEO_ijsIWcqcp1Dva08M/edit?usp=sharing))
 
 그림 13-9는 `sklearn.feature_extraction.text`모듈에서 제공하는 `CountVectorizer()`함수 사용 예제 입니다. `tokenizer`와 `stop_words`파라미터에 각각 NLTK에서 제공하는 tokenizer와 stopwords 사전을 입력하면 해당 기능을 활용해 토큰화를 한 뒤 불용어는 제거하고 남은 토큰들에 대해서 CountVectorizer를 적용하게 됩니다. `min_df`와 `max_features`파라미터를 활용해 피쳐의 개수를 제한할 수 있습니다. `min_df`에 50을 입력하면 전체 텍스트에서 50번 이상 등장하는 단어들만 피쳐로 활용한다는 뜻이며 `max_features`는 최대 피쳐의 개수를 제한시켜주는 파라미터입니다. 
 
 TfidfVectorizer는 각 단어의 빈도를 역문서 빈도로 나눈 값을 피쳐로 사용하는 방법입니다. 단어의 빈도를 역문서 빈도로 나눠줌으로써 다른 문서에도 빈번히 등장하는 단어들의 가중치는 낮추고 특정 문서에서만 자주 등장하는 단어들의 가중치는 높여주는 효과를 부여합니다. 
 
 ![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch13-img10.jpg?raw=true)
-- 그림 13-10 TfidfVectorizer 사용 예제([출처](https://docs.google.com/presentation/d/1D7_8FNJjpzStB-T63vv2aY17YyJJr4k5iqStfZJ2m3k/edit?usp=sharing))
+- 그림 13-10 TfidfVectorizer 사용 예제([출처](https://docs.google.com/presentation/d/11TsWSRQxvTdrKdHKQN1CKkLPEO_ijsIWcqcp1Dva08M/edit?usp=sharing))
 
 그림 13-10 은 `sklearn.feature_extraction.text`모듈에서 제공하는 `TfidfVectorizer()`함수 사용 예징니다. `CountVectorizer()`와 입력받는 파라미터가 유사합니다. 
 
@@ -115,12 +115,12 @@ Embedding은 ordinal/label encoding된 정수를 실수 벡터로 변환하는 �
 Embedding의 기본적인 개념은 embedding layer를 포한한 신경망 모델을 구축해서 학습 한 뒤 embedding layer에서 나온 출력값을 embedding 값으로 사용합니다. 
 
 ![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch13-img11.jpg?raw=true)
-- 그림 13-11 Embedding 도식화([출처](https://docs.google.com/presentation/d/1D7_8FNJjpzStB-T63vv2aY17YyJJr4k5iqStfZJ2m3k/edit?usp=sharing))
+- 그림 13-11 Embedding 도식화([출처](https://docs.google.com/presentation/d/11TsWSRQxvTdrKdHKQN1CKkLPEO_ijsIWcqcp1Dva08M/edit?usp=sharing))
 
 신경망 구조에 따라 embedding의 종류가 달라집니다. 그림 13-12 의 왼쪽은 CBOW embedding을 생성하는 신경망 구조이며 오른쪽은 Skip-gram embedding을 생성하는 신경망 구조입니다. 
 
 ![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch13-img12.jpg?raw=true)
-- 그림 13-12 CBOW와 Skip-gram([출처](https://docs.google.com/presentation/d/1D7_8FNJjpzStB-T63vv2aY17YyJJr4k5iqStfZJ2m3k/edit?usp=sharing))
+- 그림 13-12 CBOW와 Skip-gram([출처](https://docs.google.com/presentation/d/11TsWSRQxvTdrKdHKQN1CKkLPEO_ijsIWcqcp1Dva08M/edit?usp=sharing))
 
 ## 13.4 참고자료
 
