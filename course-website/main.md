@@ -1,8 +1,8 @@
 # 단국대 2020년 가을학기 캐글 뽀개기 강좌
 
-```{note}
-Course-website 구축 중 (~2021.04.30)
-```
+이 강의는 단국대 소프트웨어 중심대학 2020년 가을학기 오픈소스 SW설계 과목 (담당 송영상 교수님)에서 진행한 강의입니다. 데이터과학 대회에 대해 강의할 수 있는 자리를 마련해주시고 강의 공개를 허락해주신 단국대 소프트웨어 중심대학 관계자 분들과 송영상 교수님께 감사의 말씀 전합니다.
+
+더불어 캐글에 입문하고자 하는 한국 캐글러 분들께 도움이 되길 바랍니다. 
 
 ## Curriculum
 
@@ -41,18 +41,22 @@ Course-website 구축 중 (~2021.04.30)
 |2020-12-16| 보강 #1 |  |  |
 |2020-12-21| 보강 #2 |  |  |
 
-
-* 세부 일정은 변경 가능
-
-
 ## People
 | 역할 | 사진 | 성함 | 소개 |
 |:-----|:-----:|:--------|:------|
 |Instructor<br>교강사|<img src="https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/Jeong-Yoon.png?raw=true" width="100" height="100">|[Jeong-Yoon Lee](https://www.linkedin.com/in/jeongyoonlee/)<br>이정윤|Sr. Research Scientist<br>Recommendation and Search Algorithm at Netflix|
 |Webmaster<br>웹사이트 구축|<img src="https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/Sungjin.png?raw=true" width="100" height="100">|[Sungjin Ahn](https://www.linkedin.com/in/sungjin-ahn/)<br>안성진|AI Enthusiast|
 
+## Contents
+
+페이지별 왼쪽에 위치한 목차는 1장 부터 19장까지 안내합니다. 왼쪽 목차 위에 있는 `Search this book`입력창을 통해 책 전체 컨텐츠에 대한 단어 검색이 가능합니다. 상단에 있는 버튼을 통해 전체화면, Github 바로가기, 원본 파일 다운로드 등의 기능을 실행할 수 있습니다. 오른쪽에 위치한 목차는 해당 장에 대한 목차입니다. 
+
+![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/main-contents.JPG?raw=true)
+- 페이지 구성도
+
 ## Tip/Note
-각 장별로 Tip와 Note가 존재합니다. 
+
+각 장별로 Tip과 Note가 존재합니다. 
 
 ```{tip}
 여기에는 데이터과학 경진대회 참여시 직접적으로 도움 되는 노하우가 언급됩니다. 
@@ -62,8 +66,21 @@ Course-website 구축 중 (~2021.04.30)
 여기에는 본문 내용을 이해하기 위한 보조자료가 언급됩니다. 
 ```
 
+## Google Colab
+각 장별 실습 파일은 Colab으로 이동해서 직접 실행해볼 수 있습니다. 페이지 상단에 로켓 아이콘을 클릭후 `Colab`버튼을 누르면 Colab 가상환경으로 이동합니다. 
+
+![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/main-colab-button.JPG?raw=true)
+- colab 버튼
+
 ## Contribution
-Github을 통해 내용 오류 및 오탈자 등에 대해 Issue를 생성해주시거나 PR을 생성해주시면 확인 후 조치/반영 하도록 하겠습니다. 세부 사항은 contribution.md를 확인 부탁드립니다. 
+Github을 통해 내용 오류 및 오탈자 등에 대한 Issue를 생성해주시거나 PR을 생성해주시면 확인 후 조치/반영 하도록 하겠습니다. 각 페이지별 상단의 Github 아이콘을 클릭후 `open issue` 버튼을 통해 해당 페이지에 대한 Issue를 생성할 수 있습니다. 
+
+![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/main-create-issue-button.JPG?raw=true)
+- open issue 버튼
 
 ## Comment
-각 장별로 Utterance 기능이 활성화 되어 있습니다. Github 아이디로 로그인 후 댓글을 달 수 있습니다. 
+각 페이지별 하단에 댓글을 달 수 있는 Utterance 기능이 활성화 되어 있습니다. `Sign in with Github` 녹색 버튼을 눌러 Github 아이디로 로그인 후 댓글을 달 수 있습니다. 
+
+![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/main-utterance.JPG?raw=true)
+
+- utterance 화면
