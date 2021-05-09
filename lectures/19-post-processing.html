@@ -491,11 +491,11 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/kaggler-tv/dku-kaggle-class"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/kaggler-tv/dku-kaggle-class/"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/kaggler-tv/dku-kaggle-class/issues/new?title=Issue%20on%20page%20%2Flectures/19-post-processing.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/kaggler-tv/dku-kaggle-class//issues/new?title=Issue%20on%20page%20%2Flectures/19-post-processing.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -582,7 +582,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <p>첫번째 방법은 예측값의 분포를 시험셋의 종속변수 분포에 가깝게 변경하는 방법입니다. 시험셋의 종속변수는 주어지지 않기 때문이 일반적으로 알 수가 없습니다. 그래서 제출 파일에 하나의 상수 값을 입력 후 제출을 해서 리더보드에 반환되는 점수를 바탕으로 시험셋의 분포를 유추를 한 뒤 분포 변환을 적용합니다. Public 리더보드와 Private 리더보드의 분포가 다른 경우 Public 리더보드에 과적합되는 위험이 존재하지만 두 개의 리더보드의 분포가 유사한 경우 좋은 성능을 기대할 수 있습니다.</p>
 <p>두번째 방법은 예측값이 확률인 경우 0과 1에 근사한 값을 0과 1로 반올림하는 방법입니다.</p>
-<p>하지만 평가 지표가 logloss인 경우 두번째 방법은 오히려 안 좋은 성능을 보일 수 있습니다. 이런 경우 0과 1에 근사한 값을 특정 값으로 clip을 할 수 있습니다.</p>
+<p>하지만 평가 지표가 logloss인 경우 두번째 방법은 오히려 안 좋은 성능을 보일 수 있습니다. 이런 경우 0과 1에 근사한 값으로 clip을 할 수 있습니다.</p>
 <p>네번째 방법은 리더보드 점수가 향상되는 방향으로 예측값을 push하는 방법입니다. 첫번째 제출값, 두번째 제출값, 그리고 세번째 제출값을 제출할 때 마다 리더보드 점수가 상승했다면 각 제출값 사이의 차이를 구해서 어느 방향으로 예측값이 움직여야 점수가 상승하는지 파악할 수 있습니다. 이렇게 알게된 방향으로 예측값을 조정할 수 있습니다.</p>
 <p>다섯번째 방법은 하나의 샘플에서 여러 예측값이 발생한 경우 하나의 값으로 결합하는 방법입니다. 이 방법은 IEEE-CIS 대회 데이터에 특화된 방법으로 소개가 됐었습니다.</p>
 </div>
@@ -617,7 +617,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="section" id="id4">
 <h2>19.3 참고자료<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
-<p>데이터과핟 대회 수상자들의 솔루션을 살펴보면 다양한 팁들을 얻을 수 있습니다. 아래에는 각 분야별 주요 대회 우승 솔루션이 정리돼있습니다.</p>
+<p>데이터과학 대회 수상자들의 솔루션을 살펴보면 다양한 팁들을 얻을 수 있습니다. 아래에는 각 분야별 주요 대회 우승 솔루션이 정리돼있습니다.</p>
 <ul class="simple">
 <li><p>Computer Vision:</p>
 <ul>
@@ -689,7 +689,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
           By Kaggler-TV<br/>
         
-            &copy; Copyright 2020-.<br/>
+            &copy; Copyright 2020.<br/>
           <div class="extra_footer">
             <div class="row_footer"> Website organized by <a href="https://github.com/SDSTony">Sungjin Ahn</a> </div>
           </div>
@@ -706,6 +706,16 @@ commentsRunWhenDOMLoaded(addUtterances);
   <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
 
 
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-154415912-2', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     
   </body>
 </html>

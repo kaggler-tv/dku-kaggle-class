@@ -492,11 +492,11 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/kaggler-tv/dku-kaggle-class"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/kaggler-tv/dku-kaggle-class/"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/kaggler-tv/dku-kaggle-class/issues/new?title=Issue%20on%20page%20%2Flectures/18-image-classification.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/kaggler-tv/dku-kaggle-class//issues/new?title=Issue%20on%20page%20%2Flectures/18-image-classification.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -576,19 +576,23 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>이미지 데이터가 JPG/PNG로 처럼 RGB 이미지 포맷으로 저장돼있을 경우에는 <a class="reference external" href="https://opencv.org/">OpenCV</a>나 <a class="reference external" href="https://pillow.readthedocs.io/en/stable/handbook/tutorial.html#using-the-image-class">Pillow</a> 라이브러리를 사용해 불러와서 처리합니다.</p>
 <p>X-ray, MRI 처럼 의료용 이미지일 경우 <a class="reference external" href="https://en.wikipedia.org/wiki/DICOM">DiCOM</a> 형태로 제공됩니다. DiCOM은 의료 이미지 데이터를 저장하는 표준 포멧입니다. DiCOM은 환자의 성별, 이미지 저장시 사용한 기기 등 metadata를 포함합니다. DiCOM을 불러올 때는 <a class="reference external" href="https://github.com/pydicom/pydicom">Pydicom</a> 라이브러리를 사용합니다.</p>
 <p>OpenCV, Pillow, Pydicom을 사용해 불러온 이미지에 <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code>에서 제공하는 <code class="docutils literal notranslate"><span class="pre">imshow</span></code>를 사용해서 시각화 할 수 있습니다. 이미지 시각화를 통해 이미지의 사이즈, 밝기, 색감등을 확인해서 추후 전처리가 필요한지 결정을 내립니다.</p>
+<p><img alt="" src="https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch18-img01.jpg?raw=true" /></p>
+<ul class="simple">
+<li><p>그림 18-1 matplotlib을 사용한 의료 이미지 시각화 예시(<a class="reference external" href="https://docs.google.com/presentation/d/1dmCmkv0mWeuf-rHkrOYBXPKaPIwW4B6gSsVPzerOGLc/edit?usp=sharing">출처</a>)</p></li>
+</ul>
 <p>이미지 사아즈가 동일하지 않다면 resize를 통해 사이즈를 맞춰주고 밝기나 색감이 다르다면 gray scale로 통일하거나 normalization을 적용해주기도 합니다. 또한 이미지 내의 주요 부분만 추출하기 위해 cropping을 적용하기도 합니다. Cropping을 할 때는 중요 부분을 같이 잘라내지 않도록 주의가 필요합니다.</p>
 </div>
 <div class="section" id="image-augmentation">
 <h2>18.2 Image Augmentation<a class="headerlink" href="#image-augmentation" title="Permalink to this headline">¶</a></h2>
-<p>Image augmentation은 16장에서 다뤄본 것 처럼 이미지를 회전하거나 뒤집거나 확대/축소 등을 사용해서 데이터의 양을 부풀리는 과정입니다. 또한 Mixup, Cutout, CutMix등의 방법도 존재하며 세부 사항은 16장을 참고바랍니다.</p>
+<p>Image augmentation은 <a class="reference internal" href="16-data-augmentation.html"><span class="doc std std-doc">16장</span></a>에서 다뤄본 것 처럼 이미지를 회전하거나 뒤집거나 확대/축소 등을 사용해서 데이터의 양을 부풀리는 과정입니다. 또한 Mixup, Cutout, CutMix등의 방법도 존재하며 세부 사항은 <a class="reference internal" href="16-data-augmentation.html"><span class="doc std std-doc">16장</span></a>을 참고바랍니다.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Image augmentation을 cross validation과 함께 사용할 경우 augmented된 이미지는 원본 이미지와 같은 fold에 속해야 합니다. 모델 학습에 사용한 데이터가 검증 데이터셋에도 존재한다면 모델의 성능은 상대적으로 좋게 나올 것이므로 올바른 모델 검증이 진행되지 않기 때문입니다.</p>
+<p>Image augmentation을 cross validation과 함께 사용할 경우 augmented된 이미지는 원본 이미지와 같은 fold에 속해야 합니다. 모델 학습에 사용한 데이터가 검증 데이터셋에도 존재한다면 모델의 성능은 상대적으로 좋게 나올 것이므로 올바른 모델 검증이 진행되지 않습니다.</p>
 </div>
 </div>
 <div class="section" id="image-modeling">
 <h2>18.3 Image Modeling<a class="headerlink" href="#image-modeling" title="Permalink to this headline">¶</a></h2>
-<p>이미지 데이터를 처리하는 모델을 구축할 때는 직접 CNN 구조를 디자인하거나 또는 17장에서 살펴본 pre-trained 모델을 사용할 수도 있습니다. 데이터과학 대회에서는 이미 방대한 데이터셋에 대해 검증된 pre-trained 모델을 주로 사용합니다.</p>
+<p>이미지 데이터를 처리하는 모델을 구축할 때는 직접 CNN 구조를 디자인하거나 또는 <a class="reference internal" href="17-cnn.html"><span class="doc std std-doc">17장</span></a>에서 살펴본 pre-trained 모델 구조를 사용할 수도 있습니다. 데이터과학 대회에서는 이미 방대한 데이터셋에 대해 검증된 pre-trained 모델을 주로 사용합니다.</p>
 <p>Pre-trained 모델을 사용하는 방법도 크게 3가지로 구분됩니다. 첫번째는 Pre-trained 모델을 있는 그대로 사용해서 직접 예측하는 방법입니다. 두번째는 pre-trained 모델의 변수를 고정 시킨 후 새 레이어를 추가 후 학습 및 예측을 하는 방법입니다. 세번째는 pre-trained 모델의 변수도 함께 학습 후 예측하는 방법입니다. 일반적으로 세번째 방법을 fine-tuning이라고 부르며 대회에서 최종 모델로 많이 사용하는 방법입니다.</p>
 <p>Pre-trained 모델을 베이스라인 모델로 사용할 때 일반적으로 Inception-v3, ResNet-50, 그리고 EfficentNet-B0을 사용합니다. 베이스라인 모델은 대회 초기에 여러가지 실험을 적용해볼 수 있도록 기준이 되는 모델입니다. 베이스라인 모델에 다양한 이미지 augmentation 및 전처리를 적용해 어떤 augmentation과 전처리 방법이 성능을 높이는지 실험을 해볼 수 있습니다. 그렇게 해서 선정된 augmentation과 전처리 기법으로 데이터를 처리한 후 최종 모델로 EfficientNet-B3 또는 B3 이상을 사용해 성능을 더 올릴 수 있습니다.</p>
 </div>
@@ -596,9 +600,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2>18.4 Metadata Modeling<a class="headerlink" href="#metadata-modeling" title="Permalink to this headline">¶</a></h2>
 <p>18.1절에서 언급한 것 처럼 의료용 데이터 포멧인 DiCOM 같은 경우 이미지에 대한 metadata가 함께 제공될 수 있습니다. 이러한 metadata를 이미지 데이터와 함께 사용 시 최종 예측 성능을 향상 시킬 수 있습니다. Metadata를 결합하는 방법은 두 가지가 있습니다. 첫번째는 metadata만을 가지고 lightgbm, xgboost등의 모델을 학습한 후 이미지 모델과 앙상블하는 방법입니다. 두번째는 CNN 모델을 구성해두고 sub-network로 metadata를 처리할 수 있는 신경망을 구축한 뒤 CNN 모델과 sub-network의 결과물을 합친 후 dense 레이어에 전달해서 최종 결과물을 산출하는 방법입니다.</p>
 <p>2019년과 2020년에 열린 의료용 이미지 대회인 Melanoma Classification 대회의 1위 솔루션이 모두 metadata를 함께 사용한 방법이였습니다. 2019년도와 2020년도 모두 CNN 모델의 결과물과 sub-network에서 metadata를 처리해 나온 결과물을 합친 뒤 추가 레이어에 전달해서 최종 예측을 했습니다.</p>
+<p><img alt="" src="https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch18-img02.jpg?raw=true" /></p>
 <ul class="simple">
-<li><p>그림 18- <a class="reference external" href="https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/154683">Melanoma Classification 2019 1st Place</a></p></li>
-<li><p>그림 18- <a class="reference external" href="https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/175412">Melanoma Classification 2020 1st Place</a></p></li>
+<li><p>그림 18-2 <a class="reference external" href="https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/154683">Melanoma Classification 2019 1st Place</a> (<a class="reference external" href="https://docs.google.com/presentation/d/1dmCmkv0mWeuf-rHkrOYBXPKaPIwW4B6gSsVPzerOGLc/edit?usp=sharing">출처</a>)</p></li>
+</ul>
+<p><img alt="" src="https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch18-img03.jpg?raw=true" /></p>
+<ul class="simple">
+<li><p>그림 18-3 <a class="reference external" href="https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/175412">Melanoma Classification 2020 1st Place</a> (<a class="reference external" href="https://docs.google.com/presentation/d/1dmCmkv0mWeuf-rHkrOYBXPKaPIwW4B6gSsVPzerOGLc/edit?usp=sharing">출처</a>)</p></li>
 </ul>
 </div>
 <div class="section" id="ensembling">
@@ -674,7 +682,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
           By Kaggler-TV<br/>
         
-            &copy; Copyright 2020-.<br/>
+            &copy; Copyright 2020.<br/>
           <div class="extra_footer">
             <div class="row_footer"> Website organized by <a href="https://github.com/SDSTony">Sungjin Ahn</a> </div>
           </div>
@@ -691,6 +699,16 @@ commentsRunWhenDOMLoaded(addUtterances);
   <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
 
 
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-154415912-2', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     
   </body>
 </html>

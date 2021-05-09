@@ -492,11 +492,11 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/kaggler-tv/dku-kaggle-class"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/kaggler-tv/dku-kaggle-class/"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/kaggler-tv/dku-kaggle-class/issues/new?title=Issue%20on%20page%20%2Flectures/03-pandas.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/kaggler-tv/dku-kaggle-class//issues/new?title=Issue%20on%20page%20%2Flectures/03-pandas.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -565,12 +565,25 @@ commentsRunWhenDOMLoaded(addUtterances);
                 
   <div class="section" id="pandas">
 <h1>3. Pandas<a class="headerlink" href="#pandas" title="Permalink to this headline">¶</a></h1>
-<p>데이터과학을 할 때 가장 많이 사용하는 언어가 파이썬과 R입니다. 2010년도 쯤에 데이터과학이 유명해지기 시작할 때만 해도 R에서 제공하던 함수 및 라이브러리가 파이썬보다 더 많았습니다. R에서 사용하던 여러가지 기능들을 파이썬에서 제공하기 시작한게 Pandas 라이브러리 부터라고 볼 수 있습니다. 그래서 파이썬에서 데이터과학을 하는데 Pandas는 필수적인 라이브러리입니다.</p>
+<p>데이터과학을 할 때 가장 많이 사용하는 언어가 파이썬과 R입니다. 2010년도에 데이터과학이 유명해지기 시작할 때만 해도 R에서 제공하던 함수 및 라이브러리가 파이썬보다 더 많았습니다. R에서 사용하던 여러가지 기능들을 파이썬에서 제공하기 시작한게 Pandas 라이브러리 부터라고 볼 수 있습니다. 그래서 파이썬에서 데이터과학을 하는데 Pandas는 필수적인 라이브러리입니다.</p>
+<p><img alt="" src="https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch03-img01.jpg?raw=true" /></p>
+<ul class="simple">
+<li><p>그림 3-1 Pandas 로고(<a class="reference external" href="https://docs.google.com/presentation/d/1MhnsZAV8SfLK9ob9gSMXN2Jil7ZjH-8mngH-Qec7bk8/edit?usp=sharing">출처</a>)</p></li>
+</ul>
+<p><img alt="" src="https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch03-img02.jpg?raw=true" /></p>
+<ul class="simple">
+<li><p>그림 3-2 Wes McKinney(<a class="reference external" href="https://docs.google.com/presentation/d/1MhnsZAV8SfLK9ob9gSMXN2Jil7ZjH-8mngH-Qec7bk8/edit?usp=sharing">출처</a>)</p></li>
+</ul>
 <p>Pandas는 2008년에 Wes McKinney의 개인 프로젝트로 시작했습니다. Wes는 미국 동부에서 금융업에 종사하면서 파이썬을 활용해 금융 데이터 분석을 하고 있었습니다. R에서는 그 당시 여러가지 기능들을 제공 했지만 느리다는 단점이 있었고, 파이썬은 R보다는 빠르지만 다양한 기능을 제공하는 오픈 소스 라이브러리가 없었습니다. 그래서 본인이 사용하기 위해서 개인 프로젝트로 Pandas를 만들기 시작했습니다. Pandas에 기능이 하나 둘씩 추가되면서 다른 사람들도 많이 사용하기 시작했으며 본인 회사 내에서 먼저 유명하게 됐습니다. 그리고 나서 회사를 설득해서 Pandas를 오픈 소스로 출시하게 됩니다. 지금은 Pandas를 쓰지 않는 데이터 과학자가 없다고 해도 무방할 정도로 많은 사람이 사용하는 라이브러리가 됐습니다.</p>
 <p>금융쪽에서는 테이블 형태의 정형데이터를 패널 데이터(panel data)라고 칭합니다. Panel data를 줄여서 Pandas로 이름을 지었다고 하다가, 후일담으로 판다가 귀엽기 때문에 그냥 Pandas라고 했다라는 얘기를 하기도 했습니다. Pandas가 지원하는 기능으로는 데이터 입출력, 변환, 선택, 결합, 전처리, 그룹핑 등이 있습니다.</p>
 <div class="section" id="id1">
 <h2>3.1 Pandas 설치<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>Pandas는 Anaconda Navigator 또는 터미널을 통해 설치할 수 있습니다. Anaconda Navigator로 설치하는 방법은 Environments 탭에 가서 설치를 원하는 가상환경을 선택 후 Pandas 라이브러리 옆에 체크 박스를 선택하면 설치가 됩니다. 터미널을 통해서 설치하는 방법은 먼저 터미널에서 Pandas를 설치할려고 하는 가상환경을 <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">[가상환경</span> <span class="pre">이름]</span></code> 명령어를 통해 실행 후 <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandas</span></code>를 통해 설치 가능합니다. 라이브러리를 사용하다가 새 버전이 나와서 업그레이드를 해야 한다면 터미널에서 <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">pandas</span></code>명령어를 통해 업그레이드 할 수 있습니다. 해당 명령어는 기존에 pandas가 없는 경우 pandas를 최신 버전으로 설치해주며 pandas가 있는 경우에는 최신 버전으로 업그레이드 해줍니다.</p>
+<p>Pandas는 Anaconda Navigator 또는 터미널을 통해 설치할 수 있습니다. Anaconda Navigator로 설치하는 방법은 Environments 탭에 가서 설치를 원하는 가상환경을 선택 후 Pandas 라이브러리 옆에 체크 박스를 선택하면 설치가 됩니다.</p>
+<p><img alt="" src="https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch03-img03.jpg?raw=true" /></p>
+<ul class="simple">
+<li><p>그림 3-3 Anaconda Navigator에서 Pandas 설치(<a class="reference external" href="https://docs.google.com/presentation/d/1MhnsZAV8SfLK9ob9gSMXN2Jil7ZjH-8mngH-Qec7bk8/edit?usp=sharing">출처</a>)</p></li>
+</ul>
+<p>터미널을 통해서 설치하는 방법은 먼저 터미널에서 Pandas를 설치할려고 하는 가상환경을 <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">[가상환경</span> <span class="pre">이름]</span></code> 명령어를 통해 실행 후 <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandas</span></code>를 통해 설치 가능합니다. 라이브러리를 사용하다가 새 버전이 나와서 업그레이드를 해야 한다면 터미널에서 <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">pandas</span></code>명령어를 통해 업그레이드 할 수 있습니다. 해당 명령어는 기존에 pandas가 없는 경우 pandas를 최신 버전으로 설치해주며 pandas가 있는 경우에는 최신 버전으로 업그레이드 해줍니다.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>pip은 파이썬에서 사용하는 패키지 관리 프로그램입니다. pip을 통해 다양한 라이브러리를 다운로드 받고 관리할 수 있습니다.</p>
@@ -578,32 +591,94 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="section" id="id2">
 <h2>3.2 Pandas 객체<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>Pandas에서는 데이터프레임과 시리즈라는 객체를 지원합니다. 데이터프레임은 R에서 넘어온 개념이며 테이블 형식으로 된 데이터를 뜻합니다. 반면 시리즈는 1차원적인 벡터 형식으로 된 데이터를 뜻합니다. 예를 들어 표 3.X는 인덱스가 있고 두 개의 열이 있습니다. 첫번째 열은 u라는 열이고 두번째 열은 g라는 열입니다. 또한 첫번째 행은 count라는 행이며 두번째 행은 mean이라는 행입니다. 이처럼 2차원적인 데이터를 저장할 때 Pandas에서는 데이터프레임이라는 객체를 사용합니다.</p>
-<p>데이터프레임에서 하나의 컬럼만 뽑아낸다면 그것은 1차원 데이터가 될 것이며 이것을 시리즈라고 합니다. 시리즈는 인덱스 값이 원소 값과 같이 저장됩니다. 인덱스는 별도로 명시하지 않으면 0부터 시작을 합니다. 그림 3.X에 dtype이라고 하는 것은 데이터 타입을 뜻합니다. 데이터 타입은 정수형, 실수형, 시간형, 문자열 등이 있는데 3.3절에서 자세히 다뤄보도록 하겠습니다.</p>
-<p>Pandas 객체는 여러개의 member function을 보유하고 있습니다. 예를 들어 df라는 데이터프레임이 존재할 때 df.head() 함수를 사용하면 데이터프레임의 상위 5개의 행을 출력해줍니다. 각 함수들에 대한 설명은 아래와 같으며 실습 단계에서 자세히 다뤄 보겠습니다.</p>
+<p>Pandas에서는 데이터프레임과 시리즈라는 객체를 지원합니다. 데이터프레임은 R에서 넘어온 개념이며 테이블 형식으로 된 데이터를 뜻합니다. 반면 시리즈는 1차원적인 벡터 형식으로 된 데이터를 뜻합니다. 예를 들어 그림 3-4는 인덱스가 있고 두 개의 열이 있습니다. 첫번째 열은 u라는 열이고 두번째 열은 g라는 열입니다. 또한 첫번째 행은 count라는 행이며 두번째 행은 mean이라는 행입니다. 이처럼 2차원적인 데이터를 저장할 때 Pandas에서는 데이터프레임이라는 객체를 사용합니다.</p>
+<p><img alt="" src="https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch03-img04.jpg?raw=true" /></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">head()</span></code>, <code class="docutils literal notranslate"><span class="pre">tail()</span></code>: 데이터프레임 또는 시리즈의 상위, 하위 5개의 행을 출력합니다.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[]</span></code>, <code class="docutils literal notranslate"><span class="pre">iloc[]</span></code>, <code class="docutils literal notranslate"><span class="pre">loc[]</span></code>: 행 또는 열을 선택할 때 사용합니다.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">apply()</span></code>: 행/열에 특정 함수를 적용할 때 사용합니다.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">groupby()</span></code>: 특정 열로 그룹핑을 할 때 사용합니다.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sort_values()</span></code>, <code class="docutils literal notranslate"><span class="pre">sort_index()</span></code>: 특정 열 또는 인덱스의 값으로 정렬할 때 사용합니다.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">drop()</span></code>, <code class="docutils literal notranslate"><span class="pre">drop_duplicates()</span></code>: 행/열을 삭제할 때 사용합니다.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">shape</span></code>: 행과 열의 크기를 반환합니다.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">count()</span></code>: 특정 행/열에 몇 개의 값이 존재하는지 계산합니다.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sum()</span></code>: 특정 행/열의 총 합을 반환합니다.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cumsum()</span></code>: 누적 합을 반환합니다.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mean()</span></code>: 평균값을 반환합니다.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">median()</span></code>: 중앙값을 반환합니다.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">min()</span></code>: 최솟값을 반환합니다.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">max()</span></code>: 최댓값을 반환합니다.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">std()</span></code>: 표준편차를 반환합니다.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">var()</span></code>: 분산을 반환합니다.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sample()</span></code>: 특정 개수 또는 퍼센트 만큼의 표본을 추출해서 반환합니다.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unique()</span></code>: 해당 열에 존재하는 고유값을 반환합니다.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nunique()</span></code>: 해당 열에 존재하는 고유값의 개수를 반환합니다.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value_counts()</span></code>: 각 고유값별 개수를 반환합니다.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">set_index()</span></code>: 인덱스를 새로 지정할 때 사용합니다.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">reset_index()</span></code>: 인덱스를 초기화 시키고 기존 인덱스를 컬럼으로 변환하고자 할 때 사용합니다.</p></li>
+<li><p>그림 3-4 데이터프레임 예시(<a class="reference external" href="https://docs.google.com/presentation/d/1MhnsZAV8SfLK9ob9gSMXN2Jil7ZjH-8mngH-Qec7bk8/edit?usp=sharing">출처</a>)</p></li>
+</ul>
+<p>데이터프레임에서 하나의 컬럼만 뽑아낸다면 그것은 1차원 데이터가 될 것이며 이것을 시리즈라고 합니다. 시리즈는 인덱스 값이 원소 값과 같이 저장됩니다. 인덱스는 별도로 명시하지 않으면 0부터 시작을 합니다. 그림 3-5에 dtype이라고 하는 것은 데이터 타입을 뜻합니다. 데이터 타입은 정수형, 실수형, 시간형, 문자열 등이 있는데 3.3절에서 자세히 다뤄보도록 하겠습니다.</p>
+<p><img alt="" src="https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch03-img05.jpg?raw=true" /></p>
+<ul class="simple">
+<li><p>그림 3-5 시리즈 예시(<a class="reference external" href="https://docs.google.com/presentation/d/1MhnsZAV8SfLK9ob9gSMXN2Jil7ZjH-8mngH-Qec7bk8/edit?usp=sharing">출처</a>)</p></li>
+</ul>
+<p>Pandas 객체는 여러개의 member function을 보유하고 있습니다. 예를 들어 df라는 데이터프레임이 존재할 때 df.head() 함수를 사용하면 데이터프레임의 상위 5개의 행을 출력해줍니다. 주요 member function들에 대한 설명은 아래와 같으며 실습 단계에서 자세히 다뤄 보겠습니다.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>함수</p></th>
+<th class="head"><p>설명</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">head()</span></code>, <code class="docutils literal notranslate"><span class="pre">tail()</span></code></p></td>
+<td><p>데이터프레임 또는 시리즈의 상위, 하위 5개의 행을 출력합니다.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">[]</span></code>, <code class="docutils literal notranslate"><span class="pre">iloc[]</span></code>, <code class="docutils literal notranslate"><span class="pre">loc[]</span></code></p></td>
+<td><p>행 또는 열을 선택할 때 사용합니다.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">apply()</span></code></p></td>
+<td><p>행/열에 특정 함수를 적용할 때 사용합니다.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">groupby()</span></code></p></td>
+<td><p>특정 열로 그룹핑을 할 때 사용합니다.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sort_values()</span></code>, <code class="docutils literal notranslate"><span class="pre">sort_index()</span></code></p></td>
+<td><p>특정 열 또는 인덱스의 값으로 정렬할 때 사용합니다.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">drop()</span></code>, <code class="docutils literal notranslate"><span class="pre">drop_duplicates()</span></code></p></td>
+<td><p>행/열을 삭제할 때 사용합니다.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">shape</span></code></p></td>
+<td><p>행과 열의 크기를 반환합니다.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">count()</span></code></p></td>
+<td><p>특정 행/열에 몇 개의 값이 존재하는지 계산합니다.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sum()</span></code></p></td>
+<td><p>특정 행/열의 총 합을 반환합니다.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">cumsum()</span></code></p></td>
+<td><p>누적 합을 반환합니다.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mean()</span></code></p></td>
+<td><p>평균값을 반환합니다.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">median()</span></code></p></td>
+<td><p>중앙값을 반환합니다.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">min()</span></code></p></td>
+<td><p>최솟값을 반환합니다.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">max()</span></code></p></td>
+<td><p>최댓값을 반환합니다.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">std()</span></code></p></td>
+<td><p>표준편차를 반환합니다.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">var()</span></code></p></td>
+<td><p>분산을 반환합니다.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sample()</span></code></p></td>
+<td><p>특정 개수 또는 퍼센트 만큼의 표본을 추출해서 반환합니다.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">unique()</span></code></p></td>
+<td><p>해당 열에 존재하는 고유값을 반환합니다.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">nunique()</span></code></p></td>
+<td><p>해당 열에 존재하는 고유값의 개수를 반환합니다.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">value_counts()</span></code></p></td>
+<td><p>각 고유값별 개수를 반환합니다.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">set_index()</span></code></p></td>
+<td><p>인덱스를 새로 지정할 때 사용합니다.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">reset_index()</span></code></p></td>
+<td><p>인덱스를 초기화 시키고 기존 인덱스를 컬럼으로 변환하고자 할 때 사용합니다.</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>표 3-1 Pandas 객체의 주요 member function</p></li>
 </ul>
 </div>
 <div class="section" id="id3">
@@ -631,18 +706,18 @@ commentsRunWhenDOMLoaded(addUtterances);
 <tr class="row-even"><td><p>timedelta64[ns]</p></td>
 <td><p>날짜/시간 차이</p></td>
 </tr>
-<tr class="row-odd"><td><p>astype()</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">astype()</span></code></p></td>
 <td><p>데이터 타입 변환 시 사용</p></td>
 </tr>
-<tr class="row-even"><td><p>pandas.to_datetime()</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pandas.to_datetime()</span></code></p></td>
 <td><p>문자를 날짜/시간으로 변환</p></td>
 </tr>
 </tbody>
 </table>
 <ul class="simple">
-<li><p>표 3.X</p></li>
+<li><p>표 3-2 Pandas에서 제공하는 주요 데이터 타입</p></li>
 </ul>
-<p>또한 pandas에는 NaN 데이터 타입이 존재하는데 Not a Number의 약자로써 결측값을 뜻합니다. NaN을 처리하는 주요 함수는 아래와 같습니다.</p>
+<p>또한 Pandas에는 NaN 데이터 타입이 존재하는데 Not a Number의 약자로써 결측값을 뜻합니다. NaN을 처리하는 주요 함수는 아래와 같습니다.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>함수</p></th>
@@ -650,19 +725,19 @@ commentsRunWhenDOMLoaded(addUtterances);
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>isnull()</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">isnull()</span></code></p></td>
 <td><p>NaN이 있는지 여부 확인 (T/F)</p></td>
 </tr>
-<tr class="row-odd"><td><p>dropna()</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">dropna()</span></code></p></td>
 <td><p>NaN이 있는 행/열 삭제</p></td>
 </tr>
-<tr class="row-even"><td><p>fillna()</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fillna()</span></code></p></td>
 <td><p>NaN이 있는 행/열 대치</p></td>
 </tr>
 </tbody>
 </table>
 <ul class="simple">
-<li><p>표 3.X</p></li>
+<li><p>표 3-3 NaN을 처리하는 주요 함수</p></li>
 </ul>
 </div>
 <div class="section" id="id4">
@@ -675,35 +750,42 @@ commentsRunWhenDOMLoaded(addUtterances);
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>read_csv(), to_csv()</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">read_csv()</span></code>, <code class="docutils literal notranslate"><span class="pre">to_csv()</span></code></p></td>
 <td><p>CSV 파일 입출력</p></td>
 </tr>
-<tr class="row-odd"><td><p>merge(), concat()</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">merge()</span></code>, <code class="docutils literal notranslate"><span class="pre">concat()</span></code></p></td>
 <td><p>서로 다른 DataFrame 결합</p></td>
 </tr>
-<tr class="row-even"><td><p>hist(), plot()</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">hist()</span></code>, <code class="docutils literal notranslate"><span class="pre">plot()</span></code></p></td>
 <td><p>데이터 히스토그램/시각화</p></td>
 </tr>
 <tr class="row-odd"><td><p>dt.day/weekday/month/year/weekofyear</p></td>
 <td><p>Datetime[ns] 타입 데이터의 일/요일/월/년/주</p></td>
 </tr>
-<tr class="row-even"><td><p>resample()</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">resample()</span></code></p></td>
 <td><p>Datetime[ns] 타입 데이터 리샘플링</p></td>
 </tr>
-<tr class="row-odd"><td><p>pivot_table()</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pivot_table()</span></code></p></td>
 <td><p>피봇테이블 생성</p></td>
 </tr>
-<tr class="row-even"><td><p>corr()</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">corr()</span></code></p></td>
 <td><p>상관관계 계산</p></td>
 </tr>
 </tbody>
 </table>
+<ul class="simple">
+<li><p>표 3-4 Pandas의 주요 함수</p></li>
+</ul>
 </div>
 <div class="section" id="jupyter-notebook">
 <h2>3.5 Jupyter Notebook 실행 및 확장팩 설치<a class="headerlink" href="#jupyter-notebook" title="Permalink to this headline">¶</a></h2>
-<p>Pandas 실습을 하기 위해 Jupyter Notebook을 먼저 실행하겠습니다. Jupyter Notebook을 실행하는 방법은 2.2.4절을 참고 바랍니다.</p>
+<p>Pandas 실습을 하기 위해 Jupyter Notebook을 먼저 실행하겠습니다. Jupyter Notebook을 실행하는 방법은 <a class="reference external" href="https://kaggler-tv.github.io/dku-kaggle-class/lectures/02-setup.html#jupyter-notebook">2.2.4절</a>을 참고 바랍니다.</p>
 <p>Jupyter Notebook에는 다양한 확장팩을 지원하는데, 확장팩을 설치하는 방법은 터미널에서 <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">jupyter_contrib_nbextensions</span></code>를 입력하면 됩니다.</p>
 <p>확장팩 설치가 완료되면 Jupyter Notebook 메인 화면에 Nbextensions 탭이 추가됩니다. 해당 탭에 들어가서 사용하고자 하는 확장팩을 설정할 수 있습니다.</p>
+<p><img alt="" src="https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch03-img06.JPG?raw=true" /></p>
+<ul class="simple">
+<li><p>그림 3-6 Nbextensions</p></li>
+</ul>
 <p>여러 개의 확장팩 중에서 주로 사용하게 되는 확장팩은 ExecuteTime과 Table of Contents입니다. ExecuteTime은 각 셀별로 실행 시간을 표출해주며 Table of Contents는 마크다운 문법에 기반해서 목차를 생성해줍니다.</p>
 <p>지금까지 Pandas에 대한 이론적인 배경과 Jupyter Notebook 확장팩에 대해 배워봤습니다. 다음 장에서는 Pandas 실습을 진행해보도록 하겠습니다.</p>
 </div>
@@ -756,7 +838,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
           By Kaggler-TV<br/>
         
-            &copy; Copyright 2020-.<br/>
+            &copy; Copyright 2020.<br/>
           <div class="extra_footer">
             <div class="row_footer"> Website organized by <a href="https://github.com/SDSTony">Sungjin Ahn</a> </div>
           </div>
@@ -773,6 +855,16 @@ commentsRunWhenDOMLoaded(addUtterances);
   <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
 
 
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-154415912-2', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     
   </body>
 </html>
