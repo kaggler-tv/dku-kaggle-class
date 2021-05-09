@@ -16,7 +16,7 @@ Scikit-learn은 다양한 머신러닝 알고리즘과 데이터 전처리 기�
 
 ## 6.1 ML 알고리즘
 
-![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch06-img01.jpg?raw=true)
+![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch06-img02.jpg?raw=true)
 - 그림 6-2 Machine learning map([출처](https://docs.google.com/presentation/d/1c4mg_b1zYxvZw4UrodwmgJXNZw9nv0u9Mjy_oZ6Lmds/edit?usp=sharing))
 
 그림 6-2는 [Scikit-learn 공식 홈페이지](https://scikit-learn.org/stable/tutorial/machine_learning_map/)에서 제공하는 머신러닝 알고리즘 사용 가이드입니다. 가장 처음에 샘플의 개수를 확인 후 50개 이하면 데이터를 더 수집하고 50개 이상이면은 다음 단계로 진행 합니다. 그리고 나서 종속변수가 범주형인지 아닌지를 확인 하고, 라벨링이 되어 있는지 아닌지 등을 확인하면서 각 상황별 적합한 알고리즘을 추천해주는 가이드라인입니다. 
