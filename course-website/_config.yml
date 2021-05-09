@@ -3,14 +3,14 @@
 title : 단국대 2020 캐글 뽀개기
 author: Kaggler-TV
 logo: 'imgs/logo.png'
-copyright: "2020-"
+copyright: "2020"
 
 # Short description about the book
 description: >-
   DKU kaggle class
 
 #######################################################################################
-# Execution settings
+# Execution settings (노트북 html 필드할 때 실행 여부 결정)
 execute:
   execute_notebooks           : off
 
@@ -26,8 +26,11 @@ notebook_interface            : "notebook"
 #######################################################################################
 # Launch button settings
 repository:
-  url                         : https://github.com/kaggler-tv/dku-kaggle-class
-  path_to_book                : ""
+  url                         : https://github.com/kaggler-tv/dku-kaggle-class/
+  path_to_book                : "course-website"
+  
+launch_buttons:
+  colab_url: "https://colab.research.google.com"
 
 latex:
   latex_engine                : "xelatex"
@@ -45,10 +48,13 @@ html:
   comments:
     utterances:
       repo: "kaggler-tv/dku-kaggle-class"
-  
+  google_analytics_id: UA-154415912-2
+
 sphinx:
   config:
     html_js_files:
     - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
     
 only_build_toc_files: true
+
+
