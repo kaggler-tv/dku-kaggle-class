@@ -98,7 +98,7 @@ Callbacks은 `fit()`함수에 추가할 수 있는 기능입니다. Keras 사용
 
 그림 12-7과 같이 `es`와 `rlr`에 각각 EarlyStopping과 ReduceLROnPlateau callback을 저장하고 `fit()`의 `callbacks` 파라미터에 전달함으로써 구현 가능합니다. 
 
-## 12.5 Keras
+## 12.5 참고자료
 
 - [Stanford CS229 Lecture 8: Neural Networks](http://cs229.stanford.edu/notes2020fall/notes2020fall/deep_learning_notes.pdf)
 - [Deep Learning with Python](https://amzn.to/2TJcmz3)

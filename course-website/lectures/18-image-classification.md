@@ -10,19 +10,22 @@ X-ray, MRI 처럼 의료용 이미지일 경우 [DiCOM](https://en.wikipedia.org
 
 OpenCV, Pillow, Pydicom을 사용해 불러온 이미지에 `matplotlib.pyplot`에서 제공하는 `imshow`를 사용해서 시각화 할 수 있습니다. 이미지 시각화를 통해 이미지의 사이즈, 밝기, 색감등을 확인해서 추후 전처리가 필요한지 결정을 내립니다. 
 
+![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch18-img01.jpg?raw=true)
+- 그림 18-1 matplotlib을 사용한 의료 이미지 시각화 예시([출처](https://docs.google.com/presentation/d/1dmCmkv0mWeuf-rHkrOYBXPKaPIwW4B6gSsVPzerOGLc/edit?usp=sharing))
+
 이미지 사아즈가 동일하지 않다면 resize를 통해 사이즈를 맞춰주고 밝기나 색감이 다르다면 gray scale로 통일하거나 normalization을 적용해주기도 합니다. 또한 이미지 내의 주요 부분만 추출하기 위해 cropping을 적용하기도 합니다. Cropping을 할 때는 중요 부분을 같이 잘라내지 않도록 주의가 필요합니다. 
 
 ## 18.2 Image Augmentation
 
-Image augmentation은 16장에서 다뤄본 것 처럼 이미지를 회전하거나 뒤집거나 확대/축소 등을 사용해서 데이터의 양을 부풀리는 과정입니다. 또한 Mixup, Cutout, CutMix등의 방법도 존재하며 세부 사항은 16장을 참고바랍니다. 
+Image augmentation은 [16장](16-data-augmentation.md)에서 다뤄본 것 처럼 이미지를 회전하거나 뒤집거나 확대/축소 등을 사용해서 데이터의 양을 부풀리는 과정입니다. 또한 Mixup, Cutout, CutMix등의 방법도 존재하며 세부 사항은 [16장](16-data-augmentation.md)을 참고바랍니다. 
 
 ```{tip}
-Image augmentation을 cross validation과 함께 사용할 경우 augmented된 이미지는 원본 이미지와 같은 fold에 속해야 합니다. 모델 학습에 사용한 데이터가 검증 데이터셋에도 존재한다면 모델의 성능은 상대적으로 좋게 나올 것이므로 올바른 모델 검증이 진행되지 않기 때문입니다. 
+Image augmentation을 cross validation과 함께 사용할 경우 augmented된 이미지는 원본 이미지와 같은 fold에 속해야 합니다. 모델 학습에 사용한 데이터가 검증 데이터셋에도 존재한다면 모델의 성능은 상대적으로 좋게 나올 것이므로 올바른 모델 검증이 진행되지 않습니다.
 ```
 
 ## 18.3 Image Modeling
 
-이미지 데이터를 처리하는 모델을 구축할 때는 직접 CNN 구조를 디자인하거나 또는 17장에서 살펴본 pre-trained 모델을 사용할 수도 있습니다. 데이터과학 대회에서는 이미 방대한 데이터셋에 대해 검증된 pre-trained 모델을 주로 사용합니다. 
+이미지 데이터를 처리하는 모델을 구축할 때는 직접 CNN 구조를 디자인하거나 또는 [17장](17-cnn.md)에서 살펴본 pre-trained 모델 구조를 사용할 수도 있습니다. 데이터과학 대회에서는 이미 방대한 데이터셋에 대해 검증된 pre-trained 모델을 주로 사용합니다. 
 
 Pre-trained 모델을 사용하는 방법도 크게 3가지로 구분됩니다. 첫번째는 Pre-trained 모델을 있는 그대로 사용해서 직접 예측하는 방법입니다. 두번째는 pre-trained 모델의 변수를 고정 시킨 후 새 레이어를 추가 후 학습 및 예측을 하는 방법입니다. 세번째는 pre-trained 모델의 변수도 함께 학습 후 예측하는 방법입니다. 일반적으로 세번째 방법을 fine-tuning이라고 부르며 대회에서 최종 모델로 많이 사용하는 방법입니다. 
 
@@ -34,9 +37,11 @@ Pre-trained 모델을 베이스라인 모델로 사용할 때 일반적으로 In
 
 2019년과 2020년에 열린 의료용 이미지 대회인 Melanoma Classification 대회의 1위 솔루션이 모두 metadata를 함께 사용한 방법이였습니다. 2019년도와 2020년도 모두 CNN 모델의 결과물과 sub-network에서 metadata를 처리해 나온 결과물을 합친 뒤 추가 레이어에 전달해서 최종 예측을 했습니다.
 
-- 그림 18- [Melanoma Classification 2019 1st Place](https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/154683) 
+![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch18-img02.jpg?raw=true)
+- 그림 18-2 [Melanoma Classification 2019 1st Place](https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/154683) ([출처](https://docs.google.com/presentation/d/1dmCmkv0mWeuf-rHkrOYBXPKaPIwW4B6gSsVPzerOGLc/edit?usp=sharing))
 
-- 그림 18- [Melanoma Classification 2020 1st Place](https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/175412) 
+![](https://github.com/kaggler-tv/dku-kaggle-class/blob/master/course-website/imgs/ch18-img03.jpg?raw=true)
+- 그림 18-3 [Melanoma Classification 2020 1st Place](https://www.kaggle.com/c/siim-isic-melanoma-classification/discussion/175412) ([출처](https://docs.google.com/presentation/d/1dmCmkv0mWeuf-rHkrOYBXPKaPIwW4B6gSsVPzerOGLc/edit?usp=sharing))
 
 ## 18.5 Ensembling
 
